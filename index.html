@@ -1,0 +1,916 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#244638"><meta name="description" content="Praktisches Experimentierlabor zur Säurestärke für Q13 Chemie gA. Reagenzgläser, Indikatoren, geteilte Petrischalen und pH-Messung."><title>Säurestärke · Experimentierlabor</title><style>:root{font-family:Arial,Helvetica,sans-serif;color:#213d33;background:#f4f3ec;font-synthesis:none;--ink:#244638;--line:#d7dfd1;--green:#dce7bf;--paper:#fcfdf8}*{box-sizing:border-box}body{margin:0}button,a,input{touch-action:manipulation}button{font:600 13px Arial,sans-serif;min-height:44px;border:1px solid var(--line);border-radius:9px;padding:9px 12px;color:var(--ink);background:var(--paper);cursor:pointer}button:hover:not(:disabled){background:#e9efd9}button:active:not(:disabled){transform:translateY(1px)}button:disabled{opacity:.45;cursor:default}button:focus-visible,a:focus-visible,[tabindex]:focus-visible{outline:3px solid #8ba855;outline-offset:3px}[hidden]{display:none!important}.topbar{height:76px;max-width:1600px;margin:auto;padding:0 24px;display:flex;align-items:center;gap:20px;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font:25px Georgia,serif}.brand svg{width:34px;fill:none;stroke:#315848;stroke-width:1.5}.brand small{display:block;font:8px Arial,sans-serif;letter-spacing:2px;margin-top:5px}.course{margin-left:auto;font-size:10px;letter-spacing:1.4px;color:#6c7a66}.quiet{background:transparent}.quiet span{margin-left:10px}.tabs{display:flex;gap:10px;margin-bottom:12px}.tabs button{display:grid;grid-template-columns:auto 1fr;column-gap:12px;row-gap:3px;text-align:left;flex:1;padding:11px 16px;min-height:66px}.tabs small{grid-row:1/3;font-size:9px;letter-spacing:1px;align-self:center;padding-right:10px;border-right:1px solid #a8b895}.tabs strong{font-size:16px;font-weight:500}.tabs span{font-size:11px;font-weight:400;opacity:.75}.tabs button[aria-current=true]{background:var(--ink);color:#f8faee;border-color:var(--ink)}main{max-width:1600px;margin:auto;padding:16px 24px 8px}.lab{display:grid;grid-template-columns:150px minmax(0,1fr) 236px;gap:12px;align-items:stretch}.materials,.workbench,.inspector{border:1px solid var(--line);border-radius:14px;background:#fafbf5;min-width:0}.materials{padding:10px;display:flex;flex-direction:column;gap:9px}.section-head h2{font-size:13px;margin:0 0 4px}.section-head>span{font-size:10px;color:#718068}.tray-tabs{display:grid;grid-template-columns:1fr 1fr;gap:4px}.tray-tabs button{font-size:11px;padding:8px 4px}.tray-tabs [aria-pressed=true]{background:#dfebc8;border-color:#a7b98b}#tray{display:grid;grid-template-columns:1fr;gap:6px;overflow:auto;min-height:0}.material{display:flex;align-items:center;gap:8px;min-height:57px;text-align:left;font-size:12px;font-weight:400;padding:7px 6px;touch-action:none;position:relative}.material svg{flex:none;width:32px;height:40px}.material.placed:after{content:'';position:absolute;width:5px;height:5px;background:#72964e;right:5px;top:5px;border-radius:50%}.material.active{border-color:#66864c;background:#e9f0d8}.workbench{display:flex;flex-direction:column;overflow:hidden;box-shadow:0 10px 30px #29402c0a}.bench-head{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;gap:8px}.eyebrow{font-size:9px;letter-spacing:1.2px;color:#74826b;display:block;margin-bottom:5px}h1{font:26px Georgia,serif;margin:0}.bench-tools{display:flex;gap:5px}.bench-tools button{font-size:12px}.bench-tools button:last-child{font-size:24px;padding:2px;width:44px}.stage-scroll{background:#e8ece2;min-height:300px;flex:1;overflow:auto;position:relative;overscroll-behavior:contain}#stage{display:block;width:100%;height:100%;min-height:300px;touch-action:none;user-select:none}#stage [data-item]{cursor:grab}#stage [data-target],#stage [data-action]{cursor:pointer}#stage .selected-outline{stroke:#738e4b;stroke-width:2;stroke-dasharray:5 5;fill:#eff6d925;pointer-events:none}#stage .flow-drop{fill:#5b9aaf;opacity:.8;animation:fall .7s infinite ease-in}#stage .spill-ring{fill:none;stroke:#84b8c7;stroke-width:3;animation:ripple .7s infinite}#stage .target-glow{fill:#e5f0c31a;stroke:#9aad6f;stroke-width:2;stroke-dasharray:4 4;pointer-events:none}.zoomed #stage{width:150%;height:150%;max-width:none;min-height:700px}.bench-footer{display:flex;gap:10px;padding:9px 12px;border-top:1px solid var(--line);font-size:11px;line-height:1.45;min-height:46px;align-items:center}.bench-footer #bench-status{flex:1}.simulation{font-size:8px;letter-spacing:1.2px;color:#819075}.inspector{display:flex;flex-direction:column;gap:0;padding:12px;overflow:auto}.selection{border-bottom:1px solid var(--line);padding-bottom:12px}.selection h2{font-size:17px;line-height:1.3;margin:0 0 8px}.selection p,.location p{font-size:12px;line-height:1.5;color:#68765f;margin:0}.handgrips h3,.location h3{font-size:10px;letter-spacing:.7px;text-transform:uppercase;color:#738266;margin:14px 0 8px}#actions{display:grid;gap:6px}#actions button{width:100%;text-align:left;font-size:12px;line-height:1.4}.primary,#actions .primary{color:#fff;background:#31573f;border-color:#31573f}.primary:hover:not(:disabled),#actions .primary:hover:not(:disabled){background:#41674d}#actions .hold{touch-action:none;user-select:none;background:#dce8bc;border-color:#b8cb91;color:#26442f}#actions .hold.is-held{background:#b9d48d;box-shadow:inset 0 0 0 2px #6b8a47}.hold small{display:block;font-weight:400;font-size:10px;margin-top:3px}#tool-readout{margin-top:10px;display:flex;gap:7px;flex-wrap:wrap}.readout{border:1px solid #d8e1cb;background:#f1f5e7;padding:7px 9px;border-radius:7px;font:14px ui-monospace,Consolas,monospace}.readout small{font:10px Arial;margin-left:4px}#targets{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-top:8px}#targets button{font-size:11px;font-weight:400;padding:7px 5px;overflow-wrap:anywhere}#targets [aria-pressed=true]{border-color:#7d9a50;background:#e2edcb}.short-help{margin-top:auto;padding-top:14px;font-size:11px;color:#718064}.short-help strong{font-size:11px;font-weight:600}.short-help p{line-height:1.5;margin:5px 0}.short-help button{width:100%;margin-top:7px;font-size:12px}.footnote{display:flex;justify-content:space-between;align-items:center;font-size:10px;color:#829074;margin-top:5px}.footnote button{border:0;background:transparent;min-height:32px;padding:5px 0;font-size:10px;font-weight:400;color:#718064}#notice{position:fixed;z-index:30;top:10px;left:50%;transform:translateX(-50%);width:min(720px,calc(100% - 24px));display:flex;align-items:start;gap:12px;padding:13px 12px 13px 17px;border:2px solid #b93f3c;border-left-width:6px;border-radius:12px;background:#fff0ed;color:#9f2b28;box-shadow:0 10px 28px #6d252a28}#notice>div{flex:1}#notice strong{font-size:13px}#notice p{font-size:13px;line-height:1.5;margin:4px 0 0}#notice button{min-width:44px;font-size:26px;padding:0;background:transparent;border:0;color:inherit}dialog{width:min(550px,calc(100% - 24px));max-height:calc(100dvh - 24px);border:1px solid #b9c8ac;border-radius:16px;background:#fcfdf7;color:#294633;padding:22px;overflow:auto;box-shadow:0 30px 80px #203b3233}dialog::backdrop{background:#203b3260;backdrop-filter:blur(3px)}.dialog-head{display:flex;align-items:center;justify-content:space-between}.dialog-head button{border:0;background:none;font-size:27px;padding:0;width:44px}dialog h2{font:29px Georgia;margin:4px 0 18px}dialog p,dialog li{font-size:13px;line-height:1.65;color:#586e50}dialog li{margin-bottom:10px}dialog ol{padding-left:20px}.dialog-note{border-top:1px solid var(--line);padding-top:12px}.dialog-actions{display:flex;justify-content:flex-end;gap:10px}#drag-ghost{position:fixed;pointer-events:none;z-index:100;background:#244638ef;color:#fff;padding:10px 14px;border-radius:10px;font-size:12px;box-shadow:0 8px 20px #132b2733;transform:translate(12px,12px)}@keyframes fall{from{transform:translateY(-10px);opacity:0}30%{opacity:1}to{transform:translateY(14px);opacity:0}}@keyframes ripple{from{opacity:.8;transform:scale(.3)}to{opacity:0;transform:scale(1.3)}}
+@media(min-width:900px) and (min-height:600px){body{height:100dvh;overflow:hidden}.topbar{height:60px}main{height:calc(100dvh - 60px);display:flex;flex-direction:column;padding:10px 14px 4px}.tabs{flex:none;margin-bottom:9px}.tabs button{min-height:58px;padding:8px 14px}.lab{flex:1;min-height:0}.materials,.inspector{min-height:0}#tray{flex:1}.workbench{min-height:0}.stage-scroll{min-height:180px}#stage{min-height:180px}.bench-head{padding:9px 12px}h1{font-size:22px}.footnote{flex:none}.section-head>span{font-size:10px}}
+@media(max-width:1199px){.lab{grid-template-columns:130px minmax(0,1fr) 212px;gap:8px}.materials{padding:8px}.material{font-size:11px;gap:4px;padding:6px 4px}.material svg{width:27px}.inspector{padding:10px}.brand{font-size:23px}.bench-head{flex-wrap:wrap}.bench-tools{margin-left:auto}}
+@media(max-width:899px){.topbar{height:66px;padding:0 16px}.course{font-size:9px;letter-spacing:.5px}.brand{font-size:22px}.brand small{font-size:7px}.quiet{font-size:11px}.lab{grid-template-columns:minmax(0,1fr) 220px}.materials{grid-column:1/-1;display:grid;grid-template-columns:120px 1fr;gap:6px 12px}.section-head{align-self:center}.tray-tabs{grid-column:1;grid-row:2}#tray{grid-column:2;grid-row:1/3;display:flex;overflow-x:auto;max-height:130px}.material{flex:0 0 96px;min-height:76px;flex-direction:column;text-align:center;font-size:11px}.workbench{grid-column:1}.inspector{grid-column:2}.stage-scroll{min-height:440px}main{padding:12px}.tabs button{padding:10px}.tabs strong{font-size:14px}.tabs small{font-size:8px;padding-right:4px}.tabs span{font-size:10px}.footnote{font-size:9px}}
+@media(max-width:599px){.topbar{gap:8px}.course{display:none}.quiet{margin-left:auto}.lab{grid-template-columns:1fr}.materials{grid-template-columns:1fr}.section-head{display:flex;align-items:center;justify-content:space-between}.tray-tabs{grid-column:1;grid-row:2}#tray{grid-column:1;grid-row:3;max-height:100px}.material{flex-basis:98px}.workbench{grid-column:1}.inspector{grid-column:1;display:grid;grid-template-columns:1fr 1fr;gap:10px}.selection{grid-column:1/-1}.handgrips,.location{min-width:0}.short-help{grid-column:1/-1}.stage-scroll{min-height:360px;height:390px}.tabs small{display:none}.tabs button{grid-template-columns:1fr}.tabs strong{font-size:13px}.tabs span{font-size:10px}.footnote{gap:12px;line-height:1.4}.zoomed #stage{min-height:600px;width:180%;height:180%}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition:none!important}}
+
+#tray{align-content:start;overflow-x:hidden}.material{min-width:0}.material>span{min-width:0;overflow-wrap:anywhere;line-height:1.3}.muted{font-size:12px;line-height:1.5;color:#68765f;margin:0}.pipette-bulb.is-squeezed{transform:scaleX(.86);transform-box:fill-box;transform-origin:center}
+@media(max-width:899px){#tray{overflow-x:auto;align-content:stretch}}
+
+/* Handwerkzeug und gut treffbare Pipettenbedienung. */
+#hand-tool{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-width:78px;min-height:44px;padding:7px 10px;white-space:nowrap}
+#hand-tool svg,.hand-badge svg,#drag-ghost>svg{width:23px;height:23px;flex:none;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
+#hand-tool[aria-pressed=true]{background:#dce8bc;border-color:#819b58;box-shadow:inset 0 0 0 1px #819b5833}
+.selection-label{display:flex;align-items:center;gap:7px;min-height:25px}
+.hand-badge{display:inline-flex;align-items:center;justify-content:center;width:25px;height:25px;border-radius:7px;background:#e6edd8;color:#58723d}
+.hand-badge svg{width:18px;height:18px}
+#stage.is-grabbing,#stage.is-grabbing [data-item],#stage.is-grabbing [data-action]{cursor:grabbing}
+#stage .pipette-hit{fill:transparent;stroke:none;pointer-events:all;cursor:pointer;touch-action:none}
+#stage .grip-hand{pointer-events:none}
+#drag-ghost{display:flex;align-items:center;gap:8px;max-width:260px;line-height:1.3;padding:8px 11px}
+#drag-ghost>svg{width:25px;height:25px}
+#drag-ghost span{min-width:0;overflow-wrap:anywhere}
+@media(max-width:1199px){.bench-tools{gap:4px}.bench-tools button{padding-left:9px;padding-right:9px}#hand-tool{min-width:73px;padding:7px 8px;gap:5px}}
+
+#stage .flow-drop.aspirating{animation-direction:reverse}.pipette-hit{pointer-events:all}#actions .primary{min-height:48px}.hand-label{display:flex;align-items:center;gap:5px}
+
+/* Spülzustand bleibt bei der Geräteauswahl sichtbar. */
+#hygiene-status{margin-top:10px;padding:9px 10px;border:1px solid #a9c5cc;border-left-width:4px;border-radius:8px;background:#eaf4f5;color:#305565;font-size:12px;line-height:1.45;overflow-wrap:break-word}
+#hygiene-status[data-state="clean"]{border-color:#a9c5cc;background:#eaf4f5;color:#305565}
+#hygiene-status[data-state="used"]{border-color:#d4b261;background:#fff5dd;color:#72551d}
+#hygiene-status[data-state="required"]{border-color:#c97861;background:#fff0e9;color:#87412d}
+#hygiene-status[data-state="filled"]{border-color:#a8bdc5;background:#edf2f5;color:#405b6a}
+#hygiene-status strong{display:block;font-size:12px;margin-bottom:3px}
+#rinse-next{width:100%;min-height:48px;margin-top:7px;padding:8px 10px;text-align:left;border-color:#bdcba6;background:#eef3e2;line-height:1.35;font-size:12px}
+#rinse-next:hover{background:#e1ebcc}
+/* Stable HTML control outside the SVG: redraws do not detach a held pointer. */
+#direct-control{position:absolute;z-index:5;width:164px;max-width:calc(100% - 16px);min-height:54px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:3px;padding:9px 11px;border:2px solid #64844d;border-radius:10px;background:#edf5da;color:#24462f;text-align:left;line-height:1.3;box-shadow:0 5px 14px #2446381f;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;cursor:pointer}
+#direct-control>span,#direct-control>small{pointer-events:none}
+#direct-label{font-size:13px;font-weight:700}
+#direct-detail{font-size:10px;font-weight:400;color:#4a6847}
+#direct-control:hover{background:#e4efca}
+#direct-control:active{transform:none}
+#direct-control.is-held{background:#bfd993;border-color:#496c37;box-shadow:inset 0 0 0 1px #496c3744,0 3px 9px #2446381a}
+#direct-control:focus-visible{outline-color:#456f38;outline-offset:3px}
+@media(max-width:599px){#direct-control{width:150px;padding:8px 10px}#hygiene-status{margin-top:8px}}
+
+/* Rinsing feedback stays on the pressed controls without replacing their nodes. */
+#actions [data-hold-kind],#stage [data-rinse]{touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
+#actions [data-hold-kind=rinse],#actions [data-hold-kind=rinse]:hover:not(:disabled),#direct-control[data-hold-kind=rinse]{color:#24462f;background:linear-gradient(to right,#b9d6c0 0 var(--rinse-progress,0%),#edf5da var(--rinse-progress,0%) 100%);min-height:64px}
+#actions [data-hold-kind=rinse]:active{transform:none}
+#hygiene-status[data-state=rinsing]{border-color:#6cabb3;background:#e0f2f2;color:#285d66}
+#actions .rinse-complete,#direct-control.rinse-complete{border-color:#388263}
+
+.materials.return-hover{outline:3px solid #64844d;outline-offset:-3px;background:#e3efcf;box-shadow:inset 0 0 0 6px #e3efcf}
+
+/* Experiment 2: a wider comparison bench; all HTML controls stay outside it. */
+body[data-mode="v2"] .lab{grid-template-columns:minmax(0,1fr) 232px;grid-template-rows:218px minmax(0,1fr);gap:10px}
+body[data-mode="v2"] .workbench{grid-column:1;grid-row:1/3}
+body[data-mode="v2"] .materials{grid-column:2;grid-row:1;display:flex;flex-direction:column;padding:9px;gap:6px;min-height:0}
+body[data-mode="v2"] .section-head{display:flex;align-items:center;justify-content:space-between}
+body[data-mode="v2"] .section-head h2{font-size:12px;margin:0}
+body[data-mode="v2"] .section-head>span{font-size:9px}
+body[data-mode="v2"] .tray-tabs{display:grid;grid-template-columns:1fr 1fr;flex:none}
+body[data-mode="v2"] #tray{display:grid;grid-template-columns:1fr 1fr;gap:5px;max-height:none;overflow:auto;flex:1}
+body[data-mode="v2"] .material{min-height:66px;flex-direction:column;justify-content:center;gap:3px;font-size:10px;padding:5px;text-align:center}
+body[data-mode="v2"] .material svg{width:38px;height:26px}
+body[data-mode="v2"] .inspector{grid-column:2;grid-row:2;padding:10px}
+body[data-mode="v2"] .selection-label{font-size:8px;min-height:22px}
+body[data-mode="v2"] .selection h2{font-size:16px;margin-bottom:6px}
+body[data-mode="v2"] #selected-description{font-size:11px;line-height:1.4}
+body[data-mode="v2"] .bench-head{padding:8px 12px}
+#direct-control{display:none!important}
+@media(min-width:900px) and (min-height:600px){
+ body[data-mode="v2"] .topbar{height:50px}
+ body[data-mode="v2"] main{height:calc(100dvh - 50px);padding-top:7px}
+ body[data-mode="v2"] .tabs{margin-bottom:7px}
+ body[data-mode="v2"] .tabs button{min-height:52px;padding:6px 12px}
+ body[data-mode="v2"] .bench-footer{min-height:36px;padding:6px 10px}
+}
+@media(max-width:1100px) and (min-width:900px){body[data-mode="v2"] .lab{grid-template-columns:minmax(0,1fr) 206px}body[data-mode="v2"] .section-head>span{display:none}body[data-mode="v2"] .bench-head h1{font-size:20px}}
+@media(max-width:899px){
+ body[data-mode="v2"] .lab{grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto auto}
+ body[data-mode="v2"] .workbench{grid-column:1;grid-row:1}
+ body[data-mode="v2"] .stage-scroll{height:auto;min-height:0;aspect-ratio:1000/620;flex:none}
+ body[data-mode="v2"] #stage{height:100%;min-height:0}
+ body[data-mode="v2"] .materials{grid-column:1;grid-row:2;display:grid;grid-template-columns:115px minmax(0,1fr);gap:5px 9px}
+ body[data-mode="v2"] .section-head{grid-column:1;grid-row:1}
+ body[data-mode="v2"] .section-head>span{display:none}
+ body[data-mode="v2"] .tray-tabs{grid-column:1;grid-row:2}
+ body[data-mode="v2"] #tray{grid-column:2;grid-row:1/3;display:flex;overflow:auto}
+ body[data-mode="v2"] .material{flex:0 0 95px;min-height:72px}
+ body[data-mode="v2"] .inspector{grid-column:1;grid-row:3;display:grid;grid-template-columns:1fr 1fr;gap:0 15px;overflow:visible}
+ body[data-mode="v2"] .selection{grid-column:1;grid-row:1/3}
+ body[data-mode="v2"] .handgrips{grid-column:2;grid-row:1}
+ body[data-mode="v2"] .location{grid-column:2;grid-row:2}
+ body[data-mode="v2"] .short-help{grid-column:1/-1}
+}
+.handgrips{position:sticky;top:-12px;z-index:2;background:#fafbf5;padding:1px 0 10px;border-bottom:1px solid var(--line)}
+#return-tool{width:100%;margin-top:7px;font-size:12px}
+@media(max-width:899px){body[data-mode="v2"] .handgrips{position:static}}
+</style></head>
+<body>
+<header class="topbar"><a class="brand" href="#"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M11 3h10M13 3v10L5 25q-2 4 3 4h16q5 0 3-4l-8-12V3M9 20h14"/><circle cx="14" cy="24" r="1"/><circle cx="20" cy="22" r="1"/></svg><span>Säurestärke<small>EXPERIMENTIERLABOR</small></span></a><span class="course">CHEMIE · Q13 gA</span><button id="help-open" class="quiet" aria-label="Bedienhilfe öffnen">Bedienung <span>?</span></button></header>
+<main>
+<nav class="tabs" aria-label="Versuchsbereich"><button id="tab-v1" data-mode="v1" aria-current="true"><small>VERSUCH 01</small><strong>pH-Vergleich</strong><span>Ethanol &amp; Ethansäure</span></button><button id="tab-v2" data-mode="v2" aria-current="false"><small>VERSUCH 02</small><strong>Organische Säuren</strong><span>Drei Indikatorvergleiche</span></button></nav>
+<section class="lab" aria-label="Virtueller Versuchsplatz">
+<aside class="materials"><div class="section-head"><h2>Materialablage</h2><span>Ziehen oder antippen</span></div><div class="tray-tabs" aria-label="Materialgruppe"><button data-tray="equipment" aria-pressed="true">Geräte</button><button data-tray="solutions" aria-pressed="false">Lösungen</button></div><div id="tray"></div></aside>
+<section class="workbench"><div class="bench-head"><div><span class="eyebrow">ARBEITSFLÄCHE</span><h1 id="bench-title">pH-Vergleich</h1></div><div class="bench-tools"><button id="hand-tool" aria-pressed="true" title="Hand: Geräte und Flaschen greifen"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 13V6a1.5 1.5 0 0 1 3 0v6-8a1.5 1.5 0 0 1 3 0v8-6a1.5 1.5 0 0 1 3 0v7-4a1.5 1.5 0 0 1 3 0v7a6 6 0 0 1-6 6h-1.5a6 6 0 0 1-4.5-2L3.5 14a1.8 1.8 0 0 1 2.7-2.4L8 13Z"/></svg><span>Hand</span></button><button id="zoom-toggle" aria-pressed="false">Lupe <span aria-hidden="true">＋</span></button><button id="reset-open" aria-label="Diesen Versuchsbereich zurücksetzen">↺</button></div></div><div class="stage-scroll" id="stage-scroll"><svg id="stage" viewBox="0 0 1000 620" role="group" aria-label="Arbeitsfläche: Geräte und Lösungen selbst aufbauen" tabindex="0"></svg><button id="direct-control" type="button" hidden><span id="direct-label">Ansaugen</span><small id="direct-detail">Gedrückt halten · Loslassen stoppt</small></button></div><div class="bench-footer"><span id="bench-status" role="status">Wähle ein Material und platziere es auf der Arbeitsfläche.</span><span class="simulation">SIMULATION</span></div></section>
+<aside class="inspector" aria-label="Auswahl und Handgriffe"><section class="selection"><span class="eyebrow selection-label"><span class="hand-badge" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 13V6a1.5 1.5 0 0 1 3 0v6-8a1.5 1.5 0 0 1 3 0v8-6a1.5 1.5 0 0 1 3 0v7-4a1.5 1.5 0 0 1 3 0v7a6 6 0 0 1-6 6h-1.5a6 6 0 0 1-4.5-2L3.5 14a1.8 1.8 0 0 1 2.7-2.4L8 13Z"/></svg></span>IN DER HAND</span><h2 id="selected-name">Kein Gerät gewählt</h2><p id="selected-description">Material aus der Ablage ziehen oder antippen und auf der Arbeitsfläche ablegen.</p><div id="tool-readout"></div><div id="hygiene-status" role="status" aria-live="polite" aria-atomic="true" data-state="clean" hidden></div><button id="rinse-next" type="button" hidden>Zur Spülstation führen</button></section><section class="handgrips"><h3>Handgriffe</h3><div id="actions"></div><button id="return-tool" hidden>Gerät ablegen</button></section><section class="location"><h3>Einsatzort</h3><p id="target-description">Gerät greifen, dann den Einsatzort wählen.</p><div id="targets"></div></section><div class="short-help"><strong>So funktioniert’s</strong><p>Am Schaft greifen und zum Einsatzort führen. Zum Ansaugen gedrückt halten; Loslassen stoppt.</p></div></aside>
+</section>
+<footer class="footnote"><span>Nach der bereitgestellten Versuchsanleitung</span><button id="model-open">Versuchsbedingungen</button></footer>
+</main>
+<div id="notice" role="alert" hidden><div><strong id="notice-title">Prüfe deinen Aufbau</strong><p id="notice-text"></p></div><button id="notice-close" aria-label="Hinweis schließen">×</button></div>
+<dialog id="help-dialog"><div class="dialog-head"><span class="eyebrow">BEDIENUNG</span><button data-close="help-dialog" aria-label="Bedienhilfe schließen">×</button></div><h2>Jeder Handgriff zählt.</h2><p>Ziehe Geräte und Flaschen aus der Ablage auf die Arbeitsfläche. Alternativ: Material antippen und anschließend den Ablageort antippen. Mit der <strong>Hand</strong> greifst du ein anderes Gerät oder eine Flasche. Pipetten bewegst du am Schaft; der Gummiball dient zum Dosieren.</p><ol><li><strong>Flasche öffnen:</strong> Flasche auswählen und den Verschluss abnehmen.</li><li><strong>Flasche zurücklegen:</strong> Pipette herausnehmen, Flasche verschließen und „In die Materialablage zurücklegen“ wählen. Du kannst die verschlossene Flasche auch direkt in die Materialablage ziehen und später erneut aufstellen.</li><li><strong>Pipettieren:</strong> Die Spitze in die geöffnete Flasche führen. Gummiball oder „Ansaugen“ gedrückt halten: Die Flüssigkeit steigt auf. Beim Loslassen stoppt die Aufnahme. Zum Probengefäß bewegen und die Flüssigkeit durch Gedrückthalten abgeben.</li><li><strong>Indikator:</strong> Die Tropfpipette in die offene Indikatorflasche führen und zum Aufnehmen gedrückt halten. An der Probe jeden Tropfen einzeln abgeben.</li><li><strong>Spülen:</strong> Der Spülzustand steht beim ausgewählten Gerät. Vor dem Wechsel zu einer anderen Lösung zuerst Restflüssigkeit in den Abfallbehälter entleeren, dann das Gerät an der Spülstation reinigen. Erst danach die nächste Lösung aufnehmen.</li><li><strong>pH-Messung:</strong> Messgerät und Elektrode einzeln aufstellen. Den Elektrodenstecker an die Buchse des Messgeräts anschließen, Schutzkappe abnehmen und die Elektrode in die Probe führen. Gerät einschalten und die Messung starten. Vor dem Probenwechsel die Elektrode herausnehmen und spülen.</li></ol><p>Die Schaltflächen unter „Einsatzort“ führen das ausgewählte Gerät an dieselben Orte wie das Ziehen. Die Aufnahme, Abgabe und Reinigung führst du anschließend selbst aus.</p><p class="dialog-note">Mit der Lupe kannst du die Arbeitsfläche vergrößern. Im vergrößerten Ausschnitt lässt sich horizontal und vertikal scrollen.</p></dialog>
+<dialog id="reset-dialog"><div class="dialog-head"><span class="eyebrow">NEUER ANSATZ</span><button data-close="reset-dialog" aria-label="Zurück schließen">×</button></div><h2>Diesen Bereich zurücksetzen?</h2><p>Die Geräte, Flüssigkeiten und Messung dieses Versuchsbereichs werden zurückgesetzt. Der andere Bereich bleibt erhalten.</p><div class="dialog-actions"><button data-close="reset-dialog">Abbrechen</button><button id="reset-confirm" class="primary">Zurücksetzen</button></div></dialog>
+<dialog id="model-dialog"><div class="dialog-head"><span class="eyebrow">VERSUCHSBEDINGUNGEN</span><button data-close="model-dialog" aria-label="Versuchsbedingungen schließen">×</button></div><h2>Die bereitgestellten Lösungen</h2><p>Die Darstellung folgt den Vorgaben deiner Versuchsanleitung. Im ersten Bereich werden die dort vorgegebenen Proben ohne Konzentrationsangabe verwendet. Im zweiten Bereich sind die Lösungen mit c₀ = 1 mol/L beschriftet.</p><p>Farben und Messanzeigen sind simulierte Beobachtungen für diese Ansätze. Sie sind keine allgemeingültigen Messwerte für beliebige Konzentrationen oder Indikatorprodukte.</p></dialog>
+<div id="drag-ghost" hidden></div><script>/*
+ * Säurestärke: state for the practical steps in the supplied worksheet.
+ * pH and indicator colors are scenario values from that worksheet. This is
+ * deliberately not a concentration-dependent equilibrium calculation.
+ * No method places, opens, rinses, or transfers other objects implicitly.
+ */
+(function (root, factory) {
+  const api = factory();
+  if (typeof module === 'object' && module.exports) module.exports = api;
+  root.AcidModel = api;
+})(typeof globalThis !== 'undefined' ? globalThis : this, function () {
+  'use strict';
+
+  const CHEMICALS = Object.freeze({
+    ethanol: Object.freeze({ label: 'Ethanol-Lösung', short: 'Ethanol', color: '#d8ebee', indicator: false }),
+    acetic: Object.freeze({ label: 'Ethansäure-Lösung', short: 'Ethansäure', color: '#d8ebee', indicator: false }),
+    chloro: Object.freeze({ label: 'Chlorethansäure-Lösung', short: 'Chlorethansäure', color: '#d8ebee', indicator: false }),
+    propionic: Object.freeze({ label: 'Propansäure-Lösung', short: 'Propansäure', color: '#d8ebee', indicator: false }),
+    lactic: Object.freeze({ label: 'Milchsäure-Lösung', short: 'Milchsäure', color: '#d8ebee', indicator: false }),
+    btb: Object.freeze({ label: 'Bromthymolblau-Lösung', short: 'Bromthymolblau', color: '#326c9e', indicator: true }),
+    universal: Object.freeze({ label: 'Universalindikator-Lösung', short: 'Universalindikator', color: '#a86e48', indicator: true })
+  });
+  const MODES = Object.freeze({
+    v1: Object.freeze({ chemicals: ['ethanol', 'acetic', 'btb'], equipment: ['rack', 't1', 't2', 'meter', 'pipette', 'dropper', 'probe'], vessels: ['t1', 't2'] }),
+    v2: Object.freeze({ chemicals: ['ethanol', 'acetic', 'chloro', 'propionic', 'lactic', 'universal'], equipment: ['p1', 'p2', 'p3', 'pipette', 'dropper'], vessels: ['p1l', 'p1r', 'p2l', 'p2r', 'p3l', 'p3r'] })
+  });
+  const SAMPLE_COLORS = Object.freeze({
+    v1: Object.freeze({ ethanol: '#a4bd49', acetic: '#f2d446' }),
+    v2: Object.freeze({ ethanol: '#bdc74d', acetic: '#e86632', chloro: '#930d25', propionic: '#d8572a', lactic: '#d51d35' })
+  });
+  const PH = Object.freeze({ ethanol: 6.9, acetic: 4.7 });
+  const CAPACITY = 5;
+  const DROP_CAPACITY = 6;
+  const EPSILON = 1e-8;
+  const ok = (message, extra) => Object.assign({ ok: true, message: message || '' }, extra || {});
+  const fail = message => ({ ok: false, message });
+  const rounded = n => Math.round(n * 1000) / 1000;
+  const mode = s => s && MODES[s.mode];
+  const knownChemical = id => Object.prototype.hasOwnProperty.call(CHEMICALS, id);
+  const numberText = n => String(rounded(n)).replace('.', ',');
+  const freshVessel = () => ({ chemical: null, volume: 0, indicator: null, drops: 0 });
+
+  function createState(which = 'v1') {
+    if (!MODES[which]) throw new Error('Unbekannter Versuchsbereich.');
+    return {
+      mode: which,
+      placed: {},
+      bottlesOpen: {},
+      vessels: Object.fromEntries(['t1', 't2', 'p1l', 'p1r', 'p2l', 'p2r', 'p3l', 'p3r'].map(id => [id, freshVessel()])),
+      pipette: { volume: 0, chemical: null, residue: null },
+      dropper: { drops: 0, chemical: null, residue: null },
+      probe: { cap: true, power: false, connected: false, target: null, reading: null, residue: null }
+    };
+  }
+
+  function validChemical(s, chemical) {
+    return !!mode(s) && knownChemical(chemical) && mode(s).chemicals.includes(chemical);
+  }
+  function vesselContainer(target) { return /^p[123][lr]$/.test(target) ? target.slice(0, 2) : target; }
+  function vesselCheck(s, target) {
+    if (!mode(s) || !mode(s).vessels.includes(target)) return fail('Wähle ein Probengefäß dieses Versuchs.');
+    if (!s.placed[vesselContainer(target)]) return fail('Stelle das Probengefäß zuerst auf die Arbeitsfläche.');
+    return null;
+  }
+  function toolCheck(s, tool) {
+    if (!['pipette', 'dropper'].includes(tool)) return fail('Verwende eine Pipette für diesen Handgriff.');
+    if (!s.placed[tool]) return fail('Nimm die Pipette zuerst aus der Materialablage.');
+    return null;
+  }
+  function volumeAmount(amount) {
+    return typeof amount === 'number' && Number.isFinite(amount) && amount > 0 && Math.abs(amount * 4 - Math.round(amount * 4)) < EPSILON;
+  }
+  function invalidateReading(s, target) {
+    if (s.probe.target === target) s.probe.reading = null;
+  }
+
+  function place(s, id) {
+    if (!mode(s)) return fail('Wähle zunächst einen Versuch.');
+    if (typeof id !== 'string') return fail('Wähle ein Material aus der Ablage.');
+    if (id.startsWith('b-')) {
+      if (!validChemical(s, id.slice(2))) return fail('Dieses Reagenz gehört nicht zu diesem Versuchsbereich.');
+    } else if (!mode(s).equipment.includes(id)) return fail('Dieses Gerät gehört nicht zu diesem Versuchsbereich.');
+    if (['t1', 't2'].includes(id) && !s.placed.rack) return fail('Stelle zuerst den Reagenzglasständer auf die Arbeitsfläche.');
+    s.placed[id] = true;
+    return ok('Material aufgestellt.');
+  }
+
+  function toggleBottle(s, chemical) {
+    if (!validChemical(s, chemical)) return fail('Wähle eine Reagenzflasche dieses Versuchs.');
+    if (!s.placed['b-' + chemical]) return fail('Stelle die Flasche zuerst auf die Arbeitsfläche.');
+    s.bottlesOpen[chemical] = !s.bottlesOpen[chemical];
+    return ok(s.bottlesOpen[chemical] ? 'Flasche geöffnet.' : 'Flasche verschlossen.', { open: s.bottlesOpen[chemical] });
+  }
+
+  function storeBottle(s, chemical) {
+    if (!validChemical(s, chemical)) return fail('Wähle eine Reagenzflasche dieses Versuchs.');
+    if (!s.placed['b-' + chemical]) return fail('Diese Flasche steht bereits in der Materialablage.');
+    if (s.bottlesOpen[chemical]) return fail('Verschließe die Flasche, bevor du sie in die Materialablage zurücklegst.');
+    s.placed['b-' + chemical] = false;
+    return ok('Flasche in die Materialablage zurückgelegt.');
+  }
+
+  /* Volume pipette: amount defaults to 0.25 mL. Indicator dropper: a fresh draw
+     defaults to 6 drops. Explicit amount=1 supports intake ticks while held;
+     only the same indicator can be topped up, and capacity remains 6 drops. */
+  function draw(s, tool, chemical, amount) {
+    const error = toolCheck(s, tool);
+    if (error) return error;
+    if (!validChemical(s, chemical)) return fail('Wähle ein Reagenz dieses Versuchs.');
+    if (!s.placed['b-' + chemical]) return fail('Stelle die Reagenzflasche zuerst auf die Arbeitsfläche.');
+    if (!s.bottlesOpen[chemical]) return fail('Öffne die Flasche, bevor du die Pipette einführst.');
+    const indicator = CHEMICALS[chemical].indicator;
+    if (tool === 'pipette' && indicator) return fail('Verwende für den Indikator die Tropfpipette.');
+    if (tool === 'dropper' && !indicator) return fail('Verwende für die Probenlösung die Messpipette.');
+    const instrument = s[tool];
+    if (instrument.residue && instrument.residue !== chemical) return fail('Entleere und spüle die Pipette, bevor du das Reagenz wechselst.');
+    if (instrument.chemical && instrument.chemical !== chemical) return fail('In der Pipette befindet sich noch ein anderes Reagenz. Entleere und spüle sie zuerst.');
+    if (tool === 'pipette') {
+      const quantity = amount === undefined ? 0.25 : amount;
+      if (!volumeAmount(quantity)) return fail('Das Volumen muss in Schritten von 0,25 mL dosiert werden.');
+      if (instrument.volume + quantity > CAPACITY + EPSILON) return fail('Die Messpipette fasst höchstens 5 mL.');
+      instrument.volume = rounded(instrument.volume + quantity);
+      instrument.chemical = chemical;
+      instrument.residue = chemical;
+      return ok(numberText(instrument.volume) + ' mL aufgenommen.', { amount: quantity });
+    }
+    const quantity = amount === undefined ? DROP_CAPACITY : amount;
+    if (!Number.isInteger(quantity) || quantity < 1 || quantity > DROP_CAPACITY) return fail('Die Tropfpipette fasst bis zu 6 Tropfen.');
+    if (instrument.drops > 0 && amount !== 1) return fail('Entleere die Tropfpipette, bevor du sie erneut füllst.');
+    if (instrument.drops + quantity > DROP_CAPACITY) return fail('Die Tropfpipette fasst höchstens 6 Tropfen.');
+    instrument.drops += quantity;
+    instrument.chemical = chemical;
+    instrument.residue = chemical;
+    return ok('Indikator aufgenommen.', { amount: quantity });
+  }
+
+  function dispense(s, tool, target, amount) {
+    const error = toolCheck(s, tool);
+    if (error) return error;
+    const instrument = s[tool];
+    if (!instrument.chemical || (tool === 'pipette' ? instrument.volume <= EPSILON : instrument.drops < 1)) return fail('Die Pipette ist leer. Nimm zunächst Flüssigkeit auf.');
+    if (target !== 'waste') {
+      const targetError = vesselCheck(s, target);
+      if (targetError) return targetError;
+    }
+    if (tool === 'pipette') {
+      const quantity = amount === undefined ? 0.25 : amount;
+      if (!volumeAmount(quantity)) return fail('Das Volumen muss in Schritten von 0,25 mL dosiert werden.');
+      if (quantity > instrument.volume + EPSILON) return fail('Für diese Abgabe ist nicht genügend Flüssigkeit in der Pipette.');
+      if (target !== 'waste') {
+        const vessel = s.vessels[target];
+        if (vessel.chemical && vessel.chemical !== instrument.chemical) return fail('Das Gefäß enthält eine andere Lösung. Entleere es vor einem neuen Ansatz.');
+        if (vessel.volume + quantity > CAPACITY + EPSILON) return fail('Die Probe enthält bereits 5 mL. Verwende ein weiteres Gefäß oder entleere den Ansatz.');
+        vessel.chemical = instrument.chemical;
+        vessel.volume = rounded(vessel.volume + quantity);
+        invalidateReading(s, target);
+      }
+      instrument.volume = rounded(instrument.volume - quantity);
+      if (instrument.volume <= EPSILON) { instrument.volume = 0; instrument.chemical = null; }
+      return ok(target === 'waste' ? 'Flüssigkeit in den Sammelbehälter abgegeben.' : numberText(s.vessels[target].volume) + ' mL im Probengefäß.', { amount: quantity });
+    }
+    if (amount !== undefined && amount !== 1) return fail('Gib den Indikator tropfenweise ab.');
+    if (target !== 'waste') {
+      const vessel = s.vessels[target];
+      if (!vessel.chemical || vessel.volume <= EPSILON) return fail('Befülle das Probengefäß, bevor du den Indikator zugibst.');
+      const expected = s.mode === 'v1' ? 'btb' : 'universal';
+      if (instrument.chemical !== expected) return fail('Verwende den für diesen Versuch vorgesehenen Indikator.');
+      if (vessel.indicator && vessel.indicator !== instrument.chemical) return fail('Mische keine unterschiedlichen Indikatoren in derselben Probe.');
+      vessel.indicator = instrument.chemical;
+      vessel.drops += 1;
+      invalidateReading(s, target);
+    }
+    instrument.drops -= 1;
+    if (!instrument.drops) instrument.chemical = null;
+    return ok(target === 'waste' ? 'Ein Tropfen in den Sammelbehälter abgegeben.' : s.vessels[target].drops + ' Tropfen zugegeben.', { amount: 1 });
+  }
+
+  function rinse(s, tool) {
+    if (tool === 'probe') {
+      if (s.mode !== 'v1' || !s.placed.probe) return fail('Nimm zuerst die pH-Elektrode aus der Ablage.');
+      if (s.probe.cap) return fail('Nimm vor dem Spülen die Schutzkappe ab.');
+      if (s.probe.target) return fail('Nimm die Elektrode zuerst aus der Probe.');
+      s.probe.residue = null;
+      s.probe.reading = null;
+      return ok('Elektrode gespült.');
+    }
+    const error = toolCheck(s, tool);
+    if (error) return error;
+    const instrument = s[tool];
+    if ((tool === 'pipette' && instrument.volume > EPSILON) || (tool === 'dropper' && instrument.drops > 0)) return fail('Entleere die Pipette zuerst in den Sammelbehälter.');
+    instrument.residue = null;
+    instrument.chemical = null;
+    return ok('Pipette gespült.');
+  }
+
+  function empty(s, target) {
+    const error = vesselCheck(s, target);
+    if (error) return error;
+    if (s.probe.target === target) return fail('Nimm die Elektrode vor dem Entleeren aus der Probe.');
+    s.vessels[target] = freshVessel();
+    return ok('Probengefäß entleert.');
+  }
+
+  function togglePower(s) {
+    if (s.mode !== 'v1' || !s.placed.meter) return fail('Stelle zuerst das pH-Meter auf die Arbeitsfläche.');
+    s.probe.power = !s.probe.power;
+    s.probe.reading = null;
+    return ok(s.probe.power ? 'pH-Meter eingeschaltet.' : 'pH-Meter ausgeschaltet.', { power: s.probe.power });
+  }
+
+  function toggleProbeCap(s) {
+    if (s.mode !== 'v1' || !s.placed.probe) return fail('Nimm zuerst die pH-Elektrode aus der Ablage.');
+    if (s.probe.target) return fail('Nimm die Elektrode zuerst aus der Probe.');
+    s.probe.cap = !s.probe.cap;
+    s.probe.reading = null;
+    return ok(s.probe.cap ? 'Schutzkappe aufgesetzt.' : 'Schutzkappe abgenommen.', { cap: s.probe.cap });
+  }
+
+  function connectionCheck(s) {
+    if (s.mode !== 'v1') return fail('Der pH-Meter-Vergleich gehört zu Versuch 1.');
+    if (!s.placed.meter || !s.placed.probe) return fail('Stelle pH-Meter und Elektrode bereit.');
+    return null;
+  }
+
+  function connectProbe(s) {
+    const error = connectionCheck(s);
+    if (error) return error;
+    if (s.probe.connected) return ok('Die Elektrode ist bereits am pH-Meter angeschlossen.');
+    s.probe.connected = true;
+    s.probe.reading = null;
+    return ok('Elektrode am pH-Meter angeschlossen.');
+  }
+
+  function disconnectProbe(s) {
+    const error = connectionCheck(s);
+    if (error) return error;
+    s.probe.connected = false;
+    s.probe.target = null;
+    s.probe.reading = null;
+    return ok('Elektrode vom pH-Meter getrennt.');
+  }
+
+  function probeSampleCheck(s, target) {
+    const equipmentError = connectionCheck(s);
+    if (equipmentError) return equipmentError;
+    if (!s.probe.connected) return fail('Stecke die Elektrode zuerst an das pH-Meter an.');
+    if (s.probe.cap) return fail('Nimm die Schutzkappe der Elektrode ab.');
+    const error = vesselCheck(s, target);
+    if (error) return error;
+    const vessel = s.vessels[target];
+    if (!vessel.chemical || vessel.volume <= EPSILON) return fail('Tauche die Elektrode in eine befüllte Probe.');
+    if (s.probe.target && s.probe.target !== target) return fail('Nimm die Elektrode vor dem Wechsel aus der bisherigen Probe.');
+    if (s.probe.residue && s.probe.residue !== vessel.chemical) return fail('Spüle die Elektrode vor dem Wechsel zur anderen Lösung.');
+    return null;
+  }
+
+  function immerseProbe(s, target) {
+    const error = probeSampleCheck(s, target);
+    if (error) return error;
+    s.probe.target = target;
+    s.probe.residue = s.vessels[target].chemical;
+    s.probe.reading = null;
+    return ok('Elektrode in die Probe eingetaucht.');
+  }
+
+  function measure(s, target) {
+    const error = probeSampleCheck(s, target);
+    if (error) return error;
+    if (!s.probe.power) return fail('Schalte das pH-Meter ein.');
+    const vessel = s.vessels[target];
+    if (!Object.prototype.hasOwnProperty.call(PH, vessel.chemical)) return fail('Für diese Probe ist in Versuch 1 kein Messwert hinterlegt.');
+    s.probe.target = target;
+    s.probe.residue = vessel.chemical;
+    s.probe.reading = PH[vessel.chemical];
+    return ok('Messung gestartet.', { value: s.probe.reading });
+  }
+
+  function withdrawProbe(s) {
+    s.probe.target = null;
+    s.probe.reading = null;
+    return ok('Elektrode aus der Probe genommen.');
+  }
+
+  function sampleColor(s, target) {
+    const vessel = s.vessels && s.vessels[target];
+    if (!vessel || vessel.volume <= EPSILON) return 'transparent';
+    const expected = s.mode === 'v1' ? 'btb' : 'universal';
+    const color = SAMPLE_COLORS[s.mode] && SAMPLE_COLORS[s.mode][vessel.chemical];
+    if (!color || vessel.indicator !== expected || vessel.drops < 1) return '#d9ecef';
+    if (vessel.drops >= 2) return color;
+    const components = [1, 3, 5].map(i => parseInt(color.slice(i, i + 2), 16));
+    return '#' + components.map(c => Math.round(c * 0.72 + 245 * 0.28).toString(16).padStart(2, '0')).join('');
+  }
+
+  return Object.freeze({ CHEMICALS, MODES, SAMPLE_COLORS, CAPACITY, DROP_CAPACITY, createState, place, toggleBottle, storeBottle, draw, dispense, rinse, empty, togglePower, toggleProbeCap, connectProbe, disconnectProbe, immerseProbe, measure, withdrawProbe, sampleColor });
+});
+
+/* Native SVG apparatus. The worksheet outcomes are supplied by AcidModel. */
+(function (scope) {
+  'use strict';
+  const PETRI_SCALE = 1.3;
+  const DIMENSIONS = {
+    bottle: { w: 120, h: 140 }, rack: { w: 250, h: 150 },
+    tube: { w: 55, h: 150 }, petri: { w: 220 * PETRI_SCALE, h: 140 * PETRI_SCALE },
+    meter: { w: 150, h: 150 }, pipette: { w: 34, h: 200, tipX: 17, tipY: 194 },
+    dropper: { w: 42, h: 145, tipX: 21, tipY: 139 },
+    probe: { w: 32, h: 145, tipX: 16, tipY: 139 },
+    wash: { w: 150, h: 125 }, waste: { w: 120, h: 125 }
+  };
+  const NAMES = {
+    ethanol: ['Ethanol', 'Lösung'], acetic: ['Ethansäure', 'Lösung'],
+    chloro: ['Chlorethansäure', 'Lösung'], propionic: ['Propansäure', 'Lösung'],
+    lactic: ['Milchsäure', 'Lösung'], btb: ['Bromthymolblau', 'Indikator'],
+    universal: ['Universalindikator', 'Lösung']
+  };
+  const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const clamp = (value, max) => Math.max(0, Math.min(max, Number(value) || 0));
+  const number = value => Number(value || 0).toLocaleString('de-DE', { maximumFractionDigits: 2 });
+  const kind = id => id.startsWith('b-') ? 'bottle' : /^t[12]$/.test(id) ? 'tube' : /^p[123]$/.test(id) ? 'petri' : id;
+  const size = id => ({ ...(DIMENSIONS[kind(id)] || { w: 100, h: 100 }) });
+  function color(s, target) {
+    return scope.AcidModel?.sampleColor?.(s, target) || '#d8e6df';
+  }
+  function defs(prefix) {
+    return `<defs>
+      <linearGradient id="${prefix}-glass" x1="0" x2="1"><stop stop-color="#c4d5d0" stop-opacity=".55"/><stop offset=".18" stop-color="#ffffff" stop-opacity=".8"/><stop offset=".42" stop-color="#edf5ee" stop-opacity=".13"/><stop offset=".76" stop-color="#fafff8" stop-opacity=".48"/><stop offset="1" stop-color="#9db4aa" stop-opacity=".6"/></linearGradient>
+      <linearGradient id="${prefix}-metal" x1="0" x2="1"><stop stop-color="#78918b"/><stop offset=".22" stop-color="#ecf3e9"/><stop offset=".54" stop-color="#aabeb5"/><stop offset="1" stop-color="#5e7b72"/></linearGradient>
+      <linearGradient id="${prefix}-body" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#f8faf2"/><stop offset=".65" stop-color="#dfe6d8"/><stop offset="1" stop-color="#bfcabc"/></linearGradient>
+      <linearGradient id="${prefix}-amber" x1="0" x2="1"><stop stop-color="#8a581f"/><stop offset=".2" stop-color="#b38339"/><stop offset=".52" stop-color="#956325"/><stop offset=".85" stop-color="#71471b"/><stop offset="1" stop-color="#533b1f"/></linearGradient>
+      <linearGradient id="${prefix}-rubber" x1="0" x2="1"><stop stop-color="#243e34"/><stop offset=".4" stop-color="#54745f"/><stop offset="1" stop-color="#203c32"/></linearGradient>
+    </defs>`;
+  }
+  const shadow = (cx, cy, rx, ry = 5) => `<ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}" fill="#263b2e" opacity=".12"/>`;
+  function bottle(id, s, p) {
+    const chem = id.slice(2), indicator = chem === 'btb' || chem === 'universal';
+    const open = !!s.bottlesOpen?.[chem], lines = NAMES[chem] || [chem, 'Lösung'];
+    const cap = `<g data-action="cap" data-chemical="${esc(chem)}" class="apparatus-cap" role="button" aria-label="${open ? 'Verschließen' : 'Öffnen'}: ${esc(lines[0])}" tabindex="0">
+      <rect x="30" y="3" width="60" height="30" rx="8" fill="transparent"/>
+      <rect x="42" y="10" width="36" height="18" rx="4" fill="${indicator ? '#454b3b' : '#315747'}" stroke="#243e32" stroke-width="1.2"/>
+      <path d="M47 13v11m5-11v11m5-11v11m5-11v11m5-11v11m5-11v11" stroke="#b8c5a4" stroke-opacity=".35"/>
+      <ellipse cx="60" cy="11" rx="17" ry="3" fill="#6d8060"/>
+    </g>`;
+    return `${defs(p)}${shadow(61, 132, 34, 5)}
+      <g data-target="${esc(id)}">
+      <path d="M45 24h30v18c0 6 16 11 16 24v53q0 10-10 10H39q-10 0-10-10V66c0-13 16-18 16-24Z" fill="${indicator ? `url(#${p}-amber)` : `url(#${p}-glass)`}" stroke="${indicator ? '#655031' : '#94aaa0'}" stroke-width="1.6"/>
+      ${!indicator ? '<path d="M32 72h56v45q0 9-9 9H41q-9 0-9-9Z" fill="#d1e2d9" opacity=".6"/><ellipse cx="60" cy="72" rx="28" ry="3" fill="#edf5e9" stroke="#b3cbb9" stroke-width=".8"/>' : ''}
+      <path d="M38 64v51q0 5 3 6M49 33v10" fill="none" stroke="#fff" opacity="${indicator ? '.25' : '.8'}" stroke-width="3" stroke-linecap="round"/>
+      <ellipse cx="60" cy="26" rx="15" ry="4" fill="#d9e5d2" stroke="#7b9281" stroke-width="1.4"/>
+      ${open ? '<ellipse cx="60" cy="26" rx="10.5" ry="2.5" fill="#3c5346"/>' : ''}
+      <rect x="23" y="76" width="74" height="37" rx="3" fill="#fffef4" stroke="#d9d9c4"/>
+      <rect x="23" y="76" width="4" height="37" rx="2" fill="${indicator ? '#c39a47' : '#789d75'}"/>
+      <text x="61" y="87" text-anchor="middle" fill="#263f33" font-family="Arial,sans-serif" font-size="${chem === 'universal' ? 7.2 : chem === 'chloro' || chem === 'btb' ? 7.8 : 9}" font-weight="700">${esc(lines[0])}</text>
+      <text x="61" y="97" text-anchor="middle" fill="#596b57" font-family="Arial,sans-serif" font-size="8">${esc(chem === 'ethanol' && s.mode === 'v2' ? 'unvergällt' : lines[1])}</text>
+      <text x="61" y="107" text-anchor="middle" fill="#6b785f" font-family="Arial,sans-serif" font-size="7">${indicator ? 'Tropfenweise' : s.mode === 'v2' ? 'c₀ = 1 mol/L' : 'wässrig'}</text>
+      </g>
+      ${open ? `<g transform="translate(-30 96) rotate(-12 60 18)">${cap}</g>` : cap}`;
+  }
+  function rack(p) {
+    return `${defs(p)}${shadow(125, 140, 117, 7)}
+      <path d="M15 29h12v104H15zm208 0h12v104h-12Z" fill="#688d78" stroke="#456953" stroke-width="1.5"/>
+      <rect x="9" y="114" width="232" height="21" rx="5" fill="#baa17e" stroke="#8e795c"/>
+      <path d="M15 123h219m-212 7h201" stroke="#dfcba6" stroke-width="1.5" opacity=".6"/>
+      <path d="M7 36 20 23h210l13 13v13H7Z" fill="#9cad88" stroke="#667b57" stroke-width="1.5"/>
+      <path d="M7 36h236v13H7Z" fill="#6e8965"/>
+      <ellipse cx="70" cy="34" rx="22" ry="7.5" fill="#3c5d48" stroke="#d0d8b9" stroke-width="2"/>
+      <ellipse cx="180" cy="34" rx="22" ry="7.5" fill="#3c5d48" stroke="#d0d8b9" stroke-width="2"/>
+      <ellipse cx="70" cy="119" rx="18" ry="4" fill="#7d7459" opacity=".55"/><ellipse cx="180" cy="119" rx="18" ry="4" fill="#7d7459" opacity=".55"/>
+      <text x="70" y="72" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#6d7c61">1</text><text x="180" y="72" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#6d7c61">2</text>`;
+  }
+  function tube(id, s, p) {
+    const v = s.vessels?.[id] || {}, volume = clamp(v.volume, 5), top = 129 - volume * 13;
+    let marks = '';
+    for (let i = 1; i <= 5; i++) marks += `<path d="M33 ${129 - i * 13}h7" stroke="#6d8379" stroke-width="1"/>${i === 5 ? `<text x="31" y="${127 - i * 13}" text-anchor="end" font-size="7" font-family="Arial,sans-serif" fill="#60776a">5 mL</text>` : ''}`;
+    return `${defs(p)}<defs><clipPath id="${p}-inner"><path d="M14 10h27v108q0 13-13.5 13T14 118Z"/></clipPath></defs>
+      <g data-target="${id}">
+      ${shadow(27.5, 139, 20, 4)}
+      <path d="M11 8h33v110q0 16-16.5 16T11 118Z" fill="url(#${p}-glass)" stroke="#91a89c" stroke-width="1.5"/>
+      ${volume ? `<g clip-path="url(#${p}-inner)"><rect x="14" y="${top}" width="27" height="${135 - top}" fill="${esc(color(s, id))}" opacity="${v.indicator ? '.88' : '.62'}" class="sample-liquid"/><ellipse cx="27.5" cy="${top}" rx="13.5" ry="2.5" fill="#fff" opacity=".25"/><path d="M14 ${top}q13.5 4 27 0" fill="none" stroke="#fff" stroke-opacity=".75"/></g>` : ''}
+      <path d="M16 15v99q0 8 3 11" fill="none" stroke="#fff" stroke-width="3" opacity=".8" stroke-linecap="round"/>
+      ${marks}<ellipse cx="27.5" cy="8" rx="17.5" ry="4" fill="#ecf4e8" fill-opacity=".65" stroke="#8fa69a" stroke-width="1.4"/><ellipse cx="27.5" cy="8" rx="13.5" ry="2.4" fill="#c9d9cc" fill-opacity=".32"/>
+      <text x="27.5" y="149" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#476351">${number(volume)} mL${v.drops ? ' · ' + number(v.drops) + ' Tr.' : ''}</text>
+      </g>`;
+  }
+  function petri(id, s, p) {
+    const left = s.vessels?.[id + 'l'] || {}, right = s.vessels?.[id + 'r'] || {};
+    const liquid = (side, v) => v.volume > 0 ? `<rect x="${side === 'l' ? 16 : 111}" y="36" width="93" height="70" fill="${esc(color(s, id + side))}" opacity="${v.indicator ? '.88' : '.58'}" class="sample-liquid"/>` : '';
+    return `<g transform="scale(${PETRI_SCALE})">${defs(p)}<defs><clipPath id="${p}-well"><ellipse cx="110" cy="67" rx="93" ry="33"/></clipPath></defs>
+      <text x="110" y="14" text-anchor="middle" fill="#3a5947" font-family="Arial,sans-serif" font-size="13" font-weight="700">Schale ${esc(id.slice(1))}</text>
+      ${shadow(110, 115, 103, 8)}
+      <path d="M9 64v20c0 24 45 44 101 44s101-20 101-44V64" fill="url(#${p}-glass)" stroke="#8fa89d" stroke-width="1.6"/>
+      <ellipse cx="110" cy="65" rx="101" ry="40" fill="#f7fcf5" fill-opacity=".4" stroke="#a1b7aa" stroke-width="1.5"/>
+      <g clip-path="url(#${p}-well)">${liquid('l', left)}${liquid('r', right)}</g>
+      <ellipse cx="110" cy="67" rx="94" ry="34" fill="none" stroke="#afc4b6" stroke-width="1.1"/>
+      <path d="M107 33v68l6 2V34Z" fill="#dbe8dc" fill-opacity=".94" stroke="#8da794" stroke-width="1.1"/>
+      <path d="M108 34v65" stroke="#fff" stroke-width="2"/>
+      <path d="M15 84c13 23 55 35 95 35s82-12 95-35" fill="none" stroke="#fff" opacity=".7" stroke-width="3"/>
+      <path d="M23 46q27-16 62-17M139 29q29 4 50 14" fill="none" stroke="#fff" stroke-width="3" opacity=".85" stroke-linecap="round"/>
+      <g data-target="${id}l"><path d="M106 29C52 29 9 44 9 66s43 39 97 39Z" fill="transparent"/><text x="62" y="64" text-anchor="middle" fill="#274638" fill-opacity=".68" font-family="Arial,sans-serif" font-size="12" font-weight="700">A</text></g>
+      <g data-target="${id}r"><path d="M114 29c54 0 97 15 97 37s-43 39-97 39Z" fill="transparent"/><text x="158" y="64" text-anchor="middle" fill="#274638" fill-opacity=".68" font-family="Arial,sans-serif" font-size="12" font-weight="700">B</text></g>
+      <text x="60" y="136" text-anchor="middle" fill="#48634f" font-family="Arial,sans-serif" font-size="11">${number(left.volume)} mL${left.drops ? ' · ' + number(left.drops) + ' Tr.' : ''}</text>
+      <text x="160" y="136" text-anchor="middle" fill="#48634f" font-family="Arial,sans-serif" font-size="11">${number(right.volume)} mL${right.drops ? ' · ' + number(right.drops) + ' Tr.' : ''}</text></g>`;
+  }
+  function meter(s, ui, p) {
+    const probe = s.probe || {}, connected = !!probe.connected;
+    const missing = probe.power && !connected;
+    const reading = !probe.power ? 'AUS' : missing ? '— —' : ui.reading ? '···' : Number.isFinite(probe.reading) ? probe.reading.toFixed(1).replace('.', ',') : '— —';
+    return `${defs(p)}${shadow(75, 141, 67, 6)}
+      <path d="M18 18h114q9 0 10 10l6 101q0 10-10 10H12q-10 0-10-10L8 28q1-10 10-10Z" fill="url(#${p}-body)" stroke="#849c8c" stroke-width="1.5"/>
+      <g data-connect="probe" role="button" tabindex="0" aria-label="${connected ? 'Elektrode angeschlossen' : 'Elektrode anschließen'}">
+        <rect x="0" y="-8" width="68" height="40" rx="10" fill="transparent"/>
+        <ellipse cx="32" cy="13" rx="14" ry="7" fill="#a9b9a6" stroke="#455e4b" stroke-width="1.8"/>
+        <ellipse cx="32" cy="12" rx="8" ry="4.5" fill="#23372e" stroke="#d0dac9" stroke-width="1.4"/>
+        ${connected ? '<rect x="23" y="-1" width="18" height="16" rx="3" fill="#375441" stroke="#233b2d" stroke-width="1.4"/><path d="M32-1v-6" stroke="#304b3e" stroke-width="5"/><path d="M26 3h12m-12 4h12" stroke="#7c9276" stroke-width="1.2"/>' : '<circle cx="32" cy="12" r="1.4" fill="#b9b4a1"/>'}
+      </g>
+      <text x="96" y="16" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.2" fill="${connected ? '#426645' : '#8f6245'}">${connected ? 'verbunden' : 'Anschluss'}</text>
+      <text x="75" y="36" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#536b57" letter-spacing="1.3">pH-METER</text>
+      <rect x="20" y="46" width="110" height="58" rx="5" fill="#879f79" stroke="#556c52" stroke-width="2"/>
+      <path d="M24 50h102v50H24Z" fill="${probe.power ? '#d1dfba' : '#bcc6ac'}"/>
+      <text x="31" y="62" font-size="8" fill="#5b7051" font-family="Arial,sans-serif">pH</text>
+      <text x="78" y="${missing ? 79 : 91}" text-anchor="middle" font-size="${reading === 'AUS' ? 23 : missing ? 24 : 31}" font-family="ui-monospace,Consolas,monospace" fill="${probe.power ? '#31492e' : '#7b866d'}" font-weight="600">${reading}</text>
+      ${missing ? '<text x="75" y="94" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#8e4e37">Elektrode fehlt</text>' : ''}
+      <circle cx="39" cy="119" r="10" fill="${probe.power ? '#62845e' : '#f4f7eb'}" stroke="#7a9470"/>
+      <path d="M39 113v6m-4-5a6 6 0 1 0 8 0" fill="none" stroke="${probe.power ? '#f4f9e9' : '#527145'}" stroke-width="1.5" stroke-linecap="round"/>
+      <circle cx="104" cy="119" r="7" fill="${connected ? '#729954' : '#e6eddb'}" stroke="#819475"/>
+      ${connected ? '<path d="m100 119 3 3 5-6" fill="none" stroke="#f8fced" stroke-width="1.5"/>' : '<path d="M100 119h8" stroke="#809575" stroke-width="1.3"/>'}`;
+  }
+  function pipette(s, ui, p) {
+    const v = clamp(s.pipette?.volume, 5), top = 170 - v * 24;
+    const active = ui.flow && (ui.selected === 'pipette' || ui.held === 'pipette');
+    let marks = '';
+    for (let i = 1; i <= 5; i++) marks += `<path d="M20 ${170 - i * 24}h6" stroke="#557768" stroke-width=".9"/><text x="29" y="${173 - i * 24}" font-family="Arial,sans-serif" font-size="6" fill="#557768">${i}</text>`;
+    return `${defs(p)}<g class="pipette-bulb${active ? ' is-squeezed' : ''}">
+      <path d="M6 17C6 2 28 2 28 17v8q0 9-11 9T6 25Z" fill="url(#${p}-rubber)" stroke="#264838" stroke-width="1.1"/>
+      <path d="M11 12q1-4 5-5" fill="none" stroke="#a1b79a" opacity=".65" stroke-width="2" stroke-linecap="round"/></g>
+      <path d="M12 31h10v139l-5 24-5-24Z" fill="url(#${p}-glass)" stroke="#799b89" stroke-width="1"/>
+      ${v > 0 ? `<path d="M14 ${top}h6v${170 - top}l-3 15-3-15Z" fill="#8fbbaa" opacity=".8" clip-path="url(#${p}-column)"/>` : ''}
+      <defs><clipPath id="${p}-column"><path d="M14 34h6v136l-3 18-3-18Z"/></clipPath></defs>
+      <path d="M14 36v129" stroke="#fff" stroke-width="1.2" opacity=".8"/>
+      ${marks}<path d="M12 39h10" stroke="#bd875e" stroke-width="2"/>
+      <text x="17" y="199" text-anchor="middle" font-family="Arial,sans-serif" font-size="5" fill="#627b69">5 mL</text>`;
+  }
+  function dropper(s, ui, p) {
+    const v = clamp(s.dropper?.drops, 6), top = 108 - v * 9;
+    const col = s.dropper?.chemical === 'btb' ? '#a69f31' : '#c18b40';
+    const active = ui.flow && (ui.selected === 'dropper' || ui.held === 'dropper');
+    return `${defs(p)}<g class="pipette-bulb${active ? ' is-squeezed' : ''}"><path d="M8 25C8 3 34 3 34 25v12q0 10-13 10T8 37Z" fill="url(#${p}-rubber)" stroke="#294735" stroke-width="1.2"/><path d="M13 17q2-6 7-7" fill="none" stroke="#a2b69a" stroke-width="2.6" stroke-linecap="round" opacity=".65"/></g>
+      <path d="M15 44h12v68l-6 27-6-27Z" fill="url(#${p}-glass)" stroke="#789585" stroke-width="1.1"/>
+      ${v ? `<path d="M18 ${top}h6v${112 - top}l-3 20-3-20Z" fill="${col}" opacity=".85"/>` : ''}
+      <path d="M17 49v60" stroke="#fff" stroke-width="1.3" opacity=".85"/>
+      <path d="M14 45h14" stroke="#e6b96e" stroke-width="3"/>
+      <circle cx="21" cy="137" r="1" fill="#809c86"/>`;
+  }
+  function probe(s, p) {
+    const cap = s.probe?.cap !== false;
+    return `${defs(p)}<path d="M16 1v16" fill="none" stroke="#3d5249" stroke-width="4"/>
+      <rect x="6" y="15" width="20" height="30" rx="5" fill="url(#${p}-rubber)" stroke="#2c493a"/>
+      <path d="M10 44h12v80q0 10-6 12-6-2-6-12Z" fill="url(#${p}-glass)" stroke="#94a997" stroke-width="1.2"/>
+      <path d="M16 49v73" stroke="#d5b47b" stroke-width="1.5"/><path d="M12 50v72" stroke="#fff" stroke-width="1.3"/>
+      <ellipse cx="16" cy="133" rx="5.2" ry="6" fill="#bddaca" stroke="#8db39f"/>
+      <rect x="7" y="52" width="18" height="18" rx="2" fill="#f5f7e8" stroke="#b5bda3"/><text x="16" y="64" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#46613e">pH</text>
+      ${cap ? '<path d="M6 112h20v26q0 6-10 6t-10-6Z" fill="#596c59" stroke="#344b3c"/><path d="M9 116v21" stroke="#a1b29a" stroke-width="2" opacity=".5"/><path d="M5 112h22" stroke="#c2d0b5" stroke-width="3"/>' : ''}`;
+  }
+  function wash(ui, p) {
+    const ready = ['pipette', 'dropper', 'probe'].includes(ui.selected) && ui.dock === 'wash';
+    const active = ui.rinsing === true && ready;
+    return `${defs(p)}<g data-target="wash">
+      ${shadow(75, 104, 67, 6)}
+      <path d="M18 37q0-8 11-12V15h21v10q11 4 11 12v56q0 9-9 9H27q-9 0-9-9Z" fill="#e0eee7" stroke="#759b8a" stroke-width="1.6"/>
+      <path d="M22 62h35v29q0 7-7 7H29q-7 0-7-7Z" fill="#b4d7d6" opacity=".8"/>
+      <path d="M25 41v48" stroke="#fff" stroke-width="4" opacity=".8" stroke-linecap="round"/>
+      <rect x="28" y="10" width="23" height="13" rx="3" fill="#76a0a1" stroke="#527a7a"/>
+      <path d="M40 11V4h32q7 0 10 8l8 23" fill="none" stroke="#638d8e" stroke-width="6" stroke-linecap="round"/>
+      <path d="M40 11V4h32q7 0 10 8l8 23" fill="none" stroke="#d4e9e3" stroke-width="2" stroke-linecap="round"/>
+      <path d="m88 31 4 9" stroke="#466c6e" stroke-width="4" stroke-linecap="round"/>
+      <rect x="12" y="62" width="56" height="29" rx="4" fill="#fffef4" stroke="#b8cfc2"/>
+      <text x="40" y="74" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#365c50" font-weight="700">Spülwasser</text>
+      <text x="40" y="85" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#607b6e">destilliert</text>
+      <path d="M72 80h69l-5 17q-1 7-10 7H87q-9 0-10-7Z" fill="#d9e5dd" stroke="#78988a" stroke-width="1.5"/>
+      <ellipse cx="106.5" cy="80" rx="34.5" ry="10" fill="#edf6ef" stroke="#78988a" stroke-width="1.5"/>
+      <ellipse cx="106.5" cy="82" rx="28" ry="6.5" fill="${active ? '#a6d5d9' : '#c9ded1'}" opacity=".8"/>
+      ${active ? '<path d="M92 40 95 62 105 82" fill="none" stroke="#d7f2f5" stroke-width="7" stroke-linecap="round"/><path class="rinse-stream" d="M92 40 95 62 105 82" fill="none" stroke="#348eae" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="5 4"><animate attributeName="stroke-dashoffset" from="0" to="-18" dur=".6s" repeatCount="indefinite"/></path><path d="m101 80-7-4m11 5 7-5" stroke="#53a7bf" stroke-width="2.5" stroke-linecap="round"/>' : ''}
+      ${ready ? '<g data-rinse="wash" role="button" tabindex="0" aria-label="Spülflasche gedrückt halten"><rect x="10" y="0" width="66" height="104" rx="9" fill="transparent" stroke="'+(active?'#348eae':'#6b947e')+'" stroke-width="1.5" stroke-dasharray="4 4" pointer-events="all" style="cursor:pointer;touch-action:none"/></g>' : ''}
+      <text x="75" y="119" text-anchor="middle" font-family="Arial,sans-serif" font-size="${ready ? 11 : 12}" font-weight="700" fill="#3a6f6c">${active ? 'Wasser spült das Gerät' : ready ? 'Gedrückt halten' : 'Gerät spülen'}</text>
+      </g>`;
+  }
+  function waste(p) {
+    return `${defs(p)}<g data-target="waste">${shadow(60, 113, 48, 6)}
+      <path d="M20 29h80l-6 73q-1 10-34 10t-34-10Z" fill="#ddd9c7" stroke="#8d8e75" stroke-width="1.8"/>
+      <path d="M26 36h68l-5 64q-1 6-29 6t-29-6Z" fill="url(#${p}-body)"/>
+      <ellipse cx="60" cy="29" rx="41" ry="13" fill="#c2c4ac" stroke="#8a8d72" stroke-width="1.8"/>
+      <ellipse cx="60" cy="29" rx="32" ry="8" fill="#68765b"/>
+      <path d="M34 44 37 98" stroke="#fff" stroke-width="3.5" opacity=".55"/>
+      <rect x="23" y="54" width="74" height="37" rx="4" fill="#fff5dd" stroke="#d0b781"/>
+      <text x="60" y="70" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#786238">Flüssigabfall</text>
+      <text x="60" y="83" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#81775e">Reste entleeren</text>
+      </g>`;
+  }
+  function render(id, s = {}, ui = {}, prefix = 'acid-' + id) {
+    switch (kind(id)) {
+      case 'bottle': return bottle(id, s, prefix);
+      case 'rack': return rack(prefix);
+      case 'tube': return tube(id, s, prefix);
+      case 'petri': return petri(id, s, prefix);
+      case 'meter': return meter(s, ui, prefix);
+      case 'pipette': return pipette(s, ui, prefix);
+      case 'dropper': return dropper(s, ui, prefix);
+      case 'probe': return probe(s, prefix);
+      case 'wash': return wash(ui, prefix);
+      case 'waste': return waste(prefix);
+      default: return '';
+    }
+  }
+  function icon(id) {
+    const d = size(id), scale = Math.min(90 / d.w, 90 / d.h);
+    const demo = { mode: 'v1', vessels: {}, bottlesOpen: {}, pipette: {}, dropper: {}, probe: { cap: true, power: false } };
+    const decorative = render(id, demo, {}, 'acid-icon-' + id).replace(/\s(?:tabindex|role|data-action|data-target|data-chemical|data-connect|aria-label)="[^"]*"/g, '');
+    return `<svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><g transform="translate(${(100 - d.w * scale) / 2} ${(100 - d.h * scale) / 2}) scale(${scale})">${decorative}</g></svg>`;
+  }
+  const api = { svg: render, size, icon, petriScale: PETRI_SCALE };
+  scope.AcidView = api;
+  if (typeof module !== 'undefined' && module.exports) module.exports = api;
+})(typeof globalThis !== 'undefined' ? globalThis : window);
+
+(()=>{
+'use strict';
+const $=id=>document.getElementById(id),M=AcidModel,V=AcidView;
+const states={v1:M.createState('v1'),v2:M.createState('v2')};
+const makeUI=()=>({selected:null,pending:null,coords:{},dock:null,docks:{},tray:'equipment',flow:false,reading:false,zoom:false,rinsing:false,rinseElapsed:{},needsRinse:null,blocked:null,parked:{}});
+const views={v1:makeUI(),v2:makeUI()};let mode='v1',gesture=null,holdTimer=null,pumpKind=null,holdPointer=null,holdAnchor=null,rinseStart=0,measureTimer=null,noticeTimer=null,flashTimer=null;
+const s=()=>states[mode],u=()=>views[mode],tools=['pipette','dropper','probe'];
+const labels={rack:'Reagenzglasständer',t1:'Reagenzglas A',t2:'Reagenzglas B',p1:'Petrischale 1',p2:'Petrischale 2',p3:'Petrischale 3',meter:'pH-Meter',pipette:'Messpipette · 5 mL',dropper:'Tropfpipette',probe:'pH-Elektrode',wash:'Spülstation',waste:'Abfallgefäß',plug:'Elektrodenstecker'};
+const vesselLabels={t1:'Reagenzglas A',t2:'Reagenzglas B',p1l:'Schale 1 · A',p1r:'Schale 1 · B',p2l:'Schale 2 · A',p2r:'Schale 2 · B',p3l:'Schale 3 · A',p3r:'Schale 3 · B'};
+const safe=t=>String(t??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const chem=id=>M.CHEMICALS[id]?.short||M.CHEMICALS[id]?.label||id;
+const label=id=>id?.startsWith('b-')?(M.CHEMICALS[id.slice(2)]?.label||id):labels[id]||vesselLabels[id]||id;
+const allowed=()=>mode==='v1'?['rack','t1','t2','pipette','dropper','meter','probe']:['p1','p2','p3','pipette','dropper'];
+const chemicals=()=>mode==='v1'?['ethanol','acetic','btb']:['ethanol','acetic','chloro','propionic','lactic','universal'];
+function defaults(id){
+ if(id.startsWith('b-'))return mode==='v2'?{x:165+chemicals().indexOf(id.slice(2))*118,y:155}:{x:30+chemicals().indexOf(id.slice(2))*140,y:155};
+ const ps={rack:{x:400,y:400},t1:{x:330,y:305},t2:{x:425,y:305},p1:{x:200,y:400},p2:{x:430,y:400},p3:{x:660,y:400},meter:{x:800,y:440},pipette:{x:550,y:80},dropper:{x:670,y:80},probe:{x:790,y:80},plug:{x:725,y:310},wash:{x:35,y:450},waste:{x:840,y:230}};if(mode==='v2'&&id==='wash')return{x:10,y:140};if(mode==='v2'&&id==='waste')return{x:880,y:180};if(mode==='v2'&&/^p[123]$/.test(id))return{x:25+(Number(id[1])-1)*332,y:420};if(mode==='v2'&&id==='pipette')return{x:300,y:7};if(mode==='v2'&&id==='dropper')return{x:565,y:7};return ps[id]||{x:400,y:300};
+}
+function horizontal(id){return mode==='v2'&&!!u().parked[id]&&!(gesture?.id===id&&gesture.preview);}
+function visualSize(id){const d=V.size(id);return horizontal(id)?{w:d.h,h:d.w}:d;}
+function pos(id){if(gesture?.id===id&&gesture.preview)return gesture.preview;if(id==='t1'||id==='t2'){const a=u().coords.rack||defaults('rack');return{x:a.x+(id==='t1'?42.5:152.5),y:a.y-15};}return u().coords[id]||defaults(id);}
+function targets(){
+ const a=[];for(const c of chemicals()){if(s().placed['b-'+c]){const p=pos('b-'+c);a.push({id:'b-'+c,label:chem(c),x:p.x+10,y:p.y-8,w:100,h:158,tip:{x:p.x+60,y:p.y+96}});}}
+ const ids=mode==='v1'?['t1','t2']:['p1l','p1r','p2l','p2r','p3l','p3r'];
+ for(const id of ids){const parent=id.startsWith('p')?id.slice(0,2):id;if(!s().placed[parent])continue;const p=pos(parent);if(id.startsWith('p')){const right=id.endsWith('r'),k=V.petriScale;a.push({id,label:vesselLabels[id],x:p.x+(right?110:0)*k,y:p.y+25*k,w:110*k,h:103*k,tip:{x:p.x+(right?157:63)*k,y:p.y+67*k}});}else a.push({id,label:vesselLabels[id],x:p.x-12,y:p.y-15,w:79,h:168,tip:{x:p.x+27.5,y:p.y+(u().selected==='probe'?Math.max(80,141-s().vessels[id].volume*13):2)}});}
+ for(const id of ['wash','waste']){const p=pos(id),d=V.size(id);a.push({id,label:labels[id],x:p.x-8,y:p.y-8,w:d.w+16,h:d.h+16,tip:{x:p.x+(id==='wash'?95:60),y:p.y+(id==='wash'?62:30)}});}
+ if(mode==='v1'&&s().placed.meter){const p=pos('meter');a.push({id:'meter',label:'Elektrode anschließen',x:p.x-12,y:p.y-20,w:174,h:170,tip:{x:p.x+32,y:p.y+12}});}return a;
+}
+function availableTargets(){const tool=u().selected;return targets().filter(t=>tool!=='probe'&&t.id==='meter'?false:tool==='probe'?!t.id.startsWith('b-')&&t.id!=='waste':tool==='pipette'?(!t.id.startsWith('b-')||!['btb','universal'].includes(t.id.slice(2))):tool==='dropper'?(!t.id.startsWith('b-')||['btb','universal'].includes(t.id.slice(2))):false);}
+function targetAt(p){return p&&availableTargets().find(t=>p.x>=t.x&&p.x<=t.x+t.w&&p.y>=t.y&&p.y<=t.y+t.h);}
+function dragOrigin(g,p){const size=V.size(g.id);return{x:p.x-(g.offset?.x??size.w/2),y:p.y-(g.offset?.y??size.h/2)};}
+function dropTarget(id,p,origin){const size=V.size(id);return targetAt({x:origin.x+(size.tipX??size.w/2),y:origin.y+(size.tipY??size.h)})||targetAt(p);}
+function hand(){stopHold();u().selected=null;u().pending=null;u().dock=null;render();status('Hand gewählt. Gerät oder Flasche greifen und bewegen.');}
+
+function point(e){const svg=$('stage'),m=svg.getScreenCTM();if(!m)return null;const p=svg.createSVGPoint();p.x=e.clientX;p.y=e.clientY;return p.matrixTransform(m.inverse());}
+function status(t){$('bench-status').textContent=t;}
+function notify(message){$('notice-text').textContent=message;$('notice').hidden=false;clearTimeout(noticeTimer);noticeTimer=setTimeout(()=>{$('notice').hidden=true;},9000);}
+function result(r,success){if(!r?.ok){notify(r?.message||'Dieser Handgriff ist hier noch nicht möglich.');return false;}status(success||r.message||'Handgriff ausgeführt.');return true;}
+function cancelMeasurement(){if(measureTimer){clearTimeout(measureTimer);measureTimer=null;}if(u().reading){u().reading=false;s().probe.reading=null;}}
+function place(id,p){const r=M.place(s(),id);if(!result(r))return false;if(mode==='v2'&&tools.includes(id))u().parked[id]=!p;const size=visualSize(id);if(!['t1','t2'].includes(id)){const base=mode==='v2'&&/^p[123]$/.test(id)?defaults(id):p?{x:p.x-size.w/2,y:p.y-size.h/2}:defaults(id);u().coords[id]={x:Math.max(5,Math.min(995-size.w,base.x)),y:Math.max(8,Math.min(610-size.h,base.y))};}u().pending=null;u().selected=id;u().dock=null;delete u().docks[id];status(label(id)+' aufgestellt.');render();return true;}
+function choose(id){stopHold();u().blocked=null;u().selected=id;u().pending=s().placed[id]||['wash','waste'].includes(id)?null:id;u().dock=u().docks[id]||null;render();}
+function park(id){
+ if(id==='probe'){cancelMeasurement();M.withdrawProbe(s());}
+ delete u().rinseElapsed[id];
+ u().coords[id]=defaults(id);if(mode==='v2'&&tools.includes(id))u().parked[id]=true;delete u().docks[id];if(u().selected===id)u().dock=null;
+}
+function returnBottle(id){
+ if(!id?.startsWith('b-'))return;stopHold();
+ const occupant=tools.find(tool=>u().docks[tool]===id);
+ if(occupant){notify('Nimm zuerst '+label(occupant)+' aus der Flasche.');render();return;}
+ const r=M.storeBottle(s(),id.slice(2));if(!result(r)){render();return;}
+ delete u().coords[id];u().selected=null;u().pending=null;u().dock=null;u().blocked=null;u().tray='solutions';render();status(label(id)+' in die Materialablage zurückgelegt. Du kannst die Flasche später wieder aufstellen.');
+}
+function overMaterials(e){const r=document.querySelector('.materials').getBoundingClientRect();return e.clientX>=r.left&&e.clientX<=r.right&&e.clientY>=r.top&&e.clientY<=r.bottom;}
+function connectProbe(){
+ const r=M.connectProbe(s());if(result(r,'Stecker angeschlossen. Die Elektrode ist mit dem pH-Meter verbunden.')){u().blocked=null;render();}
+}
+function dock(id){
+ const tool=u().selected;if(!tools.includes(tool)||!s().placed[tool])return;stopHold();
+ if(id==='meter'){connectProbe();return;}
+ const t=availableTargets().find(x=>x.id===id);if(!t)return;
+ const other=tools.find(k=>k!==tool&&u().docks[k]===id);
+ if(other){u().blocked={target:id,occupant:other};status(label(other)+' steht noch hier. Lege es zuerst auf seinen Ablageplatz.');render();return;}
+ if(id.startsWith('b-')&&!s().bottlesOpen[id.slice(2)]){notify('Die Flasche ist noch verschlossen. Wähle die Hand und nimm zuerst den Verschluss ab.');return;}
+ const residue=s()[tool]?.residue;
+ if(id.startsWith('b-')&&residue&&residue!==id.slice(2)){u().needsRinse=tool;notify('Vor dem Lösungswechsel: Restflüssigkeit in den Abfall geben, dann die Pipette mit Spülwasser reinigen.');render();return;}
+ if(tool==='probe'&&/^t[12]$/.test(id)){
+  if(!s().probe.connected){notify('Stecke das Kabel der Elektrode zuerst in die Buchse des pH-Meters.');render();return;}
+  if(s().probe.residue&&s().probe.residue!==s().vessels[id].chemical){u().needsRinse=tool;notify('An der Elektrode haften Reste der vorherigen Probe. Spüle sie vor dem Wechsel mit Spülwasser.');render();return;}
+  const candidate={...s(),probe:{...s().probe,target:null}};const r=M.immerseProbe(candidate,id);if(!result(r))return;cancelMeasurement();s().probe=candidate.probe;
+ }else if(tool==='probe'){cancelMeasurement();M.withdrawProbe(s());}
+ if(u().docks[tool]!==id)delete u().rinseElapsed[tool];
+ delete u().parked[tool];const size=V.size(tool);u().coords[tool]={x:t.tip.x-(size.tipX??size.w/2),y:t.tip.y-(size.tipY??size.h)};u().dock=id;u().docks[tool]=id;u().blocked=null;status(label(tool)+' bei '+t.label+'.');render();
+}
+function hygiene(){
+ const id=u().selected,el=$('hygiene-status'),next=$('rinse-next');next.hidden=true;
+ if(!tools.includes(id)||!s().placed[id]){el.hidden=true;return;}el.hidden=false;
+ const instrument=s()[id],filled=id==='pipette'?instrument.volume>0:id==='dropper'?instrument.drops>0:false;
+ let state='clean',message='Sauber · bereit für eine Probe.';
+ if(filled){state='filled';message='Enthält Flüssigkeit. Vor dem Spülen zuerst in den Abfall entleeren.';}
+ else if(instrument.residue){state=u().needsRinse===id?'required':'used';message=(state==='required'?'Spülen erforderlich. ':'Benutzt. ')+(id==='probe'?'Vor einer anderen Probe mit Spülwasser reinigen.':'Vor einer anderen Lösung mit Spülwasser reinigen.');}
+ if(u().dock==='wash'&&!filled){const elapsed=u().rinseElapsed[id]||0;if(elapsed>=1200){state='clean';message='Spülen abgeschlossen. Bereit für die nächste Probe.';}else if(elapsed>0||u().rinsing){state='rinsing';message=(u().rinsing?'Spülen läuft: ':'Spülen pausiert: ')+Math.round(elapsed/12)+' %. '+(u().rinsing?'Weiter gedrückt halten.':'Zum Fortsetzen erneut gedrückt halten.');}}
+ if(el.textContent!==message)el.textContent=message;el.dataset.state=state;
+ if(instrument.residue&&u().dock!=='wash'){next.hidden=false;next.textContent=filled?'Zum Abfallbehälter':'Zur Spülstation';}
+}
+function control(){
+ const id=u().selected,at=u().dock;if(u().pending||!s().placed[id]||!tools.includes(id))return null;
+ if(u().blocked)return{action:'clear-station',label:label(u().blocked.occupant)+' ablegen',detail:'Platz für das gewählte Gerät schaffen'};
+ if(at==='wash'){const elapsed=u().rinseElapsed[id]||0,complete=elapsed>=1200;return{hold:'rinse',label:complete?'Spülen abgeschlossen':elapsed>0&&!u().rinsing?'Spülen fortsetzen':'Spülen',detail:complete?'Bereit für die nächste Probe':u().rinsing||elapsed>0?Math.round(elapsed/12)+' % · gedrückt halten':'Gedrückt halten · ca. 1 Sekunde'};}
+ if(id==='pipette'&&at)return{hold:at.startsWith('b-')?'draw':'dispense',label:at.startsWith('b-')?'Ansaugen':'Abgeben',detail:'Gedrückt halten · Loslassen stoppt'};
+ if(id==='dropper'&&at?.startsWith('b-'))return{hold:'draw',label:'Indikator ansaugen',detail:'Gedrückt halten · Loslassen stoppt'};
+ if(id==='dropper'&&at==='waste')return{hold:'dispense',label:'Rest entleeren',detail:'Gedrückt halten'};
+ if(id==='dropper'&&at)return{action:'drop',label:'1 Tropfen abgeben',detail:'Ein Klick oder Tipp = ein Tropfen'};
+ if(id==='probe'&&/^t[12]$/.test(at||''))return{action:'measure',label:u().reading?'Messwert stabilisiert sich …':'pH messen',detail:'Messung starten',disabled:u().reading};
+ return null;
+}
+function directControl(){
+ const c=control(),button=$('direct-control');button.hidden=true;if(!c)return;
+ button.dataset.holdKind=c.hold||'';button.dataset.action=c.action||'';button.disabled=!!c.disabled;if(c.hold!=='rinse'){button.classList.remove('rinse-complete');button.style.removeProperty('--rinse-progress');}
+ $('direct-label').textContent=c.label;$('direct-detail').textContent=c.detail;button.classList.toggle('is-held',!!pumpKind);rinseFeedback();
+
+}
+function rinseFeedback(){
+ const c=control(),percent=c?.hold==='rinse'?Math.round((u().rinseElapsed[u().selected]||0)/12):0;
+ document.querySelectorAll('[data-hold-kind=rinse]').forEach(b=>{b.style.setProperty('--rinse-progress',percent+'%');b.classList.toggle('rinse-complete',percent===100);if(c?.hold==='rinse'){const label=b.querySelector('.hold-label'),detail=b.querySelector('small');if(label)label.textContent=c.label;if(detail)detail.textContent=c.detail;}});
+}
+function scene(){
+ const svg=$('stage');const hit=Math.max(76,46/Math.max(.2,Math.min(svg.clientWidth/1000,svg.clientHeight/620)));let out='<defs><linearGradient id="bench-bg" x2="0" y2="1"><stop stop-color="#eef1e8"/><stop offset="1" stop-color="#dfe6d7"/></linearGradient><pattern id="bench-grid" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".7" fill="#b8c5ad" opacity=".28"/></pattern></defs><rect width="1000" height="620" fill="url(#bench-bg)"/><rect width="1000" height="620" fill="url(#bench-grid)"/>';
+ if(mode==='v2'){
+  out+='<rect x="280" y="2" width="450" height="60" rx="14" fill="#f6f8ee90" stroke="#bdc9b3" stroke-dasharray="4 5"/><text x="285" y="80" font-size="12" fill="#708366">PIPETTENABLAGE</text><path d="M20 325H980" stroke="#aebfa1" stroke-dasharray="5 6"/><text x="25" y="351" font-size="12" fill="#708366" letter-spacing="1">DREI VERGLEICHE NEBENEINANDER</text><text x="20" y="295" font-size="12" fill="#397285">SPÜLEN</text><text x="887" y="325" font-size="12" fill="#8b6647">ENTLEEREN</text>';
+  for(const id of ['p1','p2','p3']){const p=defaults(id);if(!s().placed[id])out+='<rect x="'+p.x+'" y="'+p.y+'" width="286" height="182" rx="30" stroke="#aebfa1" stroke-dasharray="5 6" fill="#f4f8ec66"/><text x="'+(p.x+143)+'" y="'+(p.y+95)+'" text-anchor="middle" font-size="17" fill="#809271">Petrischale '+id[1]+'</text>';}
+ }else out+='<rect x="515" y="55" width="325" height="240" rx="18" fill="#f6f8ee65" stroke="#bdc9b3" stroke-dasharray="4 5"/><text x="533" y="278" font-size="13" fill="#708366">GERÄTEABLAGE</text><text x="45" y="598" font-size="14" fill="#397285">SPÜLEN</text><text x="850" y="375" font-size="14" fill="#8b6647">ENTLEEREN</text>';
+ if(mode==='v1'&&!Object.keys(s().placed).some(k=>s().placed[k]))out+='<rect x="255" y="250" width="460" height="94" rx="18" stroke="#adbea1" fill="#f8faf099" stroke-dasharray="5 5"/><text x="485" y="291" text-anchor="middle" font-family="Georgia" font-size="25" fill="#809271">Deine Arbeitsfläche</text><text x="485" y="319" text-anchor="middle" font-size="14" fill="#829474">Geräte und Lösungen selbst platzieren</text>';
+ const draw=id=>{const p=pos(id),size=visualSize(id),selected=u().selected===id;return '<g data-item="'+id+'" tabindex="0" role="button" aria-label="'+safe(label(id))+'" transform="translate('+p.x+' '+p.y+')">'+(selected?'<rect class="selected-outline" x="-5" y="-5" width="'+(size.w+10)+'" height="'+(size.h+10)+'" rx="12"/>':'')+(horizontal(id)?'<g transform="translate(0 '+V.size(id).w+') rotate(-90)">'+V.svg(id,s(),u())+'</g><rect class="pipette-hit" x="-5" y="'+Math.max(-p.y,size.h/2-hit/2)+'" width="'+(size.w+10)+'" height="'+hit+'" rx="15"/>':V.svg(id,s(),u()))+((id==='pipette'||id==='dropper')&&!horizontal(id)?'<g data-pump="'+id+'" role="button" tabindex="0" aria-label="Gummiball betätigen: '+safe(label(id))+'"><rect class="pipette-hit" x="'+(size.w/2-hit/2)+'" y="'+(22-hit/2)+'" width="'+hit+'" height="'+hit+'" rx="24"/>'+ (selected?'<circle cx="'+(size.w/2)+'" cy="22" r="29" fill="none" stroke="#75954e" stroke-dasharray="3 4" pointer-events="none"/>':'')+'</g>':'')+'</g>';};
+ for(const id of ['wash','waste'])out+=draw(id);
+ const visible=Object.keys(s().placed).filter(k=>s().placed[k]&&!tools.includes(k));visible.sort((a,b)=>a==='rack'?-1:b==='rack'?1:0);for(const id of visible)out+=draw(id);
+ if(s().placed.probe){const a=s().probe.connected?{x:pos('meter').x+32,y:pos('meter').y+12}:pos('plug'),b=pos('probe');out+='<path d="M'+a.x+' '+a.y+' C'+(a.x-40)+' '+(a.y-80)+' '+(b.x-28)+' '+(b.y-40)+' '+(b.x+16)+' '+(b.y+5)+'" fill="none" stroke="#4e6255" stroke-width="4" pointer-events="none"/>';
+ if(!s().probe.connected)out+='<g data-plug="probe" tabindex="0" role="button" aria-label="Elektrodenstecker: zur Buchse des pH-Meters ziehen" transform="translate('+a.x+' '+a.y+')"><rect x="-32" y="-24" width="90" height="62" rx="12" fill="#f8faf0" stroke="#a0b389"/><path d="M-12 0h27v18h-27Z" fill="#3c5847"/><path d="M15 4h16v10H15Z" fill="#b4c2b8" stroke="#637b68"/><text x="9" y="31" font-size="10" text-anchor="middle" fill="#47633b">Stecker</text></g>';}
+ if(tools.includes(u().selected)&&s().placed[u().selected])for(const t of availableTargets())if(t.id===u().dock)out+='<rect class="target-glow" x="'+t.x+'" y="'+t.y+'" width="'+t.w+'" height="'+t.h+'" rx="12"/>';
+ for(const id of tools)if(s().placed[id])out+=draw(id);
+ if(u().flow&&u().dock){const t=targets().find(t=>t.id===u().dock);if(t){out+='<g transform="translate('+t.tip.x+' '+(t.tip.y+5)+')"><ellipse class="flow-drop '+(pumpKind==='draw'?'aspirating':'')+'" rx="3" ry="5"/><ellipse class="spill-ring" rx="12" ry="4"/></g>';}}
+ svg.innerHTML=out;svg.classList.toggle('is-grabbing',!!gesture?.moved);directControl();
+}
+function tray(){const ids=u().tray==='equipment'?allowed():chemicals().map(x=>'b-'+x);$('tray').innerHTML=ids.map(id=>'<button class="material '+(s().placed[id]?'placed ':'')+(u().selected===id?'active':'')+'" data-material="'+id+'" aria-pressed="'+(u().selected===id)+'">'+V.icon(id)+'<span>'+safe(label(id))+'</span></button>').join('');document.querySelectorAll('[data-tray]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.tray===u().tray)));}
+function actionButton(action,text,extra=''){return '<button data-action="'+action+'" '+extra+'>'+text+'</button>';}
+function readout(){const id=u().selected;let text='';if(id==='pipette')text='<span class="readout">'+s().pipette.volume.toLocaleString('de-DE',{maximumFractionDigits:2})+'<small>mL / 5 mL</small></span>'+(s().pipette.chemical?'<span class="readout">'+safe(chem(s().pipette.chemical))+'</span>':'');if(id==='dropper')text='<span class="readout">'+s().dropper.drops+'<small>Tropfen verfügbar</small></span>';if(id==='meter'||id==='probe')text='<span class="readout">pH '+(!s().probe.power?'AUS':u().reading?'…':!s().probe.connected?'NICHT VERBUNDEN':s().probe.reading==null?'— —':Number(s().probe.reading).toLocaleString('de-DE',{minimumFractionDigits:1,maximumFractionDigits:1}))+'</span>';if(s().vessels[id]&&s().placed[id]){const v=s().vessels[id];text='<span class="readout">'+v.volume.toLocaleString('de-DE')+'<small>mL</small></span><span class="readout">'+v.drops+'<small>Indikatortropfen</small></span>';}if(/^p[123]$/.test(id)){for(const side of ['l','r']){const v=s().vessels[id+side];text+='<span class="readout">'+(side==='l'?'A':'B')+': '+v.volume.toLocaleString('de-DE')+' mL · '+v.drops+' Tr.</span>';}}$('tool-readout').innerHTML=text;}
+function inspector(){
+ const id=u().selected;let desc='',actions='';$('selected-name').textContent=id?label(id):'Hand';
+ if(!id){desc='Mit der Hand Geräte oder Flaschen greifen und bewegen. Materialien aus der Ablage aufstellen.';actions='<p class="muted">Wähle zuerst ein Gerät oder eine Lösung.</p>';}
+ else if(u().pending){desc='Auf der Arbeitsfläche ablegen. Reagenzgläser werden in den Ständer gesetzt.';actions=actionButton('place','Aufstellen','class="primary"');}
+ else if(id.startsWith('b-')){const c=id.slice(2);desc=(mode==='v2'&&!['btb','universal'].includes(c)?'c₀ = 1 mol/L · '+(c==='ethanol'?'unvergällt · ':''):'')+(s().bottlesOpen[c]?'Flasche geöffnet.':'Flasche verschlossen.');actions=actionButton('cap',s().bottlesOpen[c]?'Flasche verschließen':'Verschluss abnehmen','class="primary"')+actionButton('store-bottle','In die Materialablage zurücklegen');desc+=' Nach Benutzung verschließen und zurücklegen oder in die Materialablage ziehen.';}
+ else if(id==='pipette'||id==='dropper'){
+  desc=id==='pipette'?'Am Schaft greifen und zum Einsatzort führen. Zum Ansaugen oder Abgeben den Gummiball bzw. die Schaltfläche gedrückt halten.':'Zum Füllen gedrückt halten. Am Probengefäß jeden Tropfen einzeln abgeben.';
+ }
+ else if(id==='meter'){desc=s().probe.connected?'Elektrode angeschlossen. Gerät einschalten und die Probe messen.':'Die Elektrode ist noch nicht angeschlossen. Führe ihren Stecker zur Buchse.';actions=actionButton('power',s().probe.power?'Gerät ausschalten':'Gerät einschalten');if(s().placed.probe&&!s().probe.connected)actions+=actionButton('connect','Elektrode anschließen','class="primary"');}
+ else if(id==='probe'){
+  desc=!s().probe.connected?'Stecker in die Buchse des pH-Meters stecken. Danach Schutzkappe abnehmen.':s().probe.cap?'Angeschlossen. Vor dem Eintauchen die Schutzkappe abnehmen.':'Elektrode in die Probe führen. Vor einer anderen Probe mit Spülwasser reinigen.';
+  if(!s().probe.connected)actions=actionButton('connect','Elektrode anschließen','class="primary"');
+  actions+=actionButton('probe-cap',s().probe.cap?'Schutzkappe abnehmen':'Schutzkappe aufsetzen');
+  if(s().probe.connected)actions+=actionButton('disconnect','Stecker abziehen');
+  if(!s().probe.power)actions+=actionButton('power','Messgerät einschalten');
+ }
+ else if(id==='rack'){desc='Reagenzgläser einzeln aus der Ablage in den Ständer einsetzen.';}
+ else if(/^p[123]$/.test(id)){desc='Zwei getrennte Kammern. Lösungen und Indikator lassen sich in jede Hälfte einzeln geben.';actions=actionButton('empty-left','Hälfte A leeren')+actionButton('empty-right','Hälfte B leeren');}
+ else if(/^t[12]$/.test(id)){const v=s().vessels[id];desc=v.chemical?chem(v.chemical)+' · '+v.volume.toLocaleString('de-DE')+' mL.':'Leeres Reagenzglas.';actions=actionButton('empty-vessel','Probe verwerfen');}
+ else if(id==='wash'){desc='Leere Pipetten und die Elektrode können hier gespült werden.';}
+ else if(id==='waste'){desc='Restflüssigkeiten gezielt hier abgeben.';}
+ const c=control();if(c)actions=(c.hold?'<button data-hold-kind="'+c.hold+'" class="hold primary"><span class="hold-label">'+c.label+'</span><small>'+c.detail+'</small></button>':actionButton(c.action,c.label,'class="primary" '+(c.disabled?'disabled':'')))+actions;$('selected-description').textContent=desc;$('actions').innerHTML=actions;readout();hygiene();directControl();
+ const activeTool=tools.includes(id)&&s().placed[id];$('target-description').textContent=activeTool?(u().blocked?'Belegt: '+label(u().blocked.occupant):u().dock?'Aktuell: '+(targets().find(t=>t.id===u().dock)?.label||u().dock):'Gerät an den gewünschten Einsatzort führen.'):'Gerät greifen, dann den Einsatzort wählen.';
+ $('targets').innerHTML=activeTool?availableTargets().map(t=>'<button data-target-button="'+t.id+'" aria-pressed="'+(u().dock===t.id)+'">'+safe(t.label)+'</button>').join(''):'';$('return-tool').hidden=!activeTool;
+}
+function render(){document.body.dataset.mode=mode;$('hand-tool').setAttribute('aria-pressed',String(!u().selected));scene();tray();inspector();$('bench-title').textContent=mode==='v1'?'pH-Vergleich':'Organische Säuren';document.querySelectorAll('[data-mode]').forEach(b=>b.setAttribute('aria-current',String(b.dataset.mode===mode)));$('stage-scroll').classList.toggle('zoomed',u().zoom);$('zoom-toggle').setAttribute('aria-pressed',String(u().zoom));$('zoom-toggle').innerHTML=u().zoom?'Gesamtansicht':'Lupe <span aria-hidden="true">＋</span>';}
+function flowFlash(){const view=u();clearTimeout(flashTimer);view.flow=true;scene();flashTimer=setTimeout(()=>{view.flow=false;scene();},450);}
+function transfer(kind){
+ const id=u().selected,at=u().dock;let r;
+ if(kind==='rinse'){
+  const progress=Math.min(1,(performance.now()-rinseStart)/1200);u().rinseElapsed[id]=progress*1200;u().rinsing=true;u().flow=true;scene();hygiene();
+  if(progress<1)return true;r=M.rinse(s(),id);if(r.ok){u().needsRinse=null;stopHold();status('Spülen abgeschlossen. '+label(id)+' ist für die nächste Probe bereit.');}else{u().rinseElapsed[id]=0;stopHold();notify(r.message);}return r.ok;
+ }
+ if(kind==='draw')r=M.draw(s(),id,at?.slice(2),id==='pipette'?.25:1);
+ else r=M.dispense(s(),id,at,id==='pipette'?.25:1);
+ if(!r.ok){stopHold();notify(r.message);return false;}
+ u().flow=true;scene();readout();status((kind==='draw'?'Aufgenommen: ':'Noch im Gerät: ')+(id==='pipette'?s().pipette.volume.toLocaleString('de-DE')+' mL':s().dropper.drops+' Tropfen')+'. Loslassen stoppt.');
+ const amount=id==='pipette'?s().pipette.volume:s().dropper.drops,max=id==='pipette'?5:6;
+ if((kind==='draw'&&amount>=max)||(kind==='dispense'&&amount<=0)){stopHold();status(kind==='draw'?'Pipette gefüllt. Zum Probengefäß führen.':'Flüssigkeit abgegeben. Vor einer anderen Lösung spülen.');}
+ return true;
+}
+function stopHold(){
+ const rinsing=pumpKind==='rinse',active=!!pumpKind||u().rinsing;clearInterval(holdTimer);holdTimer=null;pumpKind=null;u().flow=false;u().rinsing=false;
+ $('stage').classList.remove('is-held');$('direct-control').classList.remove('is-held');document.querySelectorAll('#actions .is-held').forEach(b=>b.classList.remove('is-held'));
+ if(active){scene();readout();hygiene();if(rinsing&&(u().rinseElapsed[u().selected]||0)<1200)status('Spülen pausiert. Erneut gedrückt halten, um fortzusetzen.');}
+}
+function beginHold(kind,anchor,pointer){
+ stopHold();const id=u().selected,at=u().dock;if(!tools.includes(id)||!at)return;
+ if(kind==='rinse'&&((id==='pipette'&&s().pipette.volume>0)||(id==='dropper'&&s().dropper.drops>0))){u().needsRinse=id;notify('Noch Flüssigkeit im Gerät: zuerst zum Abfallbehälter führen und entleeren. Danach spülen.');hygiene();return;}
+ if(kind==='rinse'&&at!=='wash')return;
+ if(kind==='rinse'&&id==='probe'&&s().probe.cap){notify('Nimm vor dem Spülen die Schutzkappe ab.');return;}
+ holdPointer=pointer;holdAnchor=anchor;pumpKind=kind;if((u().rinseElapsed[id]||0)>=1200)u().rinseElapsed[id]=0;rinseStart=performance.now()-(u().rinseElapsed[id]||0);anchor?.classList.add('is-held');
+ if(transfer(kind)&&pumpKind)holdTimer=setInterval(()=>transfer(kind),kind==='rinse'?100:id==='dropper'?220:130);
+}
+function action(action){
+ const id=u().selected,at=u().dock;let r;
+ if(action==='place'){place(id);return;}
+ if(action==='store-bottle'){returnBottle(id);return;}
+ if(action==='connect'){connectProbe();return;}
+ if(action==='disconnect'){if(/^t[12]$/.test(u().docks.probe||'')){notify('Nimm die Elektrode vor dem Abziehen des Steckers aus der Probe.');return;}r=M.disconnectProbe(s());}
+ if(action==='clear-station'){const blocked=u().blocked;if(blocked){park(blocked.occupant);u().blocked=null;dock(blocked.target);}return;}
+ if(action==='cap'){if(tools.some(tool=>u().docks[tool]===id)){notify('Nimm die Pipette zuerst aus der Flasche, bevor du sie verschließt.');return;}r=M.toggleBottle(s(),id.slice(2));}
+ if(action==='draw-dropper'){r=M.draw(s(),'dropper',at?.slice(2));if(r.ok)flowFlash();}
+ if(action==='drop'){r=M.dispense(s(),'dropper',at,1);if(r.ok)flowFlash();}
+ if(action==='empty-dropper'){const count=s().dropper.drops;for(let i=0;i<Math.max(1,count);i++){r=M.dispense(s(),'dropper','waste',1);if(!r.ok)break;}if(r?.ok)flowFlash();}
+ 
+ if(action==='probe-cap'){if(['t1','t2'].includes(u().docks.probe)){notify('Nimm die Elektrode zuerst aus der Probe, bevor du die Schutzkappe aufsetzt.');return;}cancelMeasurement();M.withdrawProbe(s());r=M.toggleProbeCap(s());}
+ if(action==='power'){cancelMeasurement();r=M.togglePower(s());}
+ if(action==='empty-left')r=M.empty(s(),id+'l');
+ if(action==='empty-right')r=M.empty(s(),id+'r');
+ if(action==='empty-vessel')r=u().docks.probe===id?{ok:false,message:'Nimm die Elektrode vor dem Entleeren aus der Probe.'}:M.empty(s(),id);
+ if(action==='measure'){
+  cancelMeasurement();r=M.measure(s(),at);if(r.ok){const reading=r.value??s().probe.reading;s().probe.reading=null;u().reading=true;const activeMode=mode,target=at;measureTimer=setTimeout(()=>{measureTimer=null;if(mode!==activeMode||u().docks.probe!==target){views[activeMode].reading=false;return;}s().probe.reading=reading;u().reading=false;status('Messwert stabil.');render();},2500);}
+ }
+ if(r)result(r);render();
+}
+$('tray').addEventListener('pointerdown',e=>{const b=e.target.closest('[data-material]');if(!b||e.button>0)return;gesture={id:b.dataset.material,startX:e.clientX,startY:e.clientY,moved:false,source:'tray',pointer:e.pointerId};b.setPointerCapture?.(e.pointerId);});
+$('tray').addEventListener('click',e=>{const b=e.target.closest('[data-material]');if(b&&e.detail===0)choose(b.dataset.material);});
+$('stage').addEventListener('pointerdown',e=>{
+ if(e.button>0)return;const item=e.target.closest('[data-item]'),plug=e.target.closest('[data-plug]'),p=point(e),id=plug?'plug':item?.dataset.item||null,origin=id?pos(id):null;
+ gesture={id,startX:e.clientX,startY:e.clientY,moved:false,source:'stage',pointer:e.pointerId,offset:origin&&p?{x:p.x-origin.x,y:p.y-origin.y}:null,cap:e.target.closest('[data-action=cap]')?.dataset.chemical,pump:e.target.closest('[data-pump]')?.dataset.pump,rinse:!!e.target.closest('[data-rinse]'),connect:!!e.target.closest('[data-connect]')};
+ $('stage').setPointerCapture?.(e.pointerId);
+ if(gesture.rinse&&control()?.hold==='rinse'){e.preventDefault();gesture.pumping=true;beginHold('rinse',$('stage'),e.pointerId);return;}
+ if(gesture.pump){if(u().selected!==gesture.pump)choose(gesture.pump);const c=control();if(c?.hold){gesture.pumping=true;beginHold(c.hold,$('stage'),e.pointerId);}}
+});
+document.addEventListener('pointermove',e=>{
+ if(!gesture||e.pointerId!==gesture.pointer)return;const g=gesture;
+ if(g.rinse&&g.pumping)return;
+ if(Math.hypot(e.clientX-g.startX,e.clientY-g.startY)>6&&!g.moved){g.moved=true;stopHold();g.pumping=false;if(g.id&&g.id!=='plug'){if(horizontal(g.id)){g.offset=g.offset?{x:V.size(g.id).w-g.offset.y,y:g.offset.x}:{x:V.size(g.id).w/2,y:V.size(g.id).h/2};}choose(g.id);}}
+ if(!g.moved||!g.id)return;e.preventDefault();const p=point(e);document.querySelector('.materials').classList.toggle('return-hover',g.source==='stage'&&g.id.startsWith('b-')&&overMaterials(e));
+ if(g.source==='stage'&&(s().placed[g.id]||g.id==='plug')&&!['t1','t2'].includes(g.id)){g.preview=dragOrigin(g,p);scene();}
+ const ghost=$('drag-ghost');ghost.hidden=false;ghost.innerHTML='<span aria-hidden="true">✋</span><span>'+safe(label(g.id))+'</span>';ghost.style.left=e.clientX+'px';ghost.style.top=e.clientY+'px';
+},{passive:false});
+document.addEventListener('pointerup',e=>{
+ if(holdPointer===e.pointerId){stopHold();holdPointer=null;holdAnchor=null;}if(!gesture||gesture.pointer!==e.pointerId)return;const g=gesture;gesture=null;$('drag-ghost').hidden=true;document.querySelector('.materials').classList.remove('return-hover');
+ if(g.source==='stage'&&g.moved&&g.id?.startsWith('b-')&&overMaterials(e)){returnBottle(g.id);return;}
+ const rect=$('stage').getBoundingClientRect(),inside=e.clientX>=rect.left&&e.clientX<=rect.right&&e.clientY>=rect.top&&e.clientY<=rect.bottom,p=point(e);
+ if(g.source==='tray'&&!g.moved){choose(g.id);return;}
+ if(g.source==='tray'&&g.moved){if(inside&&p){if(!s().placed[g.id]){if(place(g.id,p)&&tools.includes(g.id)){const t=dropTarget(g.id,p,pos(g.id));if(t)dock(t.id);}}else{choose(g.id);moveItem(g.id,p,dragOrigin(g,p));}}return;}
+ if(g.source!=='stage'||!p)return;
+ if(g.id==='plug'){if(g.moved){const meter=targets().find(t=>t.id==='meter');if(meter&&p.x>=meter.x&&p.x<=meter.x+meter.w&&p.y>=meter.y&&p.y<=meter.y+meter.h)connectProbe();else{u().coords.plug=g.preview||p;render();}}else{choose('probe');status('Stecker zur Buchse ziehen oder „Elektrode anschließen“ wählen.');}return;}
+ if(g.connect){connectProbe();return;}
+ if(g.pumping)return;
+ if(g.moved&&g.id&&!['wash','waste'].includes(g.id)){if(inside)moveItem(g.id,p,g.preview||dragOrigin(g,p));else render();return;}
+ if(g.pump){if(u().selected!==g.pump)choose(g.pump);const c=control();if(c?.action)action(c.action);else if(!c)status('Pipette am Schaft greifen und zur geöffneten Flasche führen.');return;}
+ if(u().pending){place(u().pending,p);return;}
+ if(tools.includes(u().selected)&&s().placed[u().selected]){const target=targetAt(p);if(target){dock(target.id);return;}}
+ if(g.cap){choose('b-'+g.cap);action('cap');return;}
+ if(g.id)choose(g.id);
+});
+function moveItem(id,p,origin){
+ if(!p)return;
+ if(!tools.includes(id)&&Object.values(u().docks).some(t=>t===id||(/^p[123]$/.test(id)&&t.startsWith(id))||(id==='rack'&&['t1','t2'].includes(t)))){notify('Nimm das Gerät zuerst aus dem Gefäß, bevor du den Aufbau verschiebst.');render();return;}
+ if(mode==='v2'&&/^p[123]$/.test(id)){u().coords[id]=defaults(id);render();status(label(id)+' auf ihrem Vergleichsplatz abgelegt.');return;}
+ const size=V.size(id),base=origin||{x:p.x-size.w/2,y:p.y-size.h/2};
+ if(tools.includes(id)){const t=dropTarget(id,p,base);if(t){dock(t.id);render();return;}}
+ if(['t1','t2'].includes(id)){status('Das Reagenzglas steht im Ständer.');render();return;}
+ if(id==='probe'){cancelMeasurement();M.withdrawProbe(s());}
+ delete u().rinseElapsed[id];delete u().parked[id];
+ u().coords[id]={x:Math.max(5,Math.min(995-size.w,base.x)),y:Math.max(8,Math.min(610-size.h,base.y))};u().dock=null;delete u().docks[id];render();
+}
+function cancelGesture(){document.querySelector('.materials').classList.remove('return-hover');gesture=null;holdPointer=null;holdAnchor=null;$('drag-ghost').hidden=true;stopHold();}
+document.addEventListener('pointercancel',()=>{cancelGesture();render();});window.addEventListener('blur',()=>{cancelGesture();cancelMeasurement();render();});document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelGesture();cancelMeasurement();render();}});
+function bindControl(container){
+ container.addEventListener('contextmenu',e=>{if(e.target.closest('[data-hold-kind]'))e.preventDefault();});
+ container.addEventListener('pointerdown',e=>{const b=e.target.closest('[data-hold-kind]');if(!b||!b.dataset.holdKind||e.button>0)return;e.preventDefault();b.setPointerCapture?.(e.pointerId);beginHold(b.dataset.holdKind,b,e.pointerId);});
+ container.addEventListener('click',e=>{const b=e.target.closest('[data-action]');if(b?.dataset.action&&!b.dataset.holdKind)action(b.dataset.action);});
+ container.addEventListener('keydown',e=>{const b=e.target.closest('[data-hold-kind]');if(b?.dataset.holdKind&&['Enter',' '].includes(e.key)&&!e.repeat){e.preventDefault();beginHold(b.dataset.holdKind,b,'keyboard');}});
+}
+bindControl($('actions'));bindControl($('direct-control'));
+document.addEventListener('keyup',e=>{if(['Enter',' '].includes(e.key)){stopHold();holdPointer=null;holdAnchor=null;}});
+document.addEventListener('lostpointercapture',e=>{if(holdPointer===e.pointerId){stopHold();holdPointer=null;holdAnchor=null;}});
+$('rinse-next').addEventListener('click',()=>{const id=u().selected,filled=id==='pipette'?s().pipette.volume>0:id==='dropper'?s().dropper.drops>0:false;dock(filled?'waste':'wash');});
+$('stage-scroll').addEventListener('scroll',directControl);window.addEventListener('resize',()=>{if(!gesture)scene();});
+$('hand-tool').addEventListener('click',hand);
+$('targets').addEventListener('click',e=>{const b=e.target.closest('[data-target-button]');if(b)dock(b.dataset.targetButton);});
+$('stage').addEventListener('contextmenu',e=>{if(e.target.closest('[data-rinse],[data-pump]'))e.preventDefault();});
+$('stage').addEventListener('keydown',e=>{if(e.repeat)return;if(['Enter',' '].includes(e.key)){e.preventDefault();const item=e.target.closest('[data-item]'),bulb=e.target.closest('[data-pump]');if(e.target.closest('[data-rinse]')&&control()?.hold==='rinse'){beginHold('rinse',$('stage'),'keyboard');}else if(bulb){if(u().selected!==bulb.dataset.pump)choose(bulb.dataset.pump);const c=control();if(c?.hold)beginHold(c.hold,$('stage'),'keyboard');else if(c?.action)action(c.action);}else if(e.target.closest('[data-plug]')||e.target.closest('[data-connect]')){connectProbe();}else if(e.target.matches('[data-action=cap]')){choose('b-'+e.target.dataset.chemical);action('cap');}else if(item)choose(item.dataset.item);else if(u().pending)place(u().pending);}});
+$('return-tool').addEventListener('click',()=>{stopHold();park(u().selected);u().selected=null;u().dock=null;render();status('Gerät abgelegt.');});
+document.querySelectorAll('[data-tray]').forEach(b=>b.addEventListener('click',()=>{u().tray=b.dataset.tray;tray();}));
+document.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>{if(mode===b.dataset.mode)return;cancelGesture();cancelMeasurement();mode=b.dataset.mode;$('notice').hidden=true;render();status('Versuchsbereich gewechselt. Dein Aufbau bleibt erhalten.');}));
+$('notice-close').addEventListener('click',()=>{$('notice').hidden=true;});
+$('zoom-toggle').addEventListener('click',()=>{cancelGesture();u().zoom=!u().zoom;render();});
+for(const [open,dialog] of [['help-open','help-dialog'],['reset-open','reset-dialog'],['model-open','model-dialog']])$(open).addEventListener('click',()=>{cancelGesture();$(dialog).showModal();});
+document.querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click',()=>$(b.dataset.close).close()));
+$('reset-confirm').addEventListener('click',()=>{cancelGesture();cancelMeasurement();states[mode]=M.createState(mode);views[mode]=makeUI();$('reset-dialog').close();$('notice').hidden=true;render();status('Neue Arbeitsfläche bereit.');});
+render();
+})();
+</script></body></html>
