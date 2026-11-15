@@ -56,55 +56,92 @@
 .materials.return-hover{outline:3px solid #64844d;outline-offset:-3px;background:#e3efcf;box-shadow:inset 0 0 0 6px #e3efcf}
 
 /* Experiment 2: a wider comparison bench; all HTML controls stay outside it. */
-body[data-mode="v2"] .lab{grid-template-columns:minmax(0,1fr) 232px;grid-template-rows:218px minmax(0,1fr);gap:10px}
-body[data-mode="v2"] .workbench{grid-column:1;grid-row:1/3}
-body[data-mode="v2"] .materials{grid-column:2;grid-row:1;display:flex;flex-direction:column;padding:9px;gap:6px;min-height:0}
-body[data-mode="v2"] .section-head{display:flex;align-items:center;justify-content:space-between}
-body[data-mode="v2"] .section-head h2{font-size:12px;margin:0}
-body[data-mode="v2"] .section-head>span{font-size:9px}
-body[data-mode="v2"] .tray-tabs{display:grid;grid-template-columns:1fr 1fr;flex:none}
-body[data-mode="v2"] #tray{display:grid;grid-template-columns:1fr 1fr;gap:5px;max-height:none;overflow:auto;flex:1}
-body[data-mode="v2"] .material{min-height:66px;flex-direction:column;justify-content:center;gap:3px;font-size:10px;padding:5px;text-align:center}
-body[data-mode="v2"] .material svg{width:38px;height:26px}
-body[data-mode="v2"] .inspector{grid-column:2;grid-row:2;padding:10px}
-body[data-mode="v2"] .selection-label{font-size:8px;min-height:22px}
-body[data-mode="v2"] .selection h2{font-size:16px;margin-bottom:6px}
-body[data-mode="v2"] #selected-description{font-size:11px;line-height:1.4}
-body[data-mode="v2"] .bench-head{padding:8px 12px}
+body:is([data-mode="v2"],[data-mode="v3"]) .lab{grid-template-columns:minmax(0,1fr) 232px;grid-template-rows:218px minmax(0,1fr);gap:10px}
+body:is([data-mode="v2"],[data-mode="v3"]) .workbench{grid-column:1;grid-row:1/3}
+body:is([data-mode="v2"],[data-mode="v3"]) .materials{grid-column:2;grid-row:1;display:flex;flex-direction:column;padding:9px;gap:6px;min-height:0}
+body:is([data-mode="v2"],[data-mode="v3"]) .section-head{display:flex;align-items:center;justify-content:space-between}
+body:is([data-mode="v2"],[data-mode="v3"]) .section-head h2{font-size:12px;margin:0}
+body:is([data-mode="v2"],[data-mode="v3"]) .section-head>span{font-size:9px}
+body:is([data-mode="v2"],[data-mode="v3"]) .tray-tabs{display:grid;grid-template-columns:1fr 1fr;flex:none}
+body:is([data-mode="v2"],[data-mode="v3"]) #tray{display:grid;grid-template-columns:1fr 1fr;gap:5px;max-height:none;overflow:auto;flex:1}
+body:is([data-mode="v2"],[data-mode="v3"]) .material{min-height:66px;flex-direction:column;justify-content:center;gap:3px;font-size:10px;padding:5px;text-align:center}
+body:is([data-mode="v2"],[data-mode="v3"]) .material svg{width:38px;height:26px}
+body:is([data-mode="v2"],[data-mode="v3"]) .inspector{grid-column:2;grid-row:2;padding:10px}
+body:is([data-mode="v2"],[data-mode="v3"]) .selection-label{font-size:8px;min-height:22px}
+body:is([data-mode="v2"],[data-mode="v3"]) .selection h2{font-size:16px;margin-bottom:6px}
+body:is([data-mode="v2"],[data-mode="v3"]) #selected-description{font-size:11px;line-height:1.4}
+body:is([data-mode="v2"],[data-mode="v3"]) .bench-head{padding:8px 12px}
 #direct-control{display:none!important}
 @media(min-width:900px) and (min-height:600px){
- body[data-mode="v2"] .topbar{height:50px}
- body[data-mode="v2"] main{height:calc(100dvh - 50px);padding-top:7px}
- body[data-mode="v2"] .tabs{margin-bottom:7px}
- body[data-mode="v2"] .tabs button{min-height:52px;padding:6px 12px}
- body[data-mode="v2"] .bench-footer{min-height:36px;padding:6px 10px}
+ body:is([data-mode="v2"],[data-mode="v3"]) .topbar{height:50px}
+ body:is([data-mode="v2"],[data-mode="v3"]) main{height:calc(100dvh - 50px);padding-top:7px}
+ body:is([data-mode="v2"],[data-mode="v3"]) .tabs{margin-bottom:7px}
+ body:is([data-mode="v2"],[data-mode="v3"]) .tabs button{min-height:52px;padding:6px 12px}
+ body:is([data-mode="v2"],[data-mode="v3"]) .bench-footer{min-height:36px;padding:6px 10px}
 }
-@media(max-width:1100px) and (min-width:900px){body[data-mode="v2"] .lab{grid-template-columns:minmax(0,1fr) 206px}body[data-mode="v2"] .section-head>span{display:none}body[data-mode="v2"] .bench-head h1{font-size:20px}}
+@media(max-width:1100px) and (min-width:900px){body:is([data-mode="v2"],[data-mode="v3"]) .lab{grid-template-columns:minmax(0,1fr) 206px}body:is([data-mode="v2"],[data-mode="v3"]) .section-head>span{display:none}body:is([data-mode="v2"],[data-mode="v3"]) .bench-head h1{font-size:20px}}
 @media(max-width:899px){
- body[data-mode="v2"] .lab{grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto auto}
- body[data-mode="v2"] .workbench{grid-column:1;grid-row:1}
- body[data-mode="v2"] .stage-scroll{height:auto;min-height:0;aspect-ratio:1000/620;flex:none}
- body[data-mode="v2"] #stage{height:100%;min-height:0}
- body[data-mode="v2"] .materials{grid-column:1;grid-row:2;display:grid;grid-template-columns:115px minmax(0,1fr);gap:5px 9px}
- body[data-mode="v2"] .section-head{grid-column:1;grid-row:1}
- body[data-mode="v2"] .section-head>span{display:none}
- body[data-mode="v2"] .tray-tabs{grid-column:1;grid-row:2}
- body[data-mode="v2"] #tray{grid-column:2;grid-row:1/3;display:flex;overflow:auto}
- body[data-mode="v2"] .material{flex:0 0 95px;min-height:72px}
- body[data-mode="v2"] .inspector{grid-column:1;grid-row:3;display:grid;grid-template-columns:1fr 1fr;gap:0 15px;overflow:visible}
- body[data-mode="v2"] .selection{grid-column:1;grid-row:1/3}
- body[data-mode="v2"] .handgrips{grid-column:2;grid-row:1}
- body[data-mode="v2"] .location{grid-column:2;grid-row:2}
- body[data-mode="v2"] .short-help{grid-column:1/-1}
+ body:is([data-mode="v2"],[data-mode="v3"]) .lab{grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto auto}
+ body:is([data-mode="v2"],[data-mode="v3"]) .workbench{grid-column:1;grid-row:1}
+ body:is([data-mode="v2"],[data-mode="v3"]) .stage-scroll{height:auto;min-height:0;aspect-ratio:1000/620;flex:none}
+ body:is([data-mode="v2"],[data-mode="v3"]) #stage{height:100%;min-height:0}
+ body:is([data-mode="v2"],[data-mode="v3"]) .materials{grid-column:1;grid-row:2;display:grid;grid-template-columns:115px minmax(0,1fr);gap:5px 9px}
+ body:is([data-mode="v2"],[data-mode="v3"]) .section-head{grid-column:1;grid-row:1}
+ body:is([data-mode="v2"],[data-mode="v3"]) .section-head>span{display:none}
+ body:is([data-mode="v2"],[data-mode="v3"]) .tray-tabs{grid-column:1;grid-row:2}
+ body:is([data-mode="v2"],[data-mode="v3"]) #tray{grid-column:2;grid-row:1/3;display:flex;overflow:auto}
+ body:is([data-mode="v2"],[data-mode="v3"]) .material{flex:0 0 95px;min-height:72px}
+ body:is([data-mode="v2"],[data-mode="v3"]) .inspector{grid-column:1;grid-row:3;display:grid;grid-template-columns:1fr 1fr;gap:0 15px;overflow:visible}
+ body:is([data-mode="v2"],[data-mode="v3"]) .selection{grid-column:1;grid-row:1/3}
+ body:is([data-mode="v2"],[data-mode="v3"]) .handgrips{grid-column:2;grid-row:1}
+ body:is([data-mode="v2"],[data-mode="v3"]) .location{grid-column:2;grid-row:2}
+ body:is([data-mode="v2"],[data-mode="v3"]) .short-help{grid-column:1/-1}
 }
 .handgrips{position:sticky;top:-12px;z-index:2;background:#fafbf5;padding:1px 0 10px;border-bottom:1px solid var(--line)}
 #return-tool{width:100%;margin-top:7px;font-size:12px}
-@media(max-width:899px){body[data-mode="v2"] .handgrips{position:static}}
+@media(max-width:899px){body:is([data-mode="v2"],[data-mode="v3"]) .handgrips{position:static}}
+
+.tabs button{min-width:0}.tabs strong{overflow-wrap:break-word}@media(max-width:1100px){.tabs button{column-gap:6px;padding:7px 9px}.tabs small{font-size:8px;padding-right:6px}.tabs strong{font-size:14px}}@media(max-width:599px){.tabs{gap:5px}.tabs button{padding:8px 6px}.tabs small{display:block;grid-row:auto;border:0;padding:0;font-size:9px}.tabs span{display:none}.tabs strong{font-size:12px}.topbar .brand{font-size:20px}}
+/* Keep every target reachable when the tablet inspector is short. */
+body:is([data-mode="v2"],[data-mode="v3"]) .handgrips{position:static}
+#actions .hold:hover:not(:disabled){background:#e4efca;color:#26442f}
+#actions .hold.is-held:hover:not(:disabled){background:#b9d48d;color:#26442f}
+
+/* Reagi owns a bounded row; the character and speech never cover apparatus. */
+.reagi{flex:none;display:grid;grid-template-columns:100px minmax(0,1fr) 36px;align-items:center;gap:8px;min-height:76px;height:76px;margin:0 0 7px;padding:0 9px 0 0;position:relative;color:#294b3e;background:#f8faf2;border:1px solid #d4dfca;border-radius:12px}
+.reagi-character{height:74px;min-height:0;width:100px;padding:0 2px;display:flex;align-items:center;justify-content:center;position:relative;flex-direction:column;border:0;background:transparent!important;cursor:pointer;touch-action:manipulation}
+.reagi-character:active{transform:none}
+.reagi-character svg{display:block;width:89px;height:72px;overflow:visible;flex:none;margin-top:-3px}
+.reagi-character>span{position:absolute;left:1px;top:3px;font:700 8px Arial,sans-serif;letter-spacing:.3px;color:#3d634a;text-shadow:0 1px #f8faf2}
+.reagi-speech{position:relative;min-width:0;padding:7px 11px;border:1px solid #c9d9b8;border-radius:10px;background:#fffef8;max-height:68px;overflow:auto;overscroll-behavior:contain}
+.reagi-title{display:block;margin:0 0 3px;font:700 11px Arial,sans-serif;color:#3c603f}
+.reagi-message{margin:0;font:12px/1.4 Arial,sans-serif;color:#3e5745;overflow-wrap:break-word}
+.reagi-dismiss{min-height:36px;width:36px;padding:0;border:0;background:transparent;color:inherit;font:24px Arial,sans-serif;align-self:start;margin-top:3px}
+.reagi[data-state="quiet"] .reagi-speech{border-color:transparent;background:transparent}
+.reagi[data-state="quiet"] .reagi-title{color:#62775d}
+.reagi[data-state="quiet"] .reagi-message{color:#6e7e65}
+.reagi[data-state="warning"]{border-color:#c86e60;background:#fff5ef}
+.reagi[data-state="warning"] .reagi-speech{border-color:#d39083;background:#fffaf7}
+.reagi[data-state="warning"] .reagi-title,.reagi[data-state="warning"] .reagi-message{color:#9a352e}
+.reagi[data-state="reminder"]{border-color:#ccb17a;background:#fff9ea}
+.reagi[data-state="reminder"] .reagi-speech{border-color:#d9c28d;background:#fffdf5}
+.reagi[data-state="reminder"] .reagi-title,.reagi[data-state="reminder"] .reagi-message{color:#785b23}
+.reagi-mouth-concern{display:none}
+.reagi[data-state="warning"] .reagi-mouth-smile,.reagi[data-state="reminder"] .reagi-mouth-smile{display:none}
+.reagi[data-state="warning"] .reagi-mouth-concern,.reagi[data-state="reminder"] .reagi-mouth-concern{display:block}
+.reagi[data-state="warning"] .reagi-brow-left,.reagi[data-state="reminder"] .reagi-brow-left{transform:rotate(13deg);transform-box:fill-box;transform-origin:center}
+.reagi[data-state="warning"] .reagi-brow-right,.reagi[data-state="reminder"] .reagi-brow-right{transform:rotate(-13deg);transform-box:fill-box;transform-origin:center}
+.reagi[data-state="greeting"] .reagi-arm-left{transform-origin:49px 57px;animation:reagi-wave .7s ease-in-out 2}
+@keyframes reagi-wave{0%,100%{transform:rotate(0deg)}50%{transform:rotate(14deg)}}
+@media(max-width:899px){.reagi{grid-template-columns:86px minmax(0,1fr) 36px;gap:4px;padding-right:4px;min-height:82px;height:82px}.reagi-character{width:86px;height:80px}.reagi-character svg{width:87px;height:75px}.reagi-speech{max-height:74px;padding:7px 9px}.reagi-message{font-size:12px}.reagi-dismiss{width:36px}}
+@media(max-width:599px){.reagi{height:auto;min-height:86px;grid-template-columns:78px minmax(0,1fr) 30px}.reagi-character{width:78px;height:82px}.reagi-character svg{width:80px;height:72px}.reagi-title{font-size:10px}.reagi-message{font-size:11px;line-height:1.35}.reagi-speech{max-height:100px;margin:5px 0}.reagi-dismiss{width:30px;min-height:36px}}
+@media(prefers-reduced-motion:reduce){.reagi .reagi-arm-left{animation:none!important}}
 </style></head>
 <body>
 <header class="topbar"><a class="brand" href="#"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M11 3h10M13 3v10L5 25q-2 4 3 4h16q5 0 3-4l-8-12V3M9 20h14"/><circle cx="14" cy="24" r="1"/><circle cx="20" cy="22" r="1"/></svg><span>Säurestärke<small>EXPERIMENTIERLABOR</small></span></a><span class="course">CHEMIE · Q13 gA</span><button id="help-open" class="quiet" aria-label="Bedienhilfe öffnen">Bedienung <span>?</span></button></header>
 <main>
-<nav class="tabs" aria-label="Versuchsbereich"><button id="tab-v1" data-mode="v1" aria-current="true"><small>VERSUCH 01</small><strong>pH-Vergleich</strong><span>Ethanol &amp; Ethansäure</span></button><button id="tab-v2" data-mode="v2" aria-current="false"><small>VERSUCH 02</small><strong>Organische Säuren</strong><span>Drei Indikatorvergleiche</span></button></nav>
+<nav class="tabs" aria-label="Versuchsbereich"><button id="tab-v1" data-mode="v1" aria-current="true"><small>VERSUCH 01</small><strong>pH-Vergleich</strong><span>Ethanol &amp; Ethansäure</span></button><button id="tab-v2" data-mode="v2" aria-current="false"><small>VERSUCH 02</small><strong>Säuren &amp; Magnesium</strong><span>Methan-, Ethan- &amp; Propansäure</span></button><button id="tab-v3" data-mode="v3" aria-current="false"><small>VERSUCH 03</small><strong>Organische Säuren</strong><span>Drei Indikatorvergleiche</span></button></nav>
+<section id="reagi" aria-label="Glasbert – Laborbegleitung"></section>
 <section class="lab" aria-label="Virtueller Versuchsplatz">
 <aside class="materials"><div class="section-head"><h2>Materialablage</h2><span>Ziehen oder antippen</span></div><div class="tray-tabs" aria-label="Materialgruppe"><button data-tray="equipment" aria-pressed="true">Geräte</button><button data-tray="solutions" aria-pressed="false">Lösungen</button></div><div id="tray"></div></aside>
 <section class="workbench"><div class="bench-head"><div><span class="eyebrow">ARBEITSFLÄCHE</span><h1 id="bench-title">pH-Vergleich</h1></div><div class="bench-tools"><button id="hand-tool" aria-pressed="true" title="Hand: Geräte und Flaschen greifen"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 13V6a1.5 1.5 0 0 1 3 0v6-8a1.5 1.5 0 0 1 3 0v8-6a1.5 1.5 0 0 1 3 0v7-4a1.5 1.5 0 0 1 3 0v7a6 6 0 0 1-6 6h-1.5a6 6 0 0 1-4.5-2L3.5 14a1.8 1.8 0 0 1 2.7-2.4L8 13Z"/></svg><span>Hand</span></button><button id="zoom-toggle" aria-pressed="false">Lupe <span aria-hidden="true">＋</span></button><button id="reset-open" aria-label="Diesen Versuchsbereich zurücksetzen">↺</button></div></div><div class="stage-scroll" id="stage-scroll"><svg id="stage" viewBox="0 0 1000 620" role="group" aria-label="Arbeitsfläche: Geräte und Lösungen selbst aufbauen" tabindex="0"></svg><button id="direct-control" type="button" hidden><span id="direct-label">Ansaugen</span><small id="direct-detail">Gedrückt halten · Loslassen stoppt</small></button></div><div class="bench-footer"><span id="bench-status" role="status">Wähle ein Material und platziere es auf der Arbeitsfläche.</span><span class="simulation">SIMULATION</span></div></section>
@@ -113,9 +150,9 @@ body[data-mode="v2"] .bench-head{padding:8px 12px}
 <footer class="footnote"><span>Nach der bereitgestellten Versuchsanleitung</span><button id="model-open">Versuchsbedingungen</button></footer>
 </main>
 <div id="notice" role="alert" hidden><div><strong id="notice-title">Prüfe deinen Aufbau</strong><p id="notice-text"></p></div><button id="notice-close" aria-label="Hinweis schließen">×</button></div>
-<dialog id="help-dialog"><div class="dialog-head"><span class="eyebrow">BEDIENUNG</span><button data-close="help-dialog" aria-label="Bedienhilfe schließen">×</button></div><h2>Jeder Handgriff zählt.</h2><p>Ziehe Geräte und Flaschen aus der Ablage auf die Arbeitsfläche. Alternativ: Material antippen und anschließend den Ablageort antippen. Mit der <strong>Hand</strong> greifst du ein anderes Gerät oder eine Flasche. Pipetten bewegst du am Schaft; der Gummiball dient zum Dosieren.</p><ol><li><strong>Flasche öffnen:</strong> Flasche auswählen und den Verschluss abnehmen.</li><li><strong>Flasche zurücklegen:</strong> Pipette herausnehmen, Flasche verschließen und „In die Materialablage zurücklegen“ wählen. Du kannst die verschlossene Flasche auch direkt in die Materialablage ziehen und später erneut aufstellen.</li><li><strong>Pipettieren:</strong> Die Spitze in die geöffnete Flasche führen. Gummiball oder „Ansaugen“ gedrückt halten: Die Flüssigkeit steigt auf. Beim Loslassen stoppt die Aufnahme. Zum Probengefäß bewegen und die Flüssigkeit durch Gedrückthalten abgeben.</li><li><strong>Indikator:</strong> Die Tropfpipette in die offene Indikatorflasche führen und zum Aufnehmen gedrückt halten. An der Probe jeden Tropfen einzeln abgeben.</li><li><strong>Spülen:</strong> Der Spülzustand steht beim ausgewählten Gerät. Vor dem Wechsel zu einer anderen Lösung zuerst Restflüssigkeit in den Abfallbehälter entleeren, dann das Gerät an der Spülstation reinigen. Erst danach die nächste Lösung aufnehmen.</li><li><strong>pH-Messung:</strong> Messgerät und Elektrode einzeln aufstellen. Den Elektrodenstecker an die Buchse des Messgeräts anschließen, Schutzkappe abnehmen und die Elektrode in die Probe führen. Gerät einschalten und die Messung starten. Vor dem Probenwechsel die Elektrode herausnehmen und spülen.</li></ol><p>Die Schaltflächen unter „Einsatzort“ führen das ausgewählte Gerät an dieselben Orte wie das Ziehen. Die Aufnahme, Abgabe und Reinigung führst du anschließend selbst aus.</p><p class="dialog-note">Mit der Lupe kannst du die Arbeitsfläche vergrößern. Im vergrößerten Ausschnitt lässt sich horizontal und vertikal scrollen.</p></dialog>
-<dialog id="reset-dialog"><div class="dialog-head"><span class="eyebrow">NEUER ANSATZ</span><button data-close="reset-dialog" aria-label="Zurück schließen">×</button></div><h2>Diesen Bereich zurücksetzen?</h2><p>Die Geräte, Flüssigkeiten und Messung dieses Versuchsbereichs werden zurückgesetzt. Der andere Bereich bleibt erhalten.</p><div class="dialog-actions"><button data-close="reset-dialog">Abbrechen</button><button id="reset-confirm" class="primary">Zurücksetzen</button></div></dialog>
-<dialog id="model-dialog"><div class="dialog-head"><span class="eyebrow">VERSUCHSBEDINGUNGEN</span><button data-close="model-dialog" aria-label="Versuchsbedingungen schließen">×</button></div><h2>Die bereitgestellten Lösungen</h2><p>Die Darstellung folgt den Vorgaben deiner Versuchsanleitung. Im ersten Bereich werden die dort vorgegebenen Proben ohne Konzentrationsangabe verwendet. Im zweiten Bereich sind die Lösungen mit c₀ = 1 mol/L beschriftet.</p><p>Farben und Messanzeigen sind simulierte Beobachtungen für diese Ansätze. Sie sind keine allgemeingültigen Messwerte für beliebige Konzentrationen oder Indikatorprodukte.</p></dialog>
+<dialog id="help-dialog"><div class="dialog-head"><span class="eyebrow">BEDIENUNG</span><button data-close="help-dialog" aria-label="Bedienhilfe schließen">×</button></div><h2>Jeder Handgriff zählt.</h2><p>Ziehe Geräte und Flaschen aus der Ablage auf die Arbeitsfläche. Alternativ: Material antippen und anschließend den Ablageort antippen. Mit der <strong>Hand</strong> greifst du ein anderes Gerät oder eine Flasche. Pipetten bewegst du am Schaft; der Gummiball dient zum Dosieren.</p><ol><li><strong>Flasche öffnen:</strong> Flasche auswählen und den Verschluss abnehmen.</li><li><strong>Flasche zurücklegen:</strong> Pipette herausnehmen, Flasche verschließen und „In die Materialablage zurücklegen“ wählen. Du kannst die verschlossene Flasche auch direkt in die Materialablage ziehen und später erneut aufstellen.</li><li><strong>Pipettieren:</strong> Die Spitze in die geöffnete Flasche führen. Gummiball oder „Ansaugen“ gedrückt halten: Die Flüssigkeit steigt auf. Beim Loslassen stoppt die Aufnahme. Zum Probengefäß bewegen und die Flüssigkeit durch Gedrückthalten abgeben.</li><li><strong>Indikator:</strong> Die Tropfpipette in die offene Indikatorflasche führen und zum Aufnehmen gedrückt halten. An der Probe jeden Tropfen einzeln abgeben.</li><li><strong>Spülen:</strong> Der Spülzustand steht beim ausgewählten Gerät. Vor dem Wechsel zu einer anderen Lösung zuerst Restflüssigkeit in den Abfallbehälter entleeren, dann das Gerät an der Spülstation reinigen. Erst danach die nächste Lösung aufnehmen.</li><li><strong>Magnesium zugeben:</strong> Pinzette zur Magnesiumablage führen, ein Stück greifen, zur gewünschten Kammer bewegen und dort loslassen. Die Pinzette vor dem nächsten Stück spülen. Ziehen und die Schaltflächen unter „Einsatzort“ sind gleichwertig.</li><li><strong>pH-Messung:</strong> Messgerät und Elektrode einzeln aufstellen. Den Elektrodenstecker an die Buchse des Messgeräts anschließen, Schutzkappe abnehmen und die Elektrode in die Probe führen. Gerät einschalten und die Messung starten. Vor dem Probenwechsel die Elektrode herausnehmen und spülen.</li></ol><p>Die Schaltflächen unter „Einsatzort“ führen das ausgewählte Gerät an dieselben Orte wie das Ziehen. Die Aufnahme, Abgabe und Reinigung führst du anschließend selbst aus.</p><p class="dialog-note">Mit der Lupe kannst du die Arbeitsfläche vergrößern. Im vergrößerten Ausschnitt lässt sich horizontal und vertikal scrollen.</p></dialog>
+<dialog id="reset-dialog"><div class="dialog-head"><span class="eyebrow">NEUER ANSATZ</span><button data-close="reset-dialog" aria-label="Zurück schließen">×</button></div><h2>Diesen Bereich zurücksetzen?</h2><p>Die Geräte, Flüssigkeiten und Messung dieses Versuchsbereichs werden zurückgesetzt. Die anderen Bereiche bleiben erhalten.</p><div class="dialog-actions"><button data-close="reset-dialog">Abbrechen</button><button id="reset-confirm" class="primary">Zurücksetzen</button></div></dialog>
+<dialog id="model-dialog"><div class="dialog-head"><span class="eyebrow">VERSUCHSBEDINGUNGEN</span><button data-close="model-dialog" aria-label="Versuchsbedingungen schließen">×</button></div><h2>Die bereitgestellten Lösungen</h2><p>Die Darstellung folgt den Vorgaben deiner Versuchsanleitung. Im ersten Bereich werden die dort vorgegebenen Proben ohne Konzentrationsangabe verwendet. Im zweiten Bereich werden Methan-, Ethan- und Propansäure-Lösung mit c₀ = 0,1 mol/L und gleich lange Magnesiumstücke (ca. 1 cm) verwendet. Im dritten Bereich sind die Lösungen mit c₀ = 1 mol/L beschriftet.</p><p>Farben und Messanzeigen sind simulierte Beobachtungen für diese Ansätze. Die Gasentwicklung beim Magnesiumvergleich stellt den qualitativen Vergleich der Versuchsanleitung dar. Bläschenzahl und Reaktionsdauer sind keine experimentell bestimmten Geschwindigkeiten. Die Darstellung liefert keine allgemeingültigen Messwerte für beliebige Konzentrationen oder Indikatorprodukte.</p></dialog>
 <div id="drag-ghost" hidden></div><script>/*
  * Säurestärke: state for the practical steps in the supplied worksheet.
  * pH and indicator colors are scenario values from that worksheet. This is
@@ -130,6 +167,7 @@ body[data-mode="v2"] .bench-head{padding:8px 12px}
   'use strict';
 
   const CHEMICALS = Object.freeze({
+    formic: Object.freeze({ label: 'Methansäure-Lösung', short: 'Methansäure', color: '#d8ebee', indicator: false }),
     ethanol: Object.freeze({ label: 'Ethanol-Lösung', short: 'Ethanol', color: '#d8ebee', indicator: false }),
     acetic: Object.freeze({ label: 'Ethansäure-Lösung', short: 'Ethansäure', color: '#d8ebee', indicator: false }),
     chloro: Object.freeze({ label: 'Chlorethansäure-Lösung', short: 'Chlorethansäure', color: '#d8ebee', indicator: false }),
@@ -140,12 +178,17 @@ body[data-mode="v2"] .bench-head{padding:8px 12px}
   });
   const MODES = Object.freeze({
     v1: Object.freeze({ chemicals: ['ethanol', 'acetic', 'btb'], equipment: ['rack', 't1', 't2', 'meter', 'pipette', 'dropper', 'probe'], vessels: ['t1', 't2'] }),
-    v2: Object.freeze({ chemicals: ['ethanol', 'acetic', 'chloro', 'propionic', 'lactic', 'universal'], equipment: ['p1', 'p2', 'p3', 'pipette', 'dropper'], vessels: ['p1l', 'p1r', 'p2l', 'p2r', 'p3l', 'p3r'] })
+    v2: Object.freeze({ chemicals: ['formic', 'acetic', 'propionic'], equipment: ['p4', 'pipette', 'tweezers', 'magnesium'], vessels: ['p4a', 'p4b', 'p4c'] }),
+    v3: Object.freeze({ chemicals: ['ethanol', 'acetic', 'chloro', 'propionic', 'lactic', 'universal'], equipment: ['p1', 'p2', 'p3', 'pipette', 'dropper'], vessels: ['p1l', 'p1r', 'p2l', 'p2r', 'p3l', 'p3r'] })
   });
   const SAMPLE_COLORS = Object.freeze({
     v1: Object.freeze({ ethanol: '#a4bd49', acetic: '#f2d446' }),
-    v2: Object.freeze({ ethanol: '#bdc74d', acetic: '#e86632', chloro: '#930d25', propionic: '#d8572a', lactic: '#d51d35' })
+    v3: Object.freeze({ ethanol: '#bdc74d', acetic: '#e86632', chloro: '#930d25', propionic: '#d8572a', lactic: '#d51d35' })
   });
+  // Dimensionless animation parameters, not measured reaction rates. Only the
+  // order formic > acetic > propionic is taken from the supplied worksheet.
+  const REACTION_STRENGTH = Object.freeze({ formic: 3, acetic: 1.5, propionic: 1 });
+  const REACTION_TIME = 720; // arbitrary visual duration at strength 1, seconds
   const PH = Object.freeze({ ethanol: 6.9, acetic: 4.7 });
   const CAPACITY = 5;
   const DROP_CAPACITY = 6;
@@ -164,9 +207,11 @@ body[data-mode="v2"] .bench-head{padding:8px 12px}
       mode: which,
       placed: {},
       bottlesOpen: {},
-      vessels: Object.fromEntries(['t1', 't2', 'p1l', 'p1r', 'p2l', 'p2r', 'p3l', 'p3r'].map(id => [id, freshVessel()])),
+      vessels: Object.fromEntries(['t1', 't2', 'p1l', 'p1r', 'p2l', 'p2r', 'p3l', 'p3r', 'p4a', 'p4b', 'p4c'].map(id => [id, freshVessel()])),
       pipette: { volume: 0, chemical: null, residue: null },
       dropper: { drops: 0, chemical: null, residue: null },
+      tweezers: { holding: false, residue: null },
+      magnesium: { remaining: 6 },
       probe: { cap: true, power: false, connected: false, target: null, reading: null, residue: null }
     };
   }
@@ -174,7 +219,7 @@ body[data-mode="v2"] .bench-head{padding:8px 12px}
   function validChemical(s, chemical) {
     return !!mode(s) && knownChemical(chemical) && mode(s).chemicals.includes(chemical);
   }
-  function vesselContainer(target) { return /^p[123][lr]$/.test(target) ? target.slice(0, 2) : target; }
+  function vesselContainer(target) { return /^(?:p[123][lr]|p4[abc])$/.test(target) ? target.slice(0, 2) : target; }
   function vesselCheck(s, target) {
     if (!mode(s) || !mode(s).vessels.includes(target)) return fail('Wähle ein Probengefäß dieses Versuchs.');
     if (!s.placed[vesselContainer(target)]) return fail('Stelle das Probengefäß zuerst auf die Arbeitsfläche.');
@@ -182,6 +227,7 @@ body[data-mode="v2"] .bench-head{padding:8px 12px}
   }
   function toolCheck(s, tool) {
     if (!['pipette', 'dropper'].includes(tool)) return fail('Verwende eine Pipette für diesen Handgriff.');
+    if (!mode(s)?.equipment.includes(tool)) return fail('Dieses Gerät gehört nicht zu diesem Versuchsbereich.');
     if (!s.placed[tool]) return fail('Nimm die Pipette zuerst aus der Materialablage.');
     return null;
   }
@@ -260,6 +306,7 @@ body[data-mode="v2"] .bench-head{padding:8px 12px}
     if (target !== 'waste') {
       const targetError = vesselCheck(s, target);
       if (targetError) return targetError;
+      if (s.vessels[target].magnesium) return fail('In diesem Ansatz wurde bereits Magnesium zugegeben. Verwende für weitere Flüssigkeit eine frische Probe.');
     }
     if (tool === 'pipette') {
       const quantity = amount === undefined ? 0.25 : amount;
@@ -294,6 +341,13 @@ body[data-mode="v2"] .bench-head{padding:8px 12px}
   }
 
   function rinse(s, tool) {
+    if (tool === 'tweezers') {
+      const error = tweezersCheck(s);
+      if (error) return error;
+      if (s.tweezers.holding) return fail('Lege das Magnesiumstück zuerst zurück, bevor du die Pinzette spülst.');
+      s.tweezers.residue = null;
+      return ok('Pinzette gespült.');
+    }
     if (tool === 'probe') {
       if (s.mode !== 'v1' || !s.placed.probe) return fail('Nimm zuerst die pH-Elektrode aus der Ablage.');
       if (s.probe.cap) return fail('Nimm vor dem Spülen die Schutzkappe ab.');
@@ -315,8 +369,79 @@ body[data-mode="v2"] .bench-head{padding:8px 12px}
     const error = vesselCheck(s, target);
     if (error) return error;
     if (s.probe.target === target) return fail('Nimm die Elektrode vor dem Entleeren aus der Probe.');
+    if (reactionInfo(s, target).active) return fail('Die Reaktion läuft noch. Entleere den Ansatz erst, wenn kein Magnesium mehr vorhanden ist.');
     s.vessels[target] = freshVessel();
     return ok('Probengefäß entleert.');
+  }
+
+  function tweezersCheck(s) {
+    if (s.mode !== 'v2') return fail('Der Magnesium-Vergleich gehört zu Versuch 2.');
+    if (!s.placed.tweezers) return fail('Nimm zuerst die Pinzette aus der Materialablage.');
+    return null;
+  }
+
+  function pickMagnesium(s) {
+    const error = tweezersCheck(s);
+    if (error) return error;
+    if (!s.placed.magnesium) return fail('Stelle die Magnesiumstücke zuerst auf die Arbeitsfläche.');
+    if (s.tweezers.holding) return fail('Die Pinzette hält bereits ein Magnesiumstück.');
+    if (s.tweezers.residue) return fail('An der Pinzette haften Lösungsreste. Spüle sie, bevor du ein weiteres Magnesiumstück greifst.');
+    if (s.magnesium.remaining < 1) return fail('Keine Magnesiumstücke mehr in der Ablage. Für neue Stücke kannst du diesen Versuchsbereich zurücksetzen.');
+    s.magnesium.remaining -= 1;
+    s.tweezers.holding = true;
+    return ok('Ein Magnesiumstück mit der Pinzette gegriffen.');
+  }
+
+  function releaseMagnesium(s, target) {
+    const error = tweezersCheck(s);
+    if (error) return error;
+    if (!s.tweezers.holding) return fail('Greife zuerst ein Magnesiumstück mit der Pinzette.');
+    const targetError = vesselCheck(s, target);
+    if (targetError) return targetError;
+    const vessel = s.vessels[target];
+    if (!vessel.chemical || vessel.volume <= EPSILON) return fail('Fülle zuerst eine Säurelösung in dieses Feld der Petrischale.');
+    if (!Object.prototype.hasOwnProperty.call(REACTION_STRENGTH, vessel.chemical)) return fail('Verwende eine der drei Säurelösungen aus Versuch 2.');
+    if (vessel.magnesium) return fail('In diesem Feld liegt bereits ein Magnesiumstück beziehungsweise ein reagierter Ansatz. Verwende einen frischen Ansatz.');
+    if (s.tweezers.residue) return fail('An der Pinzette haften Lösungsreste. Verwende eine gespülte Pinzette.');
+    s.tweezers.holding = false;
+    s.tweezers.residue = vessel.chemical;
+    vessel.magnesium = { elapsed: 0, remaining: 1 };
+    return ok('Magnesium in die Probe gegeben. Beobachte die Gasentwicklung.');
+  }
+
+  function returnMagnesium(s) {
+    const error = tweezersCheck(s);
+    if (error) return error;
+    if (!s.placed.magnesium) return fail('Stelle die Magnesiumablage zuerst bereit.');
+    if (!s.tweezers.holding) return fail('Die Pinzette hält kein Magnesiumstück.');
+    if (s.tweezers.residue) return fail('Bringe keine Lösungsreste in die Magnesiumablage.');
+    s.tweezers.holding = false;
+    s.magnesium.remaining += 1;
+    return ok('Unbenutztes Magnesiumstück zurückgelegt.');
+  }
+
+  // This provides a qualitative animated observation, with no numerical gas
+  // volume, real bubble frequency, measured duration, or equilibrium claim.
+  function reactionInfo(s, target) {
+    const vessel = s?.mode === 'v2' && /^p4[abc]$/.test(target) ? s.vessels?.[target] : null;
+    const magnesium = vessel?.magnesium;
+    if (!magnesium) return { active: false, strength: 0, remaining: 0, elapsed: 0, added: false };
+    const strength = REACTION_STRENGTH[vessel.chemical] || 0;
+    return { active: strength > 0 && magnesium.remaining > 0, strength, remaining: magnesium.remaining, elapsed: magnesium.elapsed, added: true };
+  }
+
+  function advanceReactions(s, seconds) {
+    if (s?.mode !== 'v2' || typeof seconds !== 'number' || !Number.isFinite(seconds) || seconds <= 0) return false;
+    let changed = false;
+    for (const target of MODES.v2.vessels) {
+      const info = reactionInfo(s, target);
+      if (!info.active) continue;
+      const magnesium = s.vessels[target].magnesium;
+      magnesium.elapsed += seconds;
+      magnesium.remaining = Math.max(0, 1 - magnesium.elapsed * info.strength / REACTION_TIME);
+      changed = true;
+    }
+    return changed;
   }
 
   function togglePower(s) {
@@ -410,7 +535,7 @@ body[data-mode="v2"] .bench-head{padding:8px 12px}
     return '#' + components.map(c => Math.round(c * 0.72 + 245 * 0.28).toString(16).padStart(2, '0')).join('');
   }
 
-  return Object.freeze({ CHEMICALS, MODES, SAMPLE_COLORS, CAPACITY, DROP_CAPACITY, createState, place, toggleBottle, storeBottle, draw, dispense, rinse, empty, togglePower, toggleProbeCap, connectProbe, disconnectProbe, immerseProbe, measure, withdrawProbe, sampleColor });
+  return Object.freeze({ CHEMICALS, MODES, SAMPLE_COLORS, CAPACITY, DROP_CAPACITY, createState, place, toggleBottle, storeBottle, draw, dispense, rinse, empty, togglePower, toggleProbeCap, connectProbe, disconnectProbe, immerseProbe, measure, withdrawProbe, sampleColor, pickMagnesium, releaseMagnesium, returnMagnesium, advanceReactions, reactionInfo });
 });
 
 /* Native SVG apparatus. The worksheet outcomes are supplied by AcidModel. */
@@ -423,10 +548,12 @@ body[data-mode="v2"] .bench-head{padding:8px 12px}
     meter: { w: 150, h: 150 }, pipette: { w: 34, h: 200, tipX: 17, tipY: 194 },
     dropper: { w: 42, h: 145, tipX: 21, tipY: 139 },
     probe: { w: 32, h: 145, tipX: 16, tipY: 139 },
+    p4: { w: 500, h: 260 }, tweezers: { w: 34, h: 180, tipX: 17, tipY: 172 },
+    magnesium: { w: 180, h: 120, tipX: 90, tipY: 58 },
     wash: { w: 150, h: 125 }, waste: { w: 120, h: 125 }
   };
   const NAMES = {
-    ethanol: ['Ethanol', 'Lösung'], acetic: ['Ethansäure', 'Lösung'],
+    formic: ['Methansäure', 'Lösung'], ethanol: ['Ethanol', 'Lösung'], acetic: ['Ethansäure', 'Lösung'],
     chloro: ['Chlorethansäure', 'Lösung'], propionic: ['Propansäure', 'Lösung'],
     lactic: ['Milchsäure', 'Lösung'], btb: ['Bromthymolblau', 'Indikator'],
     universal: ['Universalindikator', 'Lösung']
@@ -468,8 +595,8 @@ body[data-mode="v2"] .bench-head{padding:8px 12px}
       <rect x="23" y="76" width="74" height="37" rx="3" fill="#fffef4" stroke="#d9d9c4"/>
       <rect x="23" y="76" width="4" height="37" rx="2" fill="${indicator ? '#c39a47' : '#789d75'}"/>
       <text x="61" y="87" text-anchor="middle" fill="#263f33" font-family="Arial,sans-serif" font-size="${chem === 'universal' ? 7.2 : chem === 'chloro' || chem === 'btb' ? 7.8 : 9}" font-weight="700">${esc(lines[0])}</text>
-      <text x="61" y="97" text-anchor="middle" fill="#596b57" font-family="Arial,sans-serif" font-size="8">${esc(chem === 'ethanol' && s.mode === 'v2' ? 'unvergällt' : lines[1])}</text>
-      <text x="61" y="107" text-anchor="middle" fill="#6b785f" font-family="Arial,sans-serif" font-size="7">${indicator ? 'Tropfenweise' : s.mode === 'v2' ? 'c₀ = 1 mol/L' : 'wässrig'}</text>
+      <text x="61" y="97" text-anchor="middle" fill="#596b57" font-family="Arial,sans-serif" font-size="8">${esc(chem === 'ethanol' && s.mode === 'v3' ? 'unvergällt' : lines[1])}</text>
+      <text x="61" y="107" text-anchor="middle" fill="#6b785f" font-family="Arial,sans-serif" font-size="7">${indicator ? 'Tropfenweise' : s.mode === 'v3' ? 'c₀ = 1 mol/L' : s.mode === 'v2' ? 'c₀ = 0,1 mol/L' : 'wässrig'}</text>
       </g>
       ${open ? `<g transform="translate(-30 96) rotate(-12 60 18)">${cap}</g>` : cap}`;
   }
@@ -517,6 +644,72 @@ body[data-mode="v2"] .bench-head{padding:8px 12px}
       <g data-target="${id}r"><path d="M114 29c54 0 97 15 97 37s-43 39-97 39Z" fill="transparent"/><text x="158" y="64" text-anchor="middle" fill="#274638" fill-opacity=".68" font-family="Arial,sans-serif" font-size="12" font-weight="700">B</text></g>
       <text x="60" y="136" text-anchor="middle" fill="#48634f" font-family="Arial,sans-serif" font-size="11">${number(left.volume)} mL${left.drops ? ' · ' + number(left.drops) + ' Tr.' : ''}</text>
       <text x="160" y="136" text-anchor="middle" fill="#48634f" font-family="Arial,sans-serif" font-size="11">${number(right.volume)} mL${right.drops ? ' · ' + number(right.drops) + ' Tr.' : ''}</text></g>`;
+  }
+  // Interior touch areas intentionally do not overlap. Coordinates are local
+  // to the single dish, independent of its eventual position on the bench.
+  const TRIPLE_TARGETS = Object.freeze([
+    { id: 'p4a', x: 48, y: 56, w: 183, h: 96, tip: { x: 140, y: 103 } },
+    { id: 'p4b', x: 269, y: 56, w: 183, h: 96, tip: { x: 360, y: 103 } },
+    { id: 'p4c', x: 162, y: 156, w: 176, h: 70, tip: { x: 250, y: 181 } }
+  ]);
+  const SECTOR_PATHS = [
+    'M250 125 250 33A230 92 0 0 0 50.8 171Z',
+    'M250 125 449.2 171A230 92 0 0 0 250 33Z',
+    'M250 125 50.8 171A230 92 0 0 0 449.2 171Z'
+  ];
+  function magnesiumStrip(x, y, prefix, width = 36, angle = -12) {
+    return `<g transform="translate(${x} ${y}) rotate(${angle})"><path d="M${-width / 2} -4h${width}l-1 8h${2 - width}Z" fill="url(#${prefix}-metal)" stroke="#5c7074" stroke-width="1.2"/><path d="M${-width / 2 + 3} -2h${Math.max(0, width - 7)}" stroke="#f5faf8" stroke-width="1.4"/><path d="M${-width / 2 + 5} 2h${Math.max(0, width - 10)}" stroke="#7b9093" stroke-width=".8"/></g>`;
+  }
+  function reactionBubbles(s, target, x, y, p) {
+    const info = scope.AcidModel?.reactionInfo?.(s, target);
+    if (!info?.added) return '';
+    let art = info.remaining > 0 ? `<g transform="translate(${x} ${y+9}) rotate(-12)"><g data-magnesium-strip="${target}" transform="scale(${Math.max(.1,info.remaining)} 1)">${magnesiumStrip(0,0,p,38,0)}</g></g>` : '';
+    if (!info.active) return art;
+    // Animation density encodes the worksheet's qualitative ranking only.
+    // These decorative cycles are deliberately not calibrated bubble counts.
+    const count = info.strength >= 2 ? 11 : info.strength >= 1.4 ? 5 : 2;
+    const period = info.strength >= 2 ? 1.6 : info.strength >= 1.4 ? 2.3 : 3.2;
+    for (let i = 0; i < count; i++) {
+      const dx = ((i * 17) % 43) - 21, dy = 42 + (i % 3) * 7;
+      const delay = -(i * period / count), duration = period + (i % 3) * .18;
+      art += `<circle class="mg-bubble" cx="${x + dx}" cy="${y + 8}" r="${2.2 + (i % 3) * .55}" fill="#f3fcff" fill-opacity=".86" stroke="#548da2" stroke-width="1.1" pointer-events="none"><animate attributeName="cy" values="${y + 8};${y - dy}" dur="${duration}s" begin="${delay}s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.95;.85;0" keyTimes="0;.12;.8;1" dur="${duration}s" begin="${delay}s" repeatCount="indefinite"/><animate attributeName="r" values="1.4;${3.3 + i % 3}" dur="${duration}s" begin="${delay}s" repeatCount="indefinite"/></circle>`;
+    }
+    return art;
+  }
+  function triplePetri(s, p) {
+    let wells = '', labels = '', reactions = '';
+    TRIPLE_TARGETS.forEach((t, i) => {
+      const v = s.vessels?.[t.id] || {}, letter = 'ABC'[i], path = SECTOR_PATHS[i];
+      const identity = v.chemical ? (NAMES[v.chemical]?.[0] || v.chemical) : 'leer';
+      wells += `<g data-target="${t.id}"><path d="${path}" fill="${v.volume > 0 ? '#c6e0e3' : '#f7fcf5'}" fill-opacity="${v.volume > 0 ? .35 + clamp(v.volume, 5) * .06 : .34}" stroke="none"/><path d="${path}" fill="transparent" pointer-events="all"/></g>`;
+      const tx = i === 0 ? 65 : i === 1 ? 435 : 250, ty = i === 2 ? 205 : 126;
+      labels += `<text x="${tx}" y="${ty}" text-anchor="middle" fill="#426956" font-family="Arial,sans-serif" font-size="20" font-weight="700" pointer-events="none">${letter}</text>`;
+      const column = 83 + i * 167;
+      labels += `<text x="${column}" y="240" text-anchor="middle" fill="#325341" font-family="Arial,sans-serif" font-size="15" font-weight="600">${letter} · ${esc(identity)}</text><text x="${column}" y="258" text-anchor="middle" fill="#536c5d" font-family="Arial,sans-serif" font-size="14">${number(v.volume)} mL</text>`;
+      reactions += reactionBubbles(s, t.id, t.tip.x, t.tip.y, p);
+    });
+    return `${defs(p)}<text x="250" y="18" text-anchor="middle" fill="#365541" font-family="Arial,sans-serif" font-size="17" font-weight="700">Dreigeteilte Petrischale</text>${shadow(250, 217, 235, 13)}
+      <path d="M12 123v18c0 53 106 95 238 95s238-42 238-95v-18" fill="url(#${p}-glass)" stroke="#87a69a" stroke-width="2"/>
+      <ellipse cx="250" cy="123" rx="238" ry="98" fill="#f8fff6" fill-opacity=".36" stroke="#98b3a4" stroke-width="2"/>
+      ${wells}
+      <ellipse cx="250" cy="125" rx="230" ry="92" fill="none" stroke="#abc3b3" stroke-width="1.4"/>
+      <path d="M250 33v92M250 125 50.8 171M250 125 449.2 171" fill="none" stroke="#8aa995" stroke-width="7" stroke-linejoin="round"/>
+      <path d="M249 33v91M249 124 50.8 170M251 124 449.2 170" fill="none" stroke="#f7fff0" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M24 149c23 43 119 77 226 77s203-34 226-77M44 82q71-41 171-44M283 37q113 6 172 43" fill="none" stroke="#fff" opacity=".7" stroke-width="4" stroke-linecap="round"/>
+      ${reactions}${labels}`;
+  }
+  function tweezers(s, p) {
+    const holding = !!s.tweezers?.holding;
+    return `${defs(p)}<path d="M14 6q3-5 6 0l10 145-9 21-3-1 5-23L17 31 11 148l5 23-3 1-9-21Z" fill="url(#${p}-metal)" stroke="#5a7776" stroke-width="1.5" stroke-linejoin="round"/>
+      <path d="M16 10 8 146m11-136 7 136" fill="none" stroke="#edf5f0" stroke-width="1.3"/>
+      <path d="m11 75 6 1m-6 6 6 1m-6 6 6 1m1-15 6-1m-6 7 6-1m-6 7 6-1" stroke="#7e9994" stroke-width="1.2"/>
+      ${holding ? magnesiumStrip(17, 171, p, 30, 0) : ''}`;
+  }
+  function magnesium(s, p) {
+    const remaining = Number.isInteger(s.magnesium?.remaining) ? s.magnesium.remaining : 6;
+    let strips = '';
+    for (let i = 0; i < Math.min(6, remaining); i++) strips += magnesiumStrip(43 + (i % 3) * 47, 41 + Math.floor(i / 3) * 25, p, 30, -12);
+    return `${defs(p)}${shadow(90, 103, 84, 7)}<g data-target="magnesium"><path d="M9 23h162v68q0 11-13 11H22Q9 102 9 91Z" fill="url(#${p}-body)" stroke="#8caaa0" stroke-width="1.7"/><rect x="13" y="16" width="154" height="72" rx="12" fill="#f6f9ed" stroke="#9db5a3" stroke-width="1.5"/><path d="M20 22h140" stroke="#fff" stroke-width="3"/>${strips}<rect x="5" y="9" width="170" height="90" rx="14" fill="transparent" pointer-events="all"/><text x="90" y="115" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#355b48">Magnesium · je ≈ 1 cm</text></g>`;
   }
   function meter(s, ui, p) {
     const probe = s.probe || {}, connected = !!probe.connected;
@@ -579,7 +772,7 @@ body[data-mode="v2"] .bench-head{padding:8px 12px}
       ${cap ? '<path d="M6 112h20v26q0 6-10 6t-10-6Z" fill="#596c59" stroke="#344b3c"/><path d="M9 116v21" stroke="#a1b29a" stroke-width="2" opacity=".5"/><path d="M5 112h22" stroke="#c2d0b5" stroke-width="3"/>' : ''}`;
   }
   function wash(ui, p) {
-    const ready = ['pipette', 'dropper', 'probe'].includes(ui.selected) && ui.dock === 'wash';
+    const ready = ['pipette', 'dropper', 'probe', 'tweezers'].includes(ui.selected) && ui.dock === 'wash';
     const active = ui.rinsing === true && ready;
     return `${defs(p)}<g data-target="wash">
       ${shadow(75, 104, 67, 6)}
@@ -619,6 +812,9 @@ body[data-mode="v2"] .bench-head{padding:8px 12px}
       case 'rack': return rack(prefix);
       case 'tube': return tube(id, s, prefix);
       case 'petri': return petri(id, s, prefix);
+      case 'p4': return triplePetri(s, prefix);
+      case 'tweezers': return tweezers(s, prefix);
+      case 'magnesium': return magnesium(s, prefix);
       case 'meter': return meter(s, ui, prefix);
       case 'pipette': return pipette(s, ui, prefix);
       case 'dropper': return dropper(s, ui, prefix);
@@ -634,40 +830,149 @@ body[data-mode="v2"] .bench-head{padding:8px 12px}
     const decorative = render(id, demo, {}, 'acid-icon-' + id).replace(/\s(?:tabindex|role|data-action|data-target|data-chemical|data-connect|aria-label)="[^"]*"/g, '');
     return `<svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><g transform="translate(${(100 - d.w * scale) / 2} ${(100 - d.h * scale) / 2}) scale(${scale})">${decorative}</g></svg>`;
   }
-  const api = { svg: render, size, icon, petriScale: PETRI_SCALE };
+  const api = { svg: render, size, icon, petriScale: PETRI_SCALE, tripleTargets: TRIPLE_TARGETS };
   scope.AcidView = api;
+  if (typeof module !== 'undefined' && module.exports) module.exports = api;
+})(typeof globalThis !== 'undefined' ? globalThis : window);
+
+/* Reagi accompanies the practical steps; the controller supplies observations.
+ * No timers or automatic experiment actions are introduced here. */
+(function (scope) {
+  'use strict';
+  let host = null, onHelp = null, currentKey = '', currentKind = '';
+  const greetings = {
+    v1: 'Ich bin Glasbert. Du experimentierst – ich behalte die Laborroutine im Blick. Klick mich für einen kurzen Check.',
+    v2: 'Glasbert ist wieder dabei. Du übernimmst die Handgriffe, ich melde mich bei offenen Vorratsflaschen und vergessenen Spülpausen.',
+    v3: 'Drei Vergleiche, ein aufmerksames Reagenzglas. Ich achte mit auf die Laborroutine – die Beobachtungen gehören dir.'
+  };
+  const defaultHelp = 'Kurzer Check: Sind unbenutzte Vorratsflaschen verschlossen? Ist die Pipette vor einem Lösungswechsel gespült? Du entscheidest über den nächsten Handgriff.';
+  const figure = `<svg viewBox="0 0 144 124" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="reagi-glass" x1="0" x2="1"><stop stop-color="#e4f4ef"/><stop offset=".35" stop-color="#ffffff"/><stop offset="1" stop-color="#bedbd4"/></linearGradient>
+      <clipPath id="reagi-inner"><path d="M53 17h38v57c0 14-8 22-19 22S53 88 53 74Z"/></clipPath>
+    </defs>
+    <ellipse cx="73" cy="116" rx="39" ry="4" fill="#31533e" opacity=".1"/>
+    <g class="reagi-leg" fill="none" stroke="#294b3e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m61 91-3 15-10 6h17M83 91l4 16 10 6H80"/>
+    </g>
+    <g class="reagi-arm reagi-arm-left" fill="none" stroke="#294b3e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M50 57 33 62 24 47"/><path d="m24 47-6-6m6 6-2-10m2 10 5-8"/>
+    </g>
+    <g class="reagi-arm reagi-arm-right" fill="none" stroke="#294b3e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m94 58 17 7 7-12"/><path d="m118 53 5-7m-5 7 0-10m0 10-5-7"/>
+    </g>
+    <path d="M49 14h46v59c0 17-10 27-23 27S49 90 49 73Z" fill="url(#reagi-glass)" stroke="#294b3e" stroke-width="2.8"/>
+    <g clip-path="url(#reagi-inner)">
+      <path d="M51 72q10-6 21 0t21 0v28H51Z" fill="#9aba75"/>
+      <path d="M51 72q10-6 21 0t21 0" fill="none" stroke="#6f9455" stroke-width="1.5"/>
+      <circle cx="61" cy="82" r="3" fill="#e1edc7"/><circle cx="80" cy="87" r="2" fill="#e1edc7"/>
+    </g>
+    <path d="M56 23v46m1 13 3 7" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" opacity=".9"/>
+    <path d="M46 10q26-5 52 0v9q-26 5-52 0Z" fill="#dceee7" stroke="#294b3e" stroke-width="2.6"/>
+    <path d="M48 11q24 4 48 0" fill="none" stroke="#fff" stroke-width="2"/>
+    <g class="reagi-eyes" fill="#fff" stroke="#294b3e" stroke-width="1.7">
+      <ellipse cx="63" cy="45" rx="6.5" ry="8.5"/><ellipse cx="82" cy="45" rx="6.5" ry="8.5"/>
+      <ellipse cx="64" cy="46" rx="2.4" ry="4" fill="#294b3e" stroke="none"/><ellipse cx="81" cy="46" rx="2.4" ry="4" fill="#294b3e" stroke="none"/>
+    </g>
+    <g class="reagi-brows" fill="none" stroke="#294b3e" stroke-width="2.2" stroke-linecap="round">
+      <path class="reagi-brow-left" d="m57 33 11-1"/><path class="reagi-brow-right" d="m77 32 10 1"/>
+    </g>
+    <path class="reagi-mouth-smile" d="M63 60q9 11 19 0" fill="#fff" stroke="#294b3e" stroke-width="2.2" stroke-linecap="round"/>
+    <path class="reagi-mouth-concern" d="M65 63q8-4 15 0" fill="none" stroke="#294b3e" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M55 56h4m27 0h4" stroke="#cc9b82" stroke-width="2" stroke-linecap="round" opacity=".7"/>
+  </svg>`;
+
+  function init(options = {}) {
+    host = typeof document !== 'undefined' ? document.getElementById('reagi') : null;
+    onHelp = typeof options.onHelp === 'function' ? options.onHelp : null;
+    if (!host) return false;
+    host.classList.add('reagi');
+    host.innerHTML = `<button class="reagi-character" type="button" aria-label="Glasbert: Laborroutine prüfen" title="Glasbert: Laborroutine prüfen">${figure}<span>Glasbert</span></button><div class="reagi-speech" role="status" aria-live="polite" aria-atomic="true"><strong class="reagi-title">Dein Laborbegleiter</strong><p class="reagi-message"></p></div><button class="reagi-dismiss" type="button" aria-label="Glasberts Hinweis schließen" title="Hinweis schließen">×</button>`;
+    host.querySelector('.reagi-character').addEventListener('click', () => {
+      if (onHelp) onHelp();
+      else help(defaultHelp);
+    });
+    host.querySelector('.reagi-dismiss').addEventListener('click', quiet);
+    quiet();
+    return true;
+  }
+  function show(kind, title, message, key) {
+    if (!host && !init()) return false;
+    const nextKey = String(key || message);
+    if (currentKey === nextKey && currentKind === kind && host.dataset.state !== 'quiet') return false;
+    currentKey = nextKey; currentKind = kind;
+    const speech = host.querySelector('.reagi-speech');
+    speech.setAttribute('role', kind === 'warning' ? 'alert' : 'status');
+    speech.setAttribute('aria-live', kind === 'warning' ? 'assertive' : 'polite');
+    host.dataset.state = kind;
+    host.querySelector('.reagi-title').textContent = title;
+    host.querySelector('.reagi-message').textContent = String(message || '');
+    host.querySelector('.reagi-dismiss').hidden = false;
+    return true;
+  }
+  function warningTitle(message) {
+    if (/spül|reinig|restflüssigkeit|lösungswechsel|vorherigen probe/i.test(message)) return 'Die vorige Probe möchte bitte nicht mit.';
+    if (/verschließ|verschloss|verschluss|offen|deckel/i.test(message)) return 'Ein Wort zur Deckelfrage.';
+    return 'Kurzer Einspruch vom Glas.';
+  }
+  function greet(mode = 'v1') { return show('greeting', 'Hallo aus dem Glas!', greetings[mode] || greetings.v1, 'greeting-' + mode); }
+  function warn(message, key) { return show('warning', warningTitle(String(message || '')), message, key); }
+  function remind(message, key) { return show('reminder', 'Ich hätte da einen kleinen Einwand.', message, key); }
+  function help(message = defaultHelp) { return show('help', 'Ein kurzer Blick auf die Laborroutine.', message, 'help-' + message); }
+  function quiet() {
+    if (!host) return;
+    currentKey = ''; currentKind = 'quiet'; host.dataset.state = 'quiet';
+    const speech = host.querySelector('.reagi-speech');
+    speech.setAttribute('role', 'status'); speech.setAttribute('aria-live', 'polite');
+    host.querySelector('.reagi-title').textContent = 'Glasbert ist dabei.';
+    host.querySelector('.reagi-message').textContent = 'Klick mich für einen kurzen Blick auf die Laborroutine.';
+    host.querySelector('.reagi-dismiss').hidden = true;
+  }
+  const api = Object.freeze({ init, greet, warn, remind, help, quiet });
+  scope.Reagi = api;
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
 })(typeof globalThis !== 'undefined' ? globalThis : window);
 
 (()=>{
 'use strict';
 const $=id=>document.getElementById(id),M=AcidModel,V=AcidView;
-const states={v1:M.createState('v1'),v2:M.createState('v2')};
+const states={v1:M.createState('v1'),v2:M.createState('v2'),v3:M.createState('v3')};
 const makeUI=()=>({selected:null,pending:null,coords:{},dock:null,docks:{},tray:'equipment',flow:false,reading:false,zoom:false,rinsing:false,rinseElapsed:{},needsRinse:null,blocked:null,parked:{}});
-const views={v1:makeUI(),v2:makeUI()};let mode='v1',gesture=null,holdTimer=null,pumpKind=null,holdPointer=null,holdAnchor=null,rinseStart=0,measureTimer=null,noticeTimer=null,flashTimer=null;
-const s=()=>states[mode],u=()=>views[mode],tools=['pipette','dropper','probe'];
-const labels={rack:'Reagenzglasständer',t1:'Reagenzglas A',t2:'Reagenzglas B',p1:'Petrischale 1',p2:'Petrischale 2',p3:'Petrischale 3',meter:'pH-Meter',pipette:'Messpipette · 5 mL',dropper:'Tropfpipette',probe:'pH-Elektrode',wash:'Spülstation',waste:'Abfallgefäß',plug:'Elektrodenstecker'};
-const vesselLabels={t1:'Reagenzglas A',t2:'Reagenzglas B',p1l:'Schale 1 · A',p1r:'Schale 1 · B',p2l:'Schale 2 · A',p2r:'Schale 2 · B',p3l:'Schale 3 · A',p3r:'Schale 3 · B'};
+const views={v1:makeUI(),v2:makeUI(),v3:makeUI()};let mode='v1',gesture=null,holdTimer=null,pumpKind=null,holdPointer=null,holdAnchor=null,rinseStart=0,measureTimer=null,noticeTimer=null,flashTimer=null;
+const s=()=>states[mode],u=()=>views[mode],tools=['pipette','dropper','probe','tweezers'];
+const labels={p4:'Dreigeteilte Petrischale',tweezers:'Pinzette',magnesium:'Magnesiumband · ca. 1 cm',rack:'Reagenzglasständer',t1:'Reagenzglas A',t2:'Reagenzglas B',p1:'Petrischale 1',p2:'Petrischale 2',p3:'Petrischale 3',meter:'pH-Meter',pipette:'Messpipette · 5 mL',dropper:'Tropfpipette',probe:'pH-Elektrode',wash:'Spülstation',waste:'Abfallgefäß',plug:'Elektrodenstecker'};
+const vesselLabels={p4a:'Kammer A',p4b:'Kammer B',p4c:'Kammer C',t1:'Reagenzglas A',t2:'Reagenzglas B',p1l:'Schale 1 · A',p1r:'Schale 1 · B',p2l:'Schale 2 · A',p2r:'Schale 2 · B',p3l:'Schale 3 · A',p3r:'Schale 3 · B'};
 const safe=t=>String(t??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const chem=id=>M.CHEMICALS[id]?.short||M.CHEMICALS[id]?.label||id;
 const label=id=>id?.startsWith('b-')?(M.CHEMICALS[id.slice(2)]?.label||id):labels[id]||vesselLabels[id]||id;
-const allowed=()=>mode==='v1'?['rack','t1','t2','pipette','dropper','meter','probe']:['p1','p2','p3','pipette','dropper'];
-const chemicals=()=>mode==='v1'?['ethanol','acetic','btb']:['ethanol','acetic','chloro','propionic','lactic','universal'];
+const allowed=()=>M.MODES[mode].equipment;
+const chemicals=()=>M.MODES[mode].chemicals;
 function defaults(id){
- if(id.startsWith('b-'))return mode==='v2'?{x:165+chemicals().indexOf(id.slice(2))*118,y:155}:{x:30+chemicals().indexOf(id.slice(2))*140,y:155};
- const ps={rack:{x:400,y:400},t1:{x:330,y:305},t2:{x:425,y:305},p1:{x:200,y:400},p2:{x:430,y:400},p3:{x:660,y:400},meter:{x:800,y:440},pipette:{x:550,y:80},dropper:{x:670,y:80},probe:{x:790,y:80},plug:{x:725,y:310},wash:{x:35,y:450},waste:{x:840,y:230}};if(mode==='v2'&&id==='wash')return{x:10,y:140};if(mode==='v2'&&id==='waste')return{x:880,y:180};if(mode==='v2'&&/^p[123]$/.test(id))return{x:25+(Number(id[1])-1)*332,y:420};if(mode==='v2'&&id==='pipette')return{x:300,y:7};if(mode==='v2'&&id==='dropper')return{x:565,y:7};return ps[id]||{x:400,y:300};
+ if(mode==='v2'){if(id.startsWith('b-'))return{x:250+chemicals().indexOf(id.slice(2))*150,y:155};const positions={p4:{x:225,y:348},magnesium:{x:775,y:430},tweezers:{x:565,y:7},pipette:{x:300,y:7},wash:{x:10,y:140},waste:{x:880,y:180}};if(positions[id])return positions[id];}
+ if(id.startsWith('b-'))return mode==='v3'?{x:165+chemicals().indexOf(id.slice(2))*118,y:155}:{x:30+chemicals().indexOf(id.slice(2))*140,y:155};
+ const ps={rack:{x:400,y:400},t1:{x:330,y:305},t2:{x:425,y:305},p1:{x:200,y:400},p2:{x:430,y:400},p3:{x:660,y:400},meter:{x:800,y:440},pipette:{x:550,y:80},dropper:{x:670,y:80},probe:{x:790,y:80},plug:{x:725,y:310},wash:{x:35,y:450},waste:{x:840,y:230}};if(mode==='v3'&&id==='wash')return{x:10,y:140};if(mode==='v3'&&id==='waste')return{x:880,y:180};if(mode==='v3'&&/^p[123]$/.test(id))return{x:25+(Number(id[1])-1)*332,y:420};if(mode==='v3'&&id==='pipette')return{x:300,y:7};if(mode==='v3'&&id==='dropper')return{x:565,y:7};return ps[id]||{x:400,y:300};
 }
-function horizontal(id){return mode==='v2'&&!!u().parked[id]&&!(gesture?.id===id&&gesture.preview);}
+function horizontal(id){return mode!=='v1'&&!!u().parked[id]&&!(gesture?.id===id&&gesture.preview);}
 function visualSize(id){const d=V.size(id);return horizontal(id)?{w:d.h,h:d.w}:d;}
 function pos(id){if(gesture?.id===id&&gesture.preview)return gesture.preview;if(id==='t1'||id==='t2'){const a=u().coords.rack||defaults('rack');return{x:a.x+(id==='t1'?42.5:152.5),y:a.y-15};}return u().coords[id]||defaults(id);}
 function targets(){
  const a=[];for(const c of chemicals()){if(s().placed['b-'+c]){const p=pos('b-'+c);a.push({id:'b-'+c,label:chem(c),x:p.x+10,y:p.y-8,w:100,h:158,tip:{x:p.x+60,y:p.y+96}});}}
- const ids=mode==='v1'?['t1','t2']:['p1l','p1r','p2l','p2r','p3l','p3r'];
+ const ids=mode==='v1'?['t1','t2']:mode==='v3'?['p1l','p1r','p2l','p2r','p3l','p3r']:[];
+ if(mode==='v2'&&s().placed.p4){const p=pos('p4');for(const t of V.tripleTargets)a.push({...t,label:vesselLabels[t.id],x:p.x+t.x,y:p.y+t.y,tip:{x:p.x+t.tip.x,y:p.y+t.tip.y}});}
+ if(mode==='v2'&&s().placed.magnesium){const p=pos('magnesium');a.push({id:'magnesium',label:'Magnesiumband',x:p.x,y:p.y,w:180,h:120,tip:{x:p.x+90,y:p.y+58}});}
  for(const id of ids){const parent=id.startsWith('p')?id.slice(0,2):id;if(!s().placed[parent])continue;const p=pos(parent);if(id.startsWith('p')){const right=id.endsWith('r'),k=V.petriScale;a.push({id,label:vesselLabels[id],x:p.x+(right?110:0)*k,y:p.y+25*k,w:110*k,h:103*k,tip:{x:p.x+(right?157:63)*k,y:p.y+67*k}});}else a.push({id,label:vesselLabels[id],x:p.x-12,y:p.y-15,w:79,h:168,tip:{x:p.x+27.5,y:p.y+(u().selected==='probe'?Math.max(80,141-s().vessels[id].volume*13):2)}});}
  for(const id of ['wash','waste']){const p=pos(id),d=V.size(id);a.push({id,label:labels[id],x:p.x-8,y:p.y-8,w:d.w+16,h:d.h+16,tip:{x:p.x+(id==='wash'?95:60),y:p.y+(id==='wash'?62:30)}});}
  if(mode==='v1'&&s().placed.meter){const p=pos('meter');a.push({id:'meter',label:'Elektrode anschließen',x:p.x-12,y:p.y-20,w:174,h:170,tip:{x:p.x+32,y:p.y+12}});}return a;
 }
-function availableTargets(){const tool=u().selected;return targets().filter(t=>tool!=='probe'&&t.id==='meter'?false:tool==='probe'?!t.id.startsWith('b-')&&t.id!=='waste':tool==='pipette'?(!t.id.startsWith('b-')||!['btb','universal'].includes(t.id.slice(2))):tool==='dropper'?(!t.id.startsWith('b-')||['btb','universal'].includes(t.id.slice(2))):false);}
+function availableTargets(){const tool=u().selected;return targets().filter(t=>{
+ if(tool==='tweezers')return t.id==='magnesium'||t.id==='wash'||/^p4[abc]$/.test(t.id);
+ if(t.id==='magnesium')return false;
+ if(tool==='probe')return !t.id.startsWith('b-')&&t.id!=='waste';
+ if(t.id==='meter')return false;
+ if(tool==='pipette')return !t.id.startsWith('b-')||!['btb','universal'].includes(t.id.slice(2));
+ if(tool==='dropper')return !t.id.startsWith('b-')||['btb','universal'].includes(t.id.slice(2));
+ return false;
+});}
 function targetAt(p){return p&&availableTargets().find(t=>p.x>=t.x&&p.x<=t.x+t.w&&p.y>=t.y&&p.y<=t.y+t.h);}
 function dragOrigin(g,p){const size=V.size(g.id);return{x:p.x-(g.offset?.x??size.w/2),y:p.y-(g.offset?.y??size.h/2)};}
 function dropTarget(id,p,origin){const size=V.size(id);return targetAt({x:origin.x+(size.tipX??size.w/2),y:origin.y+(size.tipY??size.h)})||targetAt(p);}
@@ -675,15 +980,16 @@ function hand(){stopHold();u().selected=null;u().pending=null;u().dock=null;rend
 
 function point(e){const svg=$('stage'),m=svg.getScreenCTM();if(!m)return null;const p=svg.createSVGPoint();p.x=e.clientX;p.y=e.clientY;return p.matrixTransform(m.inverse());}
 function status(t){$('bench-status').textContent=t;}
-function notify(message){$('notice-text').textContent=message;$('notice').hidden=false;clearTimeout(noticeTimer);noticeTimer=setTimeout(()=>{$('notice').hidden=true;},9000);}
-function result(r,success){if(!r?.ok){notify(r?.message||'Dieser Handgriff ist hier noch nicht möglich.');return false;}status(success||r.message||'Handgriff ausgeführt.');return true;}
+function notify(message){Reagi.warn(message);}
+function result(r,success){if(!r?.ok){notify(r?.message||'Dieser Handgriff ist hier noch nicht möglich.');return false;}if($('reagi').dataset.state==='warning')Reagi.quiet();status(success||r.message||'Handgriff ausgeführt.');return true;}
 function cancelMeasurement(){if(measureTimer){clearTimeout(measureTimer);measureTimer=null;}if(u().reading){u().reading=false;s().probe.reading=null;}}
-function place(id,p){const r=M.place(s(),id);if(!result(r))return false;if(mode==='v2'&&tools.includes(id))u().parked[id]=!p;const size=visualSize(id);if(!['t1','t2'].includes(id)){const base=mode==='v2'&&/^p[123]$/.test(id)?defaults(id):p?{x:p.x-size.w/2,y:p.y-size.h/2}:defaults(id);u().coords[id]={x:Math.max(5,Math.min(995-size.w,base.x)),y:Math.max(8,Math.min(610-size.h,base.y))};}u().pending=null;u().selected=id;u().dock=null;delete u().docks[id];status(label(id)+' aufgestellt.');render();return true;}
+function place(id,p){const r=M.place(s(),id);if(!result(r))return false;if(mode!=='v1'&&tools.includes(id))u().parked[id]=!p;const size=visualSize(id);if(!['t1','t2'].includes(id)){const base=((mode==='v3'&&/^p[123]$/.test(id))||id==='p4'||id==='magnesium')?defaults(id):p?{x:p.x-size.w/2,y:p.y-size.h/2}:defaults(id);u().coords[id]={x:Math.max(5,Math.min(995-size.w,base.x)),y:Math.max(8,Math.min(610-size.h,base.y))};}u().pending=null;u().selected=id;u().dock=null;delete u().docks[id];status(label(id)+' aufgestellt.');render();return true;}
 function choose(id){stopHold();u().blocked=null;u().selected=id;u().pending=s().placed[id]||['wash','waste'].includes(id)?null:id;u().dock=u().docks[id]||null;render();}
 function park(id){
+ const previous=u().docks[id];
  if(id==='probe'){cancelMeasurement();M.withdrawProbe(s());}
  delete u().rinseElapsed[id];
- u().coords[id]=defaults(id);if(mode==='v2'&&tools.includes(id))u().parked[id]=true;delete u().docks[id];if(u().selected===id)u().dock=null;
+ u().coords[id]=defaults(id);if(mode!=='v1'&&tools.includes(id))u().parked[id]=true;delete u().docks[id];if(u().selected===id)u().dock=null;if(previous?.startsWith('b-'))remindBottle(previous.slice(2));
 }
 function returnBottle(id){
  if(!id?.startsWith('b-'))return;stopHold();
@@ -697,7 +1003,7 @@ function connectProbe(){
  const r=M.connectProbe(s());if(result(r,'Stecker angeschlossen. Die Elektrode ist mit dem pH-Meter verbunden.')){u().blocked=null;render();}
 }
 function dock(id){
- const tool=u().selected;if(!tools.includes(tool)||!s().placed[tool])return;stopHold();
+ const tool=u().selected,previous=u().docks[tool];if(!tools.includes(tool)||!s().placed[tool])return;stopHold();
  if(id==='meter'){connectProbe();return;}
  const t=availableTargets().find(x=>x.id===id);if(!t)return;
  const other=tools.find(k=>k!==tool&&u().docks[k]===id);
@@ -711,7 +1017,7 @@ function dock(id){
   const candidate={...s(),probe:{...s().probe,target:null}};const r=M.immerseProbe(candidate,id);if(!result(r))return;cancelMeasurement();s().probe=candidate.probe;
  }else if(tool==='probe'){cancelMeasurement();M.withdrawProbe(s());}
  if(u().docks[tool]!==id)delete u().rinseElapsed[tool];
- delete u().parked[tool];const size=V.size(tool);u().coords[tool]={x:t.tip.x-(size.tipX??size.w/2),y:t.tip.y-(size.tipY??size.h)};u().dock=id;u().docks[tool]=id;u().blocked=null;status(label(tool)+' bei '+t.label+'.');render();
+ delete u().parked[tool];const size=V.size(tool);u().coords[tool]={x:t.tip.x-(size.tipX??size.w/2),y:t.tip.y-(size.tipY??size.h)};u().dock=id;u().docks[tool]=id;u().blocked=null;status(label(tool)+' bei '+t.label+'.');render();if(previous?.startsWith('b-')&&previous!==id)remindBottle(previous.slice(2));
 }
 function hygiene(){
  const id=u().selected,el=$('hygiene-status'),next=$('rinse-next');next.hidden=true;
@@ -728,6 +1034,8 @@ function control(){
  const id=u().selected,at=u().dock;if(u().pending||!s().placed[id]||!tools.includes(id))return null;
  if(u().blocked)return{action:'clear-station',label:label(u().blocked.occupant)+' ablegen',detail:'Platz für das gewählte Gerät schaffen'};
  if(at==='wash'){const elapsed=u().rinseElapsed[id]||0,complete=elapsed>=1200;return{hold:'rinse',label:complete?'Spülen abgeschlossen':elapsed>0&&!u().rinsing?'Spülen fortsetzen':'Spülen',detail:complete?'Bereit für die nächste Probe':u().rinsing||elapsed>0?Math.round(elapsed/12)+' % · gedrückt halten':'Gedrückt halten · ca. 1 Sekunde'};}
+ if(id==='tweezers'&&at==='magnesium')return{action:s().tweezers.holding?'return-magnesium':'pick-magnesium',label:s().tweezers.holding?'Stück zurücklegen':'Magnesiumstück greifen',detail:'Mit der Pinzette aufnehmen'};
+ if(id==='tweezers'&&/^p4[abc]$/.test(at||''))return{action:'release-magnesium',label:'Magnesiumstück loslassen',detail:'Pinzette öffnen'};
  if(id==='pipette'&&at)return{hold:at.startsWith('b-')?'draw':'dispense',label:at.startsWith('b-')?'Ansaugen':'Abgeben',detail:'Gedrückt halten · Loslassen stoppt'};
  if(id==='dropper'&&at?.startsWith('b-'))return{hold:'draw',label:'Indikator ansaugen',detail:'Gedrückt halten · Loslassen stoppt'};
  if(id==='dropper'&&at==='waste')return{hold:'dispense',label:'Rest entleeren',detail:'Gedrückt halten'};
@@ -748,6 +1056,9 @@ function rinseFeedback(){
 function scene(){
  const svg=$('stage');const hit=Math.max(76,46/Math.max(.2,Math.min(svg.clientWidth/1000,svg.clientHeight/620)));let out='<defs><linearGradient id="bench-bg" x2="0" y2="1"><stop stop-color="#eef1e8"/><stop offset="1" stop-color="#dfe6d7"/></linearGradient><pattern id="bench-grid" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".7" fill="#b8c5ad" opacity=".28"/></pattern></defs><rect width="1000" height="620" fill="url(#bench-bg)"/><rect width="1000" height="620" fill="url(#bench-grid)"/>';
  if(mode==='v2'){
+  out+='<rect x="280" y="2" width="490" height="60" rx="14" fill="#f6f8ee90" stroke="#bdc9b3" stroke-dasharray="4 5"/><text x="285" y="80" font-size="12" fill="#708366">GERÄTEABLAGE</text><path d="M20 325H980" stroke="#aebfa1" stroke-dasharray="5 6"/><text x="20" y="295" font-size="12" fill="#397285">SPÜLEN</text><text x="887" y="325" font-size="12" fill="#8b6647">ENTLEEREN</text>';
+  if(!s().placed.p4)out+='<rect x="225" y="348" width="500" height="260" rx="50" stroke="#aebfa1" stroke-dasharray="5 6" fill="#f4f8ec66"/><text x="475" y="475" text-anchor="middle" font-size="20" fill="#809271">Dreigeteilte Petrischale</text>';
+ }else if(mode==='v3'){
   out+='<rect x="280" y="2" width="450" height="60" rx="14" fill="#f6f8ee90" stroke="#bdc9b3" stroke-dasharray="4 5"/><text x="285" y="80" font-size="12" fill="#708366">PIPETTENABLAGE</text><path d="M20 325H980" stroke="#aebfa1" stroke-dasharray="5 6"/><text x="25" y="351" font-size="12" fill="#708366" letter-spacing="1">DREI VERGLEICHE NEBENEINANDER</text><text x="20" y="295" font-size="12" fill="#397285">SPÜLEN</text><text x="887" y="325" font-size="12" fill="#8b6647">ENTLEEREN</text>';
   for(const id of ['p1','p2','p3']){const p=defaults(id);if(!s().placed[id])out+='<rect x="'+p.x+'" y="'+p.y+'" width="286" height="182" rx="30" stroke="#aebfa1" stroke-dasharray="5 6" fill="#f4f8ec66"/><text x="'+(p.x+143)+'" y="'+(p.y+95)+'" text-anchor="middle" font-size="17" fill="#809271">Petrischale '+id[1]+'</text>';}
  }else out+='<rect x="515" y="55" width="325" height="240" rx="18" fill="#f6f8ee65" stroke="#bdc9b3" stroke-dasharray="4 5"/><text x="533" y="278" font-size="13" fill="#708366">GERÄTEABLAGE</text><text x="45" y="598" font-size="14" fill="#397285">SPÜLEN</text><text x="850" y="375" font-size="14" fill="#8b6647">ENTLEEREN</text>';
@@ -764,15 +1075,18 @@ function scene(){
 }
 function tray(){const ids=u().tray==='equipment'?allowed():chemicals().map(x=>'b-'+x);$('tray').innerHTML=ids.map(id=>'<button class="material '+(s().placed[id]?'placed ':'')+(u().selected===id?'active':'')+'" data-material="'+id+'" aria-pressed="'+(u().selected===id)+'">'+V.icon(id)+'<span>'+safe(label(id))+'</span></button>').join('');document.querySelectorAll('[data-tray]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.tray===u().tray)));}
 function actionButton(action,text,extra=''){return '<button data-action="'+action+'" '+extra+'>'+text+'</button>';}
-function readout(){const id=u().selected;let text='';if(id==='pipette')text='<span class="readout">'+s().pipette.volume.toLocaleString('de-DE',{maximumFractionDigits:2})+'<small>mL / 5 mL</small></span>'+(s().pipette.chemical?'<span class="readout">'+safe(chem(s().pipette.chemical))+'</span>':'');if(id==='dropper')text='<span class="readout">'+s().dropper.drops+'<small>Tropfen verfügbar</small></span>';if(id==='meter'||id==='probe')text='<span class="readout">pH '+(!s().probe.power?'AUS':u().reading?'…':!s().probe.connected?'NICHT VERBUNDEN':s().probe.reading==null?'— —':Number(s().probe.reading).toLocaleString('de-DE',{minimumFractionDigits:1,maximumFractionDigits:1}))+'</span>';if(s().vessels[id]&&s().placed[id]){const v=s().vessels[id];text='<span class="readout">'+v.volume.toLocaleString('de-DE')+'<small>mL</small></span><span class="readout">'+v.drops+'<small>Indikatortropfen</small></span>';}if(/^p[123]$/.test(id)){for(const side of ['l','r']){const v=s().vessels[id+side];text+='<span class="readout">'+(side==='l'?'A':'B')+': '+v.volume.toLocaleString('de-DE')+' mL · '+v.drops+' Tr.</span>';}}$('tool-readout').innerHTML=text;}
+function readout(){const id=u().selected;let text='';if(id==='tweezers')text='<span class="readout">'+(s().tweezers.holding?'Magnesium · ca. 1 cm':'Pinzette leer')+'</span>';if(id==='magnesium')text='<span class="readout">'+s().magnesium.remaining+' gleiche Stücke · ca. 1 cm</span>';if(id==='p4')for(const side of ['a','b','c']){const v=s().vessels['p4'+side];text+='<span class="readout">'+side.toUpperCase()+': '+v.volume.toLocaleString('de-DE')+' mL'+(v.chemical?' · '+safe(chem(v.chemical)):'')+'</span>';}if(id==='pipette')text='<span class="readout">'+s().pipette.volume.toLocaleString('de-DE',{maximumFractionDigits:2})+'<small>mL / 5 mL</small></span>'+(s().pipette.chemical?'<span class="readout">'+safe(chem(s().pipette.chemical))+'</span>':'');if(id==='dropper')text='<span class="readout">'+s().dropper.drops+'<small>Tropfen verfügbar</small></span>';if(id==='meter'||id==='probe')text='<span class="readout">pH '+(!s().probe.power?'AUS':u().reading?'…':!s().probe.connected?'NICHT VERBUNDEN':s().probe.reading==null?'— —':Number(s().probe.reading).toLocaleString('de-DE',{minimumFractionDigits:1,maximumFractionDigits:1}))+'</span>';if(s().vessels[id]&&s().placed[id]){const v=s().vessels[id];text='<span class="readout">'+v.volume.toLocaleString('de-DE')+'<small>mL</small></span><span class="readout">'+v.drops+'<small>Indikatortropfen</small></span>';}if(/^p[123]$/.test(id)){for(const side of ['l','r']){const v=s().vessels[id+side];text+='<span class="readout">'+(side==='l'?'A':'B')+': '+v.volume.toLocaleString('de-DE')+' mL · '+v.drops+' Tr.</span>';}}$('tool-readout').innerHTML=text;}
 function inspector(){
  const id=u().selected;let desc='',actions='';$('selected-name').textContent=id?label(id):'Hand';
  if(!id){desc='Mit der Hand Geräte oder Flaschen greifen und bewegen. Materialien aus der Ablage aufstellen.';actions='<p class="muted">Wähle zuerst ein Gerät oder eine Lösung.</p>';}
  else if(u().pending){desc='Auf der Arbeitsfläche ablegen. Reagenzgläser werden in den Ständer gesetzt.';actions=actionButton('place','Aufstellen','class="primary"');}
- else if(id.startsWith('b-')){const c=id.slice(2);desc=(mode==='v2'&&!['btb','universal'].includes(c)?'c₀ = 1 mol/L · '+(c==='ethanol'?'unvergällt · ':''):'')+(s().bottlesOpen[c]?'Flasche geöffnet.':'Flasche verschlossen.');actions=actionButton('cap',s().bottlesOpen[c]?'Flasche verschließen':'Verschluss abnehmen','class="primary"')+actionButton('store-bottle','In die Materialablage zurücklegen');desc+=' Nach Benutzung verschließen und zurücklegen oder in die Materialablage ziehen.';}
+ else if(id.startsWith('b-')){const c=id.slice(2);desc=(mode==='v2'?'c₀ = 0,1 mol/L · ':mode==='v3'&&!['btb','universal'].includes(c)?'c₀ = 1 mol/L · '+(c==='ethanol'?'unvergällt · ':''):'')+(s().bottlesOpen[c]?'Flasche geöffnet.':'Flasche verschlossen.');actions=actionButton('cap',s().bottlesOpen[c]?'Flasche verschließen':'Verschluss abnehmen','class="primary"')+actionButton('store-bottle','In die Materialablage zurücklegen');desc+=' Nach Benutzung verschließen und zurücklegen oder in die Materialablage ziehen.';}
  else if(id==='pipette'||id==='dropper'){
   desc=id==='pipette'?'Am Schaft greifen und zum Einsatzort führen. Zum Ansaugen oder Abgeben den Gummiball bzw. die Schaltfläche gedrückt halten.':'Zum Füllen gedrückt halten. Am Probengefäß jeden Tropfen einzeln abgeben.';
  }
+ else if(id==='tweezers'){desc=s().tweezers.holding?'Magnesiumstück gegriffen. Führe die Pinzette zur gewünschten Kammer und lasse das Stück los.':'Zur Magnesiumablage führen, ein Stück greifen und anschließend zur Probe bewegen. Vor einem neuen Stück die benutzte Pinzette spülen.';}
+ else if(id==='magnesium'){desc='Gleich lange Magnesiumstücke, jeweils ca. 1 cm. Einzeln mit der Pinzette aufnehmen.';}
+ else if(id==='p4'){desc='Drei getrennte Kammern. Jede Kammer einzeln füllen; das Magnesium anschließend mit der Pinzette zugeben.';actions=['a','b','c'].map(side=>actionButton('empty-'+side,'Kammer '+side.toUpperCase()+' leeren')).join('');}
  else if(id==='meter'){desc=s().probe.connected?'Elektrode angeschlossen. Gerät einschalten und die Probe messen.':'Die Elektrode ist noch nicht angeschlossen. Führe ihren Stecker zur Buchse.';actions=actionButton('power',s().probe.power?'Gerät ausschalten':'Gerät einschalten');if(s().placed.probe&&!s().probe.connected)actions+=actionButton('connect','Elektrode anschließen','class="primary"');}
  else if(id==='probe'){
   desc=!s().probe.connected?'Stecker in die Buchse des pH-Meters stecken. Danach Schutzkappe abnehmen.':s().probe.cap?'Angeschlossen. Vor dem Eintauchen die Schutzkappe abnehmen.':'Elektrode in die Probe führen. Vor einer anderen Probe mit Spülwasser reinigen.';
@@ -790,13 +1104,13 @@ function inspector(){
  const activeTool=tools.includes(id)&&s().placed[id];$('target-description').textContent=activeTool?(u().blocked?'Belegt: '+label(u().blocked.occupant):u().dock?'Aktuell: '+(targets().find(t=>t.id===u().dock)?.label||u().dock):'Gerät an den gewünschten Einsatzort führen.'):'Gerät greifen, dann den Einsatzort wählen.';
  $('targets').innerHTML=activeTool?availableTargets().map(t=>'<button data-target-button="'+t.id+'" aria-pressed="'+(u().dock===t.id)+'">'+safe(t.label)+'</button>').join(''):'';$('return-tool').hidden=!activeTool;
 }
-function render(){document.body.dataset.mode=mode;$('hand-tool').setAttribute('aria-pressed',String(!u().selected));scene();tray();inspector();$('bench-title').textContent=mode==='v1'?'pH-Vergleich':'Organische Säuren';document.querySelectorAll('[data-mode]').forEach(b=>b.setAttribute('aria-current',String(b.dataset.mode===mode)));$('stage-scroll').classList.toggle('zoomed',u().zoom);$('zoom-toggle').setAttribute('aria-pressed',String(u().zoom));$('zoom-toggle').innerHTML=u().zoom?'Gesamtansicht':'Lupe <span aria-hidden="true">＋</span>';}
+function render(){document.body.dataset.mode=mode;$('hand-tool').setAttribute('aria-pressed',String(!u().selected));scene();tray();inspector();$('bench-title').textContent=mode==='v1'?'pH-Vergleich':mode==='v2'?'Säuren & Magnesium':'Organische Säuren';document.querySelectorAll('[data-mode]').forEach(b=>b.setAttribute('aria-current',String(b.dataset.mode===mode)));$('stage-scroll').classList.toggle('zoomed',u().zoom);$('zoom-toggle').setAttribute('aria-pressed',String(u().zoom));$('zoom-toggle').innerHTML=u().zoom?'Gesamtansicht':'Lupe <span aria-hidden="true">＋</span>';}
 function flowFlash(){const view=u();clearTimeout(flashTimer);view.flow=true;scene();flashTimer=setTimeout(()=>{view.flow=false;scene();},450);}
 function transfer(kind){
  const id=u().selected,at=u().dock;let r;
  if(kind==='rinse'){
   const progress=Math.min(1,(performance.now()-rinseStart)/1200);u().rinseElapsed[id]=progress*1200;u().rinsing=true;u().flow=true;scene();hygiene();
-  if(progress<1)return true;r=M.rinse(s(),id);if(r.ok){u().needsRinse=null;stopHold();status('Spülen abgeschlossen. '+label(id)+' ist für die nächste Probe bereit.');}else{u().rinseElapsed[id]=0;stopHold();notify(r.message);}return r.ok;
+  if(progress<1)return true;r=M.rinse(s(),id);if(r.ok){u().needsRinse=null;stopHold();Reagi.quiet();status('Spülen abgeschlossen. '+label(id)+' ist für die nächste Probe bereit.');}else{u().rinseElapsed[id]=0;stopHold();notify(r.message);}return r.ok;
  }
  if(kind==='draw')r=M.draw(s(),id,at?.slice(2),id==='pipette'?.25:1);
  else r=M.dispense(s(),id,at,id==='pipette'?.25:1);
@@ -815,18 +1129,23 @@ function beginHold(kind,anchor,pointer){
  stopHold();const id=u().selected,at=u().dock;if(!tools.includes(id)||!at)return;
  if(kind==='rinse'&&((id==='pipette'&&s().pipette.volume>0)||(id==='dropper'&&s().dropper.drops>0))){u().needsRinse=id;notify('Noch Flüssigkeit im Gerät: zuerst zum Abfallbehälter führen und entleeren. Danach spülen.');hygiene();return;}
  if(kind==='rinse'&&at!=='wash')return;
+ if(kind==='rinse'&&id==='tweezers'&&s().tweezers.holding){notify('Lege das Magnesiumstück zuerst zurück, bevor du die Pinzette spülst.');return;}
  if(kind==='rinse'&&id==='probe'&&s().probe.cap){notify('Nimm vor dem Spülen die Schutzkappe ab.');return;}
  holdPointer=pointer;holdAnchor=anchor;pumpKind=kind;if((u().rinseElapsed[id]||0)>=1200)u().rinseElapsed[id]=0;rinseStart=performance.now()-(u().rinseElapsed[id]||0);anchor?.classList.add('is-held');
  if(transfer(kind)&&pumpKind)holdTimer=setInterval(()=>transfer(kind),kind==='rinse'?100:id==='dropper'?220:130);
 }
 function action(action){
  const id=u().selected,at=u().dock;let r;
+ if(action==='pick-magnesium')r=M.pickMagnesium(s());
+ if(action==='release-magnesium')r=M.releaseMagnesium(s(),at);
+ if(action==='return-magnesium')r=M.returnMagnesium(s());
+ if(/^empty-[abc]$/.test(action)&&id==='p4')r=M.empty(s(),'p4'+action.slice(-1));
  if(action==='place'){place(id);return;}
  if(action==='store-bottle'){returnBottle(id);return;}
  if(action==='connect'){connectProbe();return;}
  if(action==='disconnect'){if(/^t[12]$/.test(u().docks.probe||'')){notify('Nimm die Elektrode vor dem Abziehen des Steckers aus der Probe.');return;}r=M.disconnectProbe(s());}
  if(action==='clear-station'){const blocked=u().blocked;if(blocked){park(blocked.occupant);u().blocked=null;dock(blocked.target);}return;}
- if(action==='cap'){if(tools.some(tool=>u().docks[tool]===id)){notify('Nimm die Pipette zuerst aus der Flasche, bevor du sie verschließt.');return;}r=M.toggleBottle(s(),id.slice(2));}
+ if(action==='cap'){if(tools.some(tool=>u().docks[tool]===id)){notify('Nimm die Pipette zuerst aus der Flasche, bevor du sie verschließt.');return;}r=M.toggleBottle(s(),id.slice(2));if(r.ok){delete bottleReminders[mode+id.slice(2)];if(s().bottlesOpen[id.slice(2)])remindOtherBottles(id.slice(2));}}
  if(action==='draw-dropper'){r=M.draw(s(),'dropper',at?.slice(2));if(r.ok)flowFlash();}
  if(action==='drop'){r=M.dispense(s(),'dropper',at,1);if(r.ok)flowFlash();}
  if(action==='empty-dropper'){const count=s().dropper.drops;for(let i=0;i<Math.max(1,count);i++){r=M.dispense(s(),'dropper','waste',1);if(!r.ok)break;}if(r?.ok)flowFlash();}
@@ -876,15 +1195,15 @@ document.addEventListener('pointerup',e=>{
  if(g.id)choose(g.id);
 });
 function moveItem(id,p,origin){
- if(!p)return;
- if(!tools.includes(id)&&Object.values(u().docks).some(t=>t===id||(/^p[123]$/.test(id)&&t.startsWith(id))||(id==='rack'&&['t1','t2'].includes(t)))){notify('Nimm das Gerät zuerst aus dem Gefäß, bevor du den Aufbau verschiebst.');render();return;}
- if(mode==='v2'&&/^p[123]$/.test(id)){u().coords[id]=defaults(id);render();status(label(id)+' auf ihrem Vergleichsplatz abgelegt.');return;}
+ if(!p)return;const previous=u().docks[id];
+ if(!tools.includes(id)&&Object.values(u().docks).some(t=>t===id||(/^p[1234]$/.test(id)&&t.startsWith(id))||(id==='rack'&&['t1','t2'].includes(t)))){notify('Nimm das Gerät zuerst aus dem Gefäß, bevor du den Aufbau verschiebst.');render();return;}
+ if((mode==='v3'&&/^p[123]$/.test(id))||id==='p4'||id==='magnesium'){u().coords[id]=defaults(id);render();status(label(id)+' auf ihrem Vergleichsplatz abgelegt.');return;}
  const size=V.size(id),base=origin||{x:p.x-size.w/2,y:p.y-size.h/2};
  if(tools.includes(id)){const t=dropTarget(id,p,base);if(t){dock(t.id);render();return;}}
  if(['t1','t2'].includes(id)){status('Das Reagenzglas steht im Ständer.');render();return;}
  if(id==='probe'){cancelMeasurement();M.withdrawProbe(s());}
  delete u().rinseElapsed[id];delete u().parked[id];
- u().coords[id]={x:Math.max(5,Math.min(995-size.w,base.x)),y:Math.max(8,Math.min(610-size.h,base.y))};u().dock=null;delete u().docks[id];render();
+ u().coords[id]={x:Math.max(5,Math.min(995-size.w,base.x)),y:Math.max(8,Math.min(610-size.h,base.y))};u().dock=null;delete u().docks[id];render();if(previous?.startsWith('b-'))remindBottle(previous.slice(2));
 }
 function cancelGesture(){document.querySelector('.materials').classList.remove('return-hover');gesture=null;holdPointer=null;holdAnchor=null;$('drag-ghost').hidden=true;stopHold();}
 document.addEventListener('pointercancel',()=>{cancelGesture();render();});window.addEventListener('blur',()=>{cancelGesture();cancelMeasurement();render();});document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelGesture();cancelMeasurement();render();}});
@@ -905,12 +1224,24 @@ $('stage').addEventListener('contextmenu',e=>{if(e.target.closest('[data-rinse],
 $('stage').addEventListener('keydown',e=>{if(e.repeat)return;if(['Enter',' '].includes(e.key)){e.preventDefault();const item=e.target.closest('[data-item]'),bulb=e.target.closest('[data-pump]');if(e.target.closest('[data-rinse]')&&control()?.hold==='rinse'){beginHold('rinse',$('stage'),'keyboard');}else if(bulb){if(u().selected!==bulb.dataset.pump)choose(bulb.dataset.pump);const c=control();if(c?.hold)beginHold(c.hold,$('stage'),'keyboard');else if(c?.action)action(c.action);}else if(e.target.closest('[data-plug]')||e.target.closest('[data-connect]')){connectProbe();}else if(e.target.matches('[data-action=cap]')){choose('b-'+e.target.dataset.chemical);action('cap');}else if(item)choose(item.dataset.item);else if(u().pending)place(u().pending);}});
 $('return-tool').addEventListener('click',()=>{stopHold();park(u().selected);u().selected=null;u().dock=null;render();status('Gerät abgelegt.');});
 document.querySelectorAll('[data-tray]').forEach(b=>b.addEventListener('click',()=>{u().tray=b.dataset.tray;tray();}));
-document.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>{if(mode===b.dataset.mode)return;cancelGesture();cancelMeasurement();mode=b.dataset.mode;$('notice').hidden=true;render();status('Versuchsbereich gewechselt. Dein Aufbau bleibt erhalten.');}));
+document.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>{if(mode===b.dataset.mode)return;cancelGesture();cancelMeasurement();const oldMode=mode,open=chemicals().filter(c=>s().placed['b-'+c]&&s().bottlesOpen[c]);mode=b.dataset.mode;$('notice').hidden=true;render();Reagi.greet(mode);if(open.length)Reagi.remind('In Versuch '+oldMode.slice(1)+' stehen noch Vorratsflaschen offen: '+open.map(chem).join(', ')+'. Verschließe sie nach der Entnahme.');status('Versuchsbereich gewechselt. Dein Aufbau bleibt erhalten.');}));
 $('notice-close').addEventListener('click',()=>{$('notice').hidden=true;});
 $('zoom-toggle').addEventListener('click',()=>{cancelGesture();u().zoom=!u().zoom;render();});
 for(const [open,dialog] of [['help-open','help-dialog'],['reset-open','reset-dialog'],['model-open','model-dialog']])$(open).addEventListener('click',()=>{cancelGesture();$(dialog).showModal();});
 document.querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click',()=>$(b.dataset.close).close()));
-$('reset-confirm').addEventListener('click',()=>{cancelGesture();cancelMeasurement();states[mode]=M.createState(mode);views[mode]=makeUI();$('reset-dialog').close();$('notice').hidden=true;render();status('Neue Arbeitsfläche bereit.');});
-render();
+$('reset-confirm').addEventListener('click',()=>{cancelGesture();cancelMeasurement();states[mode]=M.createState(mode);views[mode]=makeUI();for(const key of Object.keys(bottleReminders))if(key.startsWith(mode))delete bottleReminders[key];Reagi.greet(mode);$('reset-dialog').close();$('notice').hidden=true;render();status('Neue Arbeitsfläche bereit.');});
+const bottleReminders={};
+function remindBottle(c){const key=mode+c;if(s().placed['b-'+c]&&s().bottlesOpen[c]&&!bottleReminders[key]){bottleReminders[key]=true;Reagi.remind('Die Vorratsflasche mit '+chem(c)+' steht noch offen. Nach der Entnahme bitte wieder verschließen.',key);}}
+function remindOtherBottles(except){const c=chemicals().find(c=>c!==except&&s().placed['b-'+c]&&s().bottlesOpen[c]);if(c)remindBottle(c);}
+function routineHint(){
+ const open=chemicals().filter(c=>s().placed['b-'+c]&&s().bottlesOpen[c]&&!Object.values(u().docks).includes('b-'+c));
+ if(open.length){Reagi.remind('Noch offen: '+open.map(chem).join(', ')+'. Vorratsflaschen nach der Entnahme verschließen.');return;}
+ const dirty=tools.filter(id=>s().placed[id]&&s()[id]?.residue);
+ if(dirty.length){Reagi.remind(dirty.map(label).join(', ')+': noch benutzt. Vor einer anderen Lösung erst Restflüssigkeit entleeren und dann spülen.');return;}
+ Reagi.help(mode==='v2'?'Für einen vergleichbaren Ansatz: Welche Größen müssen in allen drei Kammern gleich bleiben? Die Handgriffe führst du selbst aus.':'Laborroutine: gezielt entnehmen, Vorratsflasche verschließen und Geräte vor dem Probenwechsel spülen.');
+}
+Reagi.init({onHelp:routineHint});render();Reagi.greet(mode);
+let lastReactionTick=performance.now();
+setInterval(()=>{const now=performance.now(),dt=Math.min(2,(now-lastReactionTick)/1000);lastReactionTick=now;if(document.hidden)return;const st=states.v2;const before=['p4a','p4b','p4c'].map(id=>M.reactionInfo(st,id).active).join();M.advanceReactions(st,dt);const after=['p4a','p4b','p4c'].map(id=>M.reactionInfo(st,id).active).join();if(mode==='v2'){if(before!==after&&!gesture&&!pumpKind)scene();else document.querySelectorAll('[data-magnesium-strip]').forEach(el=>{const r=M.reactionInfo(st,el.dataset.magnesiumStrip).remaining;el.setAttribute('transform','scale('+Math.max(.1,r)+' 1)');});}},1000);
 })();
 </script></body></html>
